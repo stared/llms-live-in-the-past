@@ -16,90 +16,26 @@ import json
 import os
 import re
 from datetime import datetime, timezone
+from pathlib import Path
 
 from openai import OpenAI
 
-# ---------------------------------------------------------------------------
-# Models table — every known model with family + release date
-# ---------------------------------------------------------------------------
+CONFIG_DIR = Path(__file__).parent / "config"
 
-MODELS: list[dict] = [
-    # Claude
-    {"model_id": "anthropic/claude-3-haiku",       "family": "Claude Haiku",   "release_date": "2024-03-13"},
-    {"model_id": "anthropic/claude-3.5-haiku",      "family": "Claude Haiku",   "release_date": "2024-11-04"},
-    {"model_id": "anthropic/claude-haiku-4.5",      "family": "Claude Haiku",   "release_date": "2025-10-15"},
-    {"model_id": "anthropic/claude-3.5-sonnet",     "family": "Claude Sonnet",  "release_date": "2024-10-22"},
-    {"model_id": "anthropic/claude-3.7-sonnet",     "family": "Claude Sonnet",  "release_date": "2025-02-24"},
-    {"model_id": "anthropic/claude-sonnet-4",       "family": "Claude Sonnet",  "release_date": "2025-05-22"},
-    {"model_id": "anthropic/claude-sonnet-4.5",     "family": "Claude Sonnet",  "release_date": "2025-09-29"},
-    {"model_id": "anthropic/claude-opus-4",         "family": "Claude Opus",    "release_date": "2025-05-22"},
-    {"model_id": "anthropic/claude-opus-4.1",       "family": "Claude Opus",    "release_date": "2025-08-05"},
-    {"model_id": "anthropic/claude-opus-4.5",       "family": "Claude Opus",    "release_date": "2025-11-24"},
-    {"model_id": "anthropic/claude-opus-4.6",       "family": "Claude Opus",    "release_date": "2026-02-05"},
-    # GPT
-    {"model_id": "openai/gpt-4o",                   "family": "GPT",            "release_date": "2024-05-13"},
-    {"model_id": "openai/gpt-4o-2024-05-13",        "family": "GPT",            "release_date": "2024-05-13"},
-    {"model_id": "openai/gpt-4o-2024-08-06",        "family": "GPT",            "release_date": "2024-08-06"},
-    {"model_id": "openai/gpt-4o-2024-11-20",        "family": "GPT",            "release_date": "2024-11-20"},
-    {"model_id": "openai/gpt-4o-mini",              "family": "GPT Mini",       "release_date": "2024-07-18"},
-    {"model_id": "openai/gpt-5",                    "family": "GPT",            "release_date": "2025-08-07"},
-    {"model_id": "openai/gpt-5-mini",               "family": "GPT Mini",       "release_date": "2025-08-07"},
-    {"model_id": "openai/gpt-5-nano",               "family": "GPT Nano",       "release_date": "2025-08-07"},
-    {"model_id": "openai/gpt-5-pro",                "family": "GPT Pro",        "release_date": "2025-09-26"},
-    {"model_id": "openai/gpt-5.1",                  "family": "GPT",            "release_date": "2025-11-13"},
-    {"model_id": "openai/gpt-5.2",                  "family": "GPT",            "release_date": "2025-12-10"},
-    {"model_id": "openai/gpt-5.2-pro",              "family": "GPT Pro",        "release_date": "2025-12-10"},
-    # Gemini
-    {"model_id": "google/gemini-2.0-flash-001",     "family": "Gemini Flash",   "release_date": "2025-02-05"},
-    {"model_id": "google/gemini-2.5-pro",           "family": "Gemini Pro",     "release_date": "2025-06-17"},
-    {"model_id": "google/gemini-2.5-pro-preview",   "family": "Gemini Pro",     "release_date": "2025-06-05"},
-    {"model_id": "google/gemini-2.5-flash",         "family": "Gemini Flash",   "release_date": "2025-06-17"},
-    {"model_id": "google/gemini-2.5-flash-lite",    "family": "Gemini Flash",   "release_date": "2025-07-22"},
-    {"model_id": "google/gemini-3-pro-preview",     "family": "Gemini Pro",     "release_date": "2025-11-18"},
-    {"model_id": "google/gemini-3-flash-preview",   "family": "Gemini Flash",   "release_date": "2025-12-17"},
-]
 
-# ---------------------------------------------------------------------------
-# Prompt templates — keyed by prompt_id
-# ---------------------------------------------------------------------------
+def load_json(path: Path) -> dict | list:
+    with open(path) as f:
+        return json.load(f)
 
-PROMPTS: dict[str, dict] = {
-    "v1": {
-        "system": "You are a helpful assistant. Respond with valid JSON only.",
-        "user_template": (
-            "I want to use the most recent {family} model via OpenRouter API.\n"
-            "What model ID should I use? Respond with only:\n"
-            '{{\"model\": \"provider/model-name\"}}'
-        ),
-    },
-}
 
-# ---------------------------------------------------------------------------
-# Experiment config
-# ---------------------------------------------------------------------------
+MODELS: list[dict] = load_json(CONFIG_DIR / "models.json")
 
-ANSWERER_MODEL_IDS: list[str] = [
-    "anthropic/claude-sonnet-4.5",
-    "openai/gpt-4o",
-    "openai/gpt-5.2",
-    "google/gemini-2.5-flash",
-    "google/gemini-3-flash-preview",
-]
+_experiment = load_json(CONFIG_DIR / "experiment.json")
+ANSWERER_MODEL_IDS: list[str] = _experiment["answerer_model_ids"]
+SUBJECT_FAMILIES: list[str] = _experiment["subject_families"]
+DEFAULT_PROMPT_ID: str = _experiment["prompt_id"]
 
-SUBJECT_FAMILIES: list[str] = [
-    "Claude Opus",
-    "Claude Sonnet",
-    "Claude Haiku",
-    "GPT",
-    "Gemini Pro",
-    "Gemini Flash",
-]
-
-DEFAULT_PROMPT_ID = "v1"
-
-# ---------------------------------------------------------------------------
-# Derived lookups (built from MODELS table)
-# ---------------------------------------------------------------------------
+PROMPTS: dict[str, dict] = load_json(CONFIG_DIR / "prompts.json")
 
 
 def build_model_index(models: list[dict]) -> dict[str, dict]:
@@ -115,11 +51,6 @@ def find_latest_per_family(models: list[dict]) -> dict[str, str]:
         if fam not in latest or m["release_date"] > latest[fam]["release_date"]:
             latest[fam] = m
     return {fam: m["model_id"] for fam, m in latest.items()}
-
-
-# ---------------------------------------------------------------------------
-# Response parsing
-# ---------------------------------------------------------------------------
 
 
 def extract_model_id(raw: str) -> str | None:
@@ -139,11 +70,6 @@ def extract_model_id(raw: str) -> str | None:
         return match.group(1)
 
     return None
-
-
-# ---------------------------------------------------------------------------
-# Evaluation (derived — not stored)
-# ---------------------------------------------------------------------------
 
 
 def evaluate_query(
@@ -180,11 +106,6 @@ def evaluate_query(
     }
 
 
-# ---------------------------------------------------------------------------
-# API calls
-# ---------------------------------------------------------------------------
-
-
 def query_model(client: OpenAI, answerer_model: str, prompt: dict, family: str) -> str:
     user_content = prompt["user_template"].format(family=family)
     response = client.chat.completions.create(
@@ -196,11 +117,6 @@ def query_model(client: OpenAI, answerer_model: str, prompt: dict, family: str) 
         temperature=0,
     )
     return response.choices[0].message.content or ""
-
-
-# ---------------------------------------------------------------------------
-# Console output
-# ---------------------------------------------------------------------------
 
 
 def print_table(evaluated: list[dict]) -> None:
@@ -236,11 +152,6 @@ def print_table(evaluated: list[dict]) -> None:
         print(line2)
 
     print()
-
-
-# ---------------------------------------------------------------------------
-# Main
-# ---------------------------------------------------------------------------
 
 
 def main() -> None:
