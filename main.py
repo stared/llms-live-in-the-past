@@ -81,7 +81,9 @@ PROMPTS: dict[str, dict] = {
 ANSWERER_MODEL_IDS: list[str] = [
     "anthropic/claude-sonnet-4.5",
     "openai/gpt-4o",
+    "openai/gpt-5.2",
     "google/gemini-2.5-flash",
+    "google/gemini-3-flash-preview",
 ]
 
 SUBJECT_FAMILIES: list[str] = [
