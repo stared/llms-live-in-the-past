@@ -14,20 +14,17 @@ function App() {
   useEffect(() => {
     async function load() {
       try {
-        const [modelsRes, q1Res, q2Res] = await Promise.all([
+        const [modelsRes, qRes] = await Promise.all([
           fetch("/data/models.json"),
-          fetch("/data/queries_20260207_170850.json"),
-          fetch("/data/queries_20260207_170946.json"),
+          fetch("/data/queries_20260208_224943.json"),
         ]);
         const models: Model[] = await modelsRes.json();
-        const queries1: Query[] = await q1Res.json();
-        const queries2: Query[] = await q2Res.json();
+        const queries: Query[] = await qRes.json();
 
         const modelIndex = buildModelIndex(models);
         const latestPerFamily = findLatestPerFamily(models);
 
-        // Use the latest query file (has more answerer models), dedupe by answerer+family
-        const allQueries = [...queries1, ...queries2];
+        const allQueries = [...queries];
         const seen = new Set<string>();
         const deduped: Query[] = [];
         for (const q of allQueries.reverse()) {
