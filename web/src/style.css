@@ -1,0 +1,203 @@
+:root {
+  --bg: #0f1117;
+  --surface: #1a1d27;
+  --border: #2a2d3a;
+  --text: #e1e4ed;
+  --text-muted: #8b8fa3;
+  --exact: #22c55e;
+  --exact-bg: #052e16;
+  --wrong: #ef4444;
+  --wrong-bg: #2a0a0a;
+  --parse-failure: #f59e0b;
+  --parse-failure-bg: #2a1f00;
+  --expected-bg: #1e293b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.summary {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge.exact {
+  background: var(--exact-bg);
+  color: var(--exact);
+  border: 1px solid var(--exact);
+}
+
+.badge.wrong {
+  background: var(--wrong-bg);
+  color: var(--wrong);
+  border: 1px solid var(--wrong);
+}
+
+.badge.parse-failure {
+  background: var(--parse-failure-bg);
+  color: var(--parse-failure);
+  border: 1px solid var(--parse-failure);
+}
+
+.badge.total {
+  background: var(--surface);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid var(--border);
+}
+
+thead th {
+  background: var(--surface);
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.answerer-header {
+  min-width: 180px;
+}
+
+.answerer-cell {
+  background: var(--surface);
+  min-width: 180px;
+}
+
+.answerer-cell .model-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.answerer-cell .model-date {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.cell {
+  vertical-align: top;
+  min-width: 160px;
+  cursor: default;
+  transition: background 0.15s;
+}
+
+.cell:hover {
+  filter: brightness(1.2);
+}
+
+.cell.exact {
+  background: var(--exact-bg);
+  border-left-color: var(--exact);
+}
+
+.cell.wrong {
+  background: var(--wrong-bg);
+  border-left-color: var(--wrong);
+}
+
+.cell.parse_failure {
+  background: var(--parse-failure-bg);
+  border-left-color: var(--parse-failure);
+}
+
+.cell.expected-footer {
+  background: var(--expected-bg);
+}
+
+.answered-model {
+  font-weight: 500;
+  word-break: break-all;
+}
+
+.answered-date {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  margin-top: 0.15rem;
+}
+
+.check-mark {
+  color: var(--exact);
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 0.15rem;
+}
+
+.unknown-model {
+  color: var(--wrong);
+  font-size: 0.75rem;
+  font-style: italic;
+  margin-top: 0.15rem;
+}
+
+.loading,
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.25rem;
+}
+
+.error {
+  color: var(--wrong);
+}
+
+tfoot td {
+  font-weight: 600;
+  border-top: 2px solid var(--text-muted);
+}

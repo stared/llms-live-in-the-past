@@ -1,0 +1,146 @@
+[
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.5",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v1",
+    "answered_model_id": "anthropic/claude-opus-4-20250514",
+    "raw_response": "{\"model\": \"anthropic/claude-opus-4-20250514\"}",
+    "queried_at": "2026-02-07T17:08:31.732745+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.5",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v1",
+    "answered_model_id": "anthropic/claude-3.5-sonnet",
+    "raw_response": "{\"model\": \"anthropic/claude-3.5-sonnet\"}",
+    "queried_at": "2026-02-07T17:08:33.383623+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.5",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v1",
+    "answered_model_id": "anthropic/claude-3.5-haiku",
+    "raw_response": "{\"model\": \"anthropic/claude-3.5-haiku\"}",
+    "queried_at": "2026-02-07T17:08:35.608773+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.5",
+    "subject_family": "GPT",
+    "prompt_id": "v1",
+    "answered_model_id": "openai/gpt-4-turbo",
+    "raw_response": "{\"model\": \"openai/gpt-4-turbo\"}",
+    "queried_at": "2026-02-07T17:08:37.677605+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.5",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v1",
+    "answered_model_id": "google/gemini-pro-1.5",
+    "raw_response": "{\"model\": \"google/gemini-pro-1.5\"}",
+    "queried_at": "2026-02-07T17:08:39.141876+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.5",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v1",
+    "answered_model_id": "google/gemini-2.0-flash-001",
+    "raw_response": "{\"model\": \"google/gemini-2.0-flash-001\"}",
+    "queried_at": "2026-02-07T17:08:41.113023+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v1",
+    "answered_model_id": "anthropic/claude-2",
+    "raw_response": "```json\n{\"model\": \"anthropic/claude-2\"}\n```",
+    "queried_at": "2026-02-07T17:08:41.809577+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v1",
+    "answered_model_id": "anthropic/claude-2.0",
+    "raw_response": "```json\n{\"model\": \"anthropic/claude-2.0\"}\n```",
+    "queried_at": "2026-02-07T17:08:42.487709+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v1",
+    "answered_model_id": "anthropic/claude-v1-haiku",
+    "raw_response": "```json\n{\"model\": \"anthropic/claude-v1-haiku\"}\n```",
+    "queried_at": "2026-02-07T17:08:43.119524+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o",
+    "subject_family": "GPT",
+    "prompt_id": "v1",
+    "answered_model_id": "openai/gpt-4.0",
+    "raw_response": "```json\n{\"model\": \"openai/gpt-4.0\"}\n```",
+    "queried_at": "2026-02-07T17:08:43.767063+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v1",
+    "answered_model_id": "openai/gemini-pro-1",
+    "raw_response": "```json\n{\"model\": \"openai/gemini-pro-1\"}\n```",
+    "queried_at": "2026-02-07T17:08:44.429870+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v1",
+    "answered_model_id": "openai/gemini-flash-v1",
+    "raw_response": "```json\n{\"model\": \"openai/gemini-flash-v1\"}\n```",
+    "queried_at": "2026-02-07T17:08:45.154390+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v1",
+    "answered_model_id": "anthropic/claude-3-opus",
+    "raw_response": "```json\n{\n  \"model\": \"anthropic/claude-3-opus\"\n}\n```",
+    "queried_at": "2026-02-07T17:08:46.061465+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v1",
+    "answered_model_id": "anthropic/claude-3-sonnet",
+    "raw_response": "```json\n{\n  \"model\": \"anthropic/claude-3-sonnet\"\n}\n```",
+    "queried_at": "2026-02-07T17:08:47.147594+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v1",
+    "answered_model_id": "anthropic/claude-3-haiku",
+    "raw_response": "```json\n{\n  \"model\": \"anthropic/claude-3-haiku\"\n}\n```",
+    "queried_at": "2026-02-07T17:08:47.625519+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash",
+    "subject_family": "GPT",
+    "prompt_id": "v1",
+    "answered_model_id": "openai/gpt-4o",
+    "raw_response": "```json\n{\n  \"model\": \"openai/gpt-4o\"\n}\n```",
+    "queried_at": "2026-02-07T17:08:48.682264+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v1",
+    "answered_model_id": "google/gemini-pro",
+    "raw_response": "```json\n{\n  \"model\": \"google/gemini-pro\"\n}\n```",
+    "queried_at": "2026-02-07T17:08:49.749350+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v1",
+    "answered_model_id": "google/gemini-flash-1.5",
+    "raw_response": "```json\n{\n  \"model\": \"google/gemini-flash-1.5\"\n}\n```",
+    "queried_at": "2026-02-07T17:08:50.159040+00:00"
+  }
+]
