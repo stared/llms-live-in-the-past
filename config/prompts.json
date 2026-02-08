@@ -2,5 +2,9 @@
   "v1": {
     "system": "You are a helpful assistant. Respond with valid JSON only.",
     "user_template": "I want to use the most recent {family} model via OpenRouter API.\nWhat model ID should I use? Respond with only:\n{{\"model\": \"provider/model-name\"}}"
+  },
+  "v2": {
+    "system": "You are a helpful assistant. Respond with valid JSON only.",
+    "user_template": "What is the most recent {family} model? Give me the exact model number as used in the official API.\nRespond with only:\n{{\"model\": \"[model name]\"}}"
   }
 }
