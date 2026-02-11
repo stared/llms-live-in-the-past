@@ -19,38 +19,84 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from openai import OpenAI
+from pydantic import BaseModel, TypeAdapter
 
 CONFIG_DIR = Path(__file__).parent / "config"
 
 
-def load_json(path: Path) -> dict | list:
-    with open(path) as f:
-        return json.load(f)
+# ── Pydantic models ──────────────────────────────────────────────────────────
 
 
-MODELS: list[dict] = load_json(CONFIG_DIR / "models.json")
-
-_experiment = load_json(CONFIG_DIR / "experiment.json")
-ANSWERER_MODEL_IDS: list[str] = _experiment["answerer_model_ids"]
-SUBJECT_FAMILIES: list[str] = _experiment["subject_families"]
-DEFAULT_PROMPT_ID: str = _experiment["prompt_id"]
-
-PROMPTS: dict[str, dict] = load_json(CONFIG_DIR / "prompts.json")
+class Model(BaseModel):
+    model_id: str
+    family: str
+    release_date: str  # "2024-03-13"
 
 
-def build_model_index(models: list[dict]) -> dict[str, dict]:
-    """model_id → {family, release_date}"""
-    return {m["model_id"]: m for m in models}
+class Prompt(BaseModel):
+    system: str
+    user_template: str
 
 
-def find_latest_per_family(models: list[dict]) -> dict[str, str]:
+class ExperimentConfig(BaseModel):
+    answerer_model_ids: list[str]
+    subject_families: list[str]
+    prompt_id: str
+
+
+class Query(BaseModel):
+    answerer_model_id: str
+    subject_family: str
+    prompt_id: str
+    answered_model_id: str | None
+    raw_response: str
+    queried_at: str
+
+
+class EvaluatedQuery(Query):
+    answerer_release_date: str | None = None
+    expected_model_id: str | None = None
+    expected_release_date: str | None = None
+    answered_release_date: str | None = None
+    verdict: str  # "exact" | "wrong" | "parse_failure"
+
+
+# ── Load config ──────────────────────────────────────────────────────────────
+
+_ModelList = TypeAdapter(list[Model])
+_PromptDict = TypeAdapter(dict[str, Prompt])
+
+MODELS: list[Model] = _ModelList.validate_json(
+    (CONFIG_DIR / "models.json").read_bytes()
+)
+
+EXPERIMENT: ExperimentConfig = ExperimentConfig.model_validate_json(
+    (CONFIG_DIR / "experiment.json").read_bytes()
+)
+ANSWERER_MODEL_IDS = EXPERIMENT.answerer_model_ids
+SUBJECT_FAMILIES = EXPERIMENT.subject_families
+DEFAULT_PROMPT_ID = EXPERIMENT.prompt_id
+
+PROMPTS: dict[str, Prompt] = _PromptDict.validate_json(
+    (CONFIG_DIR / "prompts.json").read_bytes()
+)
+
+
+# ── Helpers ──────────────────────────────────────────────────────────────────
+
+
+def build_model_index(models: list[Model]) -> dict[str, Model]:
+    """model_id → Model"""
+    return {m.model_id: m for m in models}
+
+
+def find_latest_per_family(models: list[Model]) -> dict[str, str]:
     """family → model_id of the most recent model in that family."""
-    latest: dict[str, dict] = {}
+    latest: dict[str, Model] = {}
     for m in models:
-        fam = m["family"]
-        if fam not in latest or m["release_date"] > latest[fam]["release_date"]:
-            latest[fam] = m
-    return {fam: m["model_id"] for fam, m in latest.items()}
+        if m.family not in latest or m.release_date > latest[m.family].release_date:
+            latest[m.family] = m
+    return {fam: m.model_id for fam, m in latest.items()}
 
 
 def extract_model_id(raw: str) -> str | None:
@@ -73,45 +119,43 @@ def extract_model_id(raw: str) -> str | None:
 
 
 def evaluate_query(
-    query: dict,
-    model_index: dict[str, dict],
+    query: Query,
+    model_index: dict[str, Model],
     latest_per_family: dict[str, str],
-) -> dict:
+) -> EvaluatedQuery:
     """Enrich a query row with derived fields for display."""
-    family = query["subject_family"]
-    expected_id = latest_per_family.get(family)
-    expected_date = model_index[expected_id]["release_date"] if expected_id else None
+    expected_id = latest_per_family.get(query.subject_family)
+    expected_date = model_index[expected_id].release_date if expected_id else None
 
-    answered_id = query["answered_model_id"]
-    answered_info = model_index.get(answered_id) if answered_id else None
-    answered_date = answered_info["release_date"] if answered_info else None
+    answered_info = model_index.get(query.answered_model_id) if query.answered_model_id else None
+    answered_date = answered_info.release_date if answered_info else None
 
-    answerer_info = model_index.get(query["answerer_model_id"])
-    answerer_date = answerer_info["release_date"] if answerer_info else None
+    answerer_info = model_index.get(query.answerer_model_id)
+    answerer_date = answerer_info.release_date if answerer_info else None
 
-    if answered_id is None:
+    if query.answered_model_id is None:
         verdict = "parse_failure"
-    elif answered_id == expected_id:
+    elif query.answered_model_id == expected_id:
         verdict = "exact"
     else:
         verdict = "wrong"
 
-    return {
-        **query,
-        "answerer_release_date": answerer_date,
-        "expected_model_id": expected_id,
-        "expected_release_date": expected_date,
-        "answered_release_date": answered_date,
-        "verdict": verdict,
-    }
+    return EvaluatedQuery(
+        **query.model_dump(),
+        answerer_release_date=answerer_date,
+        expected_model_id=expected_id,
+        expected_release_date=expected_date,
+        answered_release_date=answered_date,
+        verdict=verdict,
+    )
 
 
-def query_model(client: OpenAI, answerer_model: str, prompt: dict, family: str) -> str:
-    user_content = prompt["user_template"].format(family=family)
+def query_model(client: OpenAI, answerer_model: str, prompt: Prompt, family: str) -> str:
+    user_content = prompt.user_template.format(family=family)
     response = client.chat.completions.create(
         model=answerer_model,
         messages=[
-            {"role": "system", "content": prompt["system"]},
+            {"role": "system", "content": prompt.system},
             {"role": "user", "content": user_content},
         ],
         temperature=0,
@@ -119,7 +163,7 @@ def query_model(client: OpenAI, answerer_model: str, prompt: dict, family: str) 
     return response.choices[0].message.content or ""
 
 
-def print_table(evaluated: list[dict]) -> None:
+def print_table(evaluated: list[EvaluatedQuery]) -> None:
     header = (
         f"{'Answerer':<36} | {'Asked about':<14} | "
         f"{'Answered':<40} | {'Expected':<40} | {'Result':<8}"
@@ -129,14 +173,14 @@ def print_table(evaluated: list[dict]) -> None:
     print("-" * len(header))
 
     for r in evaluated:
-        answerer = r["answerer_model_id"]
-        a_date = r.get("answerer_release_date") or "?"
-        subject = r["subject_family"]
-        answered = r["answered_model_id"] or "(parse failure)"
-        ans_date = r.get("answered_release_date") or "?"
-        expected = r.get("expected_model_id") or "?"
-        exp_date = r.get("expected_release_date") or "?"
-        verdict = r["verdict"].upper()
+        answerer = r.answerer_model_id
+        a_date = r.answerer_release_date or "?"
+        subject = r.subject_family
+        answered = r.answered_model_id or "(parse failure)"
+        ans_date = r.answered_release_date or "?"
+        expected = r.expected_model_id or "?"
+        exp_date = r.expected_release_date or "?"
+        verdict = r.verdict.upper()
 
         line1 = (
             f"{answerer:<36} | {subject:<14} | "
@@ -171,7 +215,7 @@ def main() -> None:
     latest_per_family = find_latest_per_family(MODELS)
 
     # Collect raw queries
-    queries: list[dict] = []
+    queries: list[Query] = []
     total = len(ANSWERER_MODEL_IDS) * len(SUBJECT_FAMILIES)
     count = 0
 
@@ -183,14 +227,14 @@ def main() -> None:
             raw = query_model(client, answerer_id, prompt, family)
             answered_id = extract_model_id(raw)
 
-            query = {
-                "answerer_model_id": answerer_id,
-                "subject_family": family,
-                "prompt_id": prompt_id,
-                "answered_model_id": answered_id,
-                "raw_response": raw,
-                "queried_at": datetime.now(timezone.utc).isoformat(),
-            }
+            query = Query(
+                answerer_model_id=answerer_id,
+                subject_family=family,
+                prompt_id=prompt_id,
+                answered_model_id=answered_id,
+                raw_response=raw,
+                queried_at=datetime.now(timezone.utc).isoformat(),
+            )
             queries.append(query)
 
             # Quick feedback
@@ -201,14 +245,14 @@ def main() -> None:
                 print("       → EXACT")
             else:
                 info = model_index.get(answered_id)
-                date_hint = f", from {info['release_date']}" if info else ""
+                date_hint = f", from {info.release_date}" if info else ""
                 print(f"       → WRONG (answered: {answered_id}{date_hint})")
 
     # Evaluate for display (derived, not saved)
     evaluated = [evaluate_query(q, model_index, latest_per_family) for q in queries]
     print_table(evaluated)
 
-    verdicts = [e["verdict"] for e in evaluated]
+    verdicts = [e.verdict for e in evaluated]
     print(
         f"Summary: {verdicts.count('exact')} exact, "
         f"{verdicts.count('wrong')} wrong, "
@@ -222,14 +266,16 @@ def main() -> None:
 
     # Models table (overwrite — it's reference data)
     models_path = "results/models.json"
-    with open(models_path, "w") as f:
-        json.dump(MODELS, f, indent=2)
+    Path(models_path).write_text(
+        _ModelList.dump_json(MODELS, indent=2).decode()
+    )
     print(f"\nModels table saved to {models_path}")
 
     # Queries table (append-friendly, timestamped)
     queries_path = f"results/queries_{timestamp}.json"
-    with open(queries_path, "w") as f:
-        json.dump(queries, f, indent=2)
+    Path(queries_path).write_text(
+        TypeAdapter(list[Query]).dump_json(queries, indent=2).decode()
+    )
     print(f"Queries saved to {queries_path}")
 
 
