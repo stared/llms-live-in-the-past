@@ -1,203 +1,184 @@
 :root {
-  --bg: #0f1117;
-  --surface: #1a1d27;
-  --border: #2a2d3a;
-  --text: #e1e4ed;
-  --text-muted: #8b8fa3;
-  --exact: #22c55e;
-  --exact-bg: #052e16;
-  --wrong: #ef4444;
-  --wrong-bg: #2a0a0a;
-  --parse-failure: #f59e0b;
-  --parse-failure-bg: #2a1f00;
-  --expected-bg: #1e293b;
+  --bg: #111;
+  --text: #ccc;
+  --muted: #666;
+  --dim: #444;
+  --border: #222;
+  --ok: #2ecc71;
+  --bad: #e74c3c;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.5;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1080px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2.5rem 2rem 2rem;
 }
+
+/* ── Header ── */
+
+header { margin-bottom: 1.5rem; }
 
 h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
 }
 
-.subtitle {
-  color: var(--text-muted);
-  margin-bottom: 1.5rem;
-  font-size: 1.05rem;
+.sub {
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
-.summary {
+.meta {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--muted);
   display: flex;
-  gap: 0.75rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
 }
 
-.badge {
-  padding: 0.35rem 0.85rem;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 600;
+.run-picker {
+  display: inline-flex;
+  gap: 0.25rem;
 }
 
-.badge.exact {
-  background: var(--exact-bg);
-  color: var(--exact);
-  border: 1px solid var(--exact);
-}
-
-.badge.wrong {
-  background: var(--wrong-bg);
-  color: var(--wrong);
-  border: 1px solid var(--wrong);
-}
-
-.badge.parse-failure {
-  background: var(--parse-failure-bg);
-  color: var(--parse-failure);
-  border: 1px solid var(--parse-failure);
-}
-
-.badge.total {
-  background: var(--surface);
-  color: var(--text-muted);
+.run-picker button {
+  background: none;
   border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.65rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: inherit;
 }
 
-.table-wrapper {
-  overflow-x: auto;
+.run-picker button.active {
+  border-color: var(--dim);
+  color: var(--text);
+  background: #1a1a1a;
 }
+
+.run-picker button:hover { border-color: var(--dim); }
+
+/* ── Table ── */
 
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 
-th,
-td {
-  padding: 0.75rem;
+th, td {
+  padding: 0.5rem 0.6rem;
   text-align: left;
-  border: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 thead th {
-  background: var(--surface);
-  color: var(--text-muted);
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
-.answerer-header {
-  min-width: 180px;
-}
-
-.answerer-cell {
-  background: var(--surface);
-  min-width: 180px;
-}
-
-.answerer-cell .model-name {
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.answerer-cell .model-date {
-  color: var(--text-muted);
-  font-size: 0.75rem;
-}
-
-.cell {
-  vertical-align: top;
-  min-width: 160px;
-  cursor: default;
-  transition: background 0.15s;
-}
-
-.cell:hover {
-  filter: brightness(1.2);
-}
-
-.cell.exact {
-  background: var(--exact-bg);
-  border-left-color: var(--exact);
-}
-
-.cell.wrong {
-  background: var(--wrong-bg);
-  border-left-color: var(--wrong);
-}
-
-.cell.parse_failure {
-  background: var(--parse-failure-bg);
-  border-left-color: var(--parse-failure);
-}
-
-.cell.expected-footer {
-  background: var(--expected-bg);
-}
-
-.answered-model {
+  color: var(--muted);
   font-weight: 500;
-  word-break: break-all;
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  padding-bottom: 0.6rem;
+  border-bottom-color: var(--dim);
+  white-space: nowrap;
 }
 
-.answered-date {
-  color: var(--text-muted);
-  font-size: 0.75rem;
-  margin-top: 0.15rem;
+.corner { width: 140px; }
+
+/* ── Row header ── */
+
+.rh {
+  width: 140px;
+  min-width: 140px;
+  white-space: nowrap;
 }
 
-.check-mark {
-  color: var(--exact);
-  font-size: 0.75rem;
+.rh-name { display: block; font-weight: 600; font-size: 0.78rem; }
+.rh-date { display: block; color: var(--dim); font-size: 0.62rem; font-variant-numeric: tabular-nums; }
+
+.ft-label {
   font-weight: 600;
-  margin-top: 0.15rem;
+  color: var(--muted);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
-.unknown-model {
-  color: var(--wrong);
-  font-size: 0.75rem;
-  font-style: italic;
-  margin-top: 0.15rem;
+/* ── Data cells ── */
+
+.c {
+  vertical-align: top;
+  min-width: 120px;
+  transition: background 0.1s;
 }
 
-.loading,
-.error {
+.c:hover { filter: brightness(1.3); }
+
+.c-model {
+  display: block;
+  font-weight: 500;
+  color: var(--text);
+  word-break: break-word;
+  line-height: 1.3;
+}
+
+.c-lag {
+  display: block;
+  font-size: 0.62rem;
+  margin-top: 0.1rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Verdict colors */
+
+.c.exact { border-left: 2px solid var(--ok); }
+.c.exact .c-lag { color: var(--ok); font-weight: 600; }
+
+.c.wrong { border-left: 2px solid rgba(231,76,60,0.4); }
+.c.wrong .c-lag { color: var(--bad); opacity: 0.7; }
+
+.c.parse_failure .c-model { color: var(--dim); font-style: italic; }
+
+/* Footer */
+
+tfoot td { border-top: 1px solid var(--dim); border-bottom: none; }
+.c.ft .c-model { color: var(--muted); font-weight: 600; }
+.c.ft .c-lag { color: var(--dim); font-size: 0.58rem; }
+
+/* ── Page footer ── */
+
+.pf {
+  margin-top: 2rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.65rem;
+  color: #444;
+}
+
+.pf a { color: #555; text-decoration: none; }
+.pf a:hover { color: var(--text); }
+
+.center {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-size: 1.25rem;
+  color: var(--muted);
 }
 
-.error {
-  color: var(--wrong);
-}
-
-tfoot td {
-  font-weight: 600;
-  border-top: 2px solid var(--text-muted);
-}
+.error { color: var(--bad); }

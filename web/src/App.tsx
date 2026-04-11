@@ -2,43 +2,89 @@ import { useEffect, useState } from "react";
 import type { Model, Query, EvaluatedQuery } from "./types";
 import { buildModelIndex, findLatestPerFamily, evaluateQuery } from "./evaluate";
 
-function shortModelName(modelId: string): string {
-  return modelId.replace(/^(anthropic|openai|google)\//, "");
+const FAMILY_ORDER = [
+  "Claude Opus",
+  "Claude Sonnet",
+  "Claude Haiku",
+  "GPT",
+  "Gemini Pro",
+  "Gemini Flash",
+];
+
+const QUERY_FILES = [
+  "queries_20260411_211727.json",
+  "queries_20260208_224943.json",
+  "queries_20260207_170946.json",
+  "queries_20260207_170850.json",
+];
+
+function shortName(id: string): string {
+  return id.replace(/^(anthropic|openai|google)\//, "").replace(/-preview$/, "");
+}
+
+function monthsDehind(answered: string | null, expected: string | null): number | null {
+  if (!answered || !expected) return null;
+  const ms = new Date(expected).getTime() - new Date(answered).getTime();
+  return Math.round((ms / (1000 * 60 * 60 * 24 * 30.44)) * 10) / 10;
+}
+
+function lagText(m: number | null): string {
+  if (m === null) return "";
+  if (m <= 0) return "current";
+  return m < 1 ? "<1 mo" : `${Math.round(m)} mo`;
 }
 
 function App() {
-  const [evaluated, setEvaluated] = useState<EvaluatedQuery[]>([]);
+  const [experiments, setExperiments] = useState<
+    { file: string; date: string; queries: EvaluatedQuery[] }[]
+  >([]);
+  const [activeIdx, setActiveIdx] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function load() {
       try {
-        const [modelsRes, qRes] = await Promise.all([
-          fetch("/data/models.json"),
-          fetch("/data/queries_20260208_224943.json"),
-        ]);
+        const modelsRes = await fetch("/data/models.json");
         const models: Model[] = await modelsRes.json();
-        const queries: Query[] = await qRes.json();
-
         const modelIndex = buildModelIndex(models);
         const latestPerFamily = findLatestPerFamily(models);
 
-        const allQueries = [...queries];
-        const seen = new Set<string>();
-        const deduped: Query[] = [];
-        for (const q of allQueries.reverse()) {
-          const key = `${q.answerer_model_id}::${q.subject_family}`;
-          if (!seen.has(key)) {
-            seen.add(key);
-            deduped.push(q);
+        const exps: { file: string; date: string; queries: EvaluatedQuery[] }[] = [];
+
+        for (const file of QUERY_FILES) {
+          try {
+            const res = await fetch(`/data/${file}`);
+            if (!res.ok) continue;
+            const rawQueries: Query[] = await res.json();
+
+            // Deduplicate within this file
+            const seen = new Set<string>();
+            const deduped: Query[] = [];
+            for (const q of rawQueries) {
+              const key = `${q.answerer_model_id}::${q.subject_family}`;
+              if (!seen.has(key)) {
+                seen.add(key);
+                deduped.push(q);
+              }
+            }
+
+            const evaluated = deduped.map((q) =>
+              evaluateQuery(q, modelIndex, latestPerFamily)
+            );
+
+            const dateMatch = file.match(/(\d{8})/);
+            const dateStr = dateMatch
+              ? `${dateMatch[1].slice(0, 4)}-${dateMatch[1].slice(4, 6)}-${dateMatch[1].slice(6, 8)}`
+              : "";
+
+            exps.push({ file, date: dateStr, queries: evaluated });
+          } catch {
+            /* skip */
           }
         }
 
-        const results = deduped.map((q) =>
-          evaluateQuery(q, modelIndex, latestPerFamily)
-        );
-        setEvaluated(results);
+        setExperiments(exps);
       } catch (e) {
         setError(String(e));
       } finally {
@@ -48,24 +94,17 @@ function App() {
     load();
   }, []);
 
-  if (loading) return <div className="loading">Loading results...</div>;
-  if (error) return <div className="error">Error: {error}</div>;
+  if (loading) return <div className="center">Loading...</div>;
+  if (error) return <div className="center error">{error}</div>;
+  if (!experiments.length) return <div className="center">No data found.</div>;
 
-  // Build matrix: answerer models (rows) x subject families (columns)
+  const exp = experiments[activeIdx];
+  const evaluated = exp.queries;
+
   const answerers = [...new Set(evaluated.map((e) => e.answerer_model_id))];
   const families = [...new Set(evaluated.map((e) => e.subject_family))];
-
-  // Sort families in a logical order
-  const familyOrder = [
-    "Claude Opus",
-    "Claude Sonnet",
-    "Claude Haiku",
-    "GPT",
-    "Gemini Pro",
-    "Gemini Flash",
-  ];
   families.sort(
-    (a, b) => (familyOrder.indexOf(a) ?? 99) - (familyOrder.indexOf(b) ?? 99)
+    (a, b) => (FAMILY_ORDER.indexOf(a) ?? 99) - (FAMILY_ORDER.indexOf(b) ?? 99)
   );
 
   const lookup = new Map<string, EvaluatedQuery>();
@@ -73,108 +112,135 @@ function App() {
     lookup.set(`${e.answerer_model_id}::${e.subject_family}`, e);
   }
 
-  const verdictCounts = { exact: 0, wrong: 0, parse_failure: 0 };
+  // Stats
+  const exact = evaluated.filter((e) => e.verdict === "exact").length;
+
+  // Max lag for color scaling
+  let maxLag = 1;
   for (const e of evaluated) {
-    verdictCounts[e.verdict]++;
+    const lag = monthsDehind(e.answered_release_date, e.expected_release_date);
+    if (lag !== null && lag > maxLag) maxLag = lag;
   }
 
   return (
     <div className="container">
-      <h1>We Live in the Past</h1>
-      <p className="subtitle">
-        Do AI models know what's current? Each model was asked to identify the
-        most recent model in each family via OpenRouter API.
-      </p>
-
-      <div className="summary">
-        <span className="badge exact">{verdictCounts.exact} correct</span>
-        <span className="badge wrong">{verdictCounts.wrong} wrong</span>
-        <span className="badge parse-failure">
-          {verdictCounts.parse_failure} parse failures
-        </span>
-        <span className="badge total">
-          {evaluated.length} total
-        </span>
-      </div>
-
-      <div className="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th className="answerer-header">Answerer</th>
-              {families.map((f) => (
-                <th key={f}>{f}</th>
+      <header>
+        <h1>We Live in the Past</h1>
+        <p className="sub">
+          Each AI was asked: "What is the most recent model in this family?"
+        </p>
+        <div className="meta">
+          <span>
+            {exact}/{evaluated.length} correct
+          </span>
+          {experiments.length > 1 && (
+            <span className="run-picker">
+              {experiments.map((ex, i) => (
+                <button
+                  key={ex.file}
+                  className={i === activeIdx ? "active" : ""}
+                  onClick={() => setActiveIdx(i)}
+                >
+                  {ex.date}
+                </button>
               ))}
-            </tr>
-          </thead>
-          <tbody>
-            {answerers.map((answerer) => (
-              <tr key={answerer}>
-                <td className="answerer-cell">
-                  <div className="model-name">{shortModelName(answerer)}</div>
-                  <div className="model-date">
-                    {lookup.get(`${answerer}::${families[0]}`)
-                      ?.answerer_release_date ?? ""}
-                  </div>
+            </span>
+          )}
+        </div>
+      </header>
+
+      <table>
+        <thead>
+          <tr>
+            <th className="corner" />
+            {families.map((f) => (
+              <th key={f}>{f}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {answerers.map((ans) => {
+            const sample = lookup.get(`${ans}::${families[0]}`);
+            return (
+              <tr key={ans}>
+                <td className="rh">
+                  <span className="rh-name">{shortName(ans)}</span>
+                  <span className="rh-date">{sample?.answerer_release_date ?? ""}</span>
                 </td>
-                {families.map((family) => {
-                  const entry = lookup.get(`${answerer}::${family}`);
-                  if (!entry) return <td key={family} className="cell empty">-</td>;
+                {families.map((fam) => {
+                  const e = lookup.get(`${ans}::${fam}`);
+                  if (!e) return <td key={fam} className="c" />;
+
+                  const lag =
+                    e.verdict === "exact"
+                      ? 0
+                      : monthsDehind(e.answered_release_date, e.expected_release_date);
+                  const unknown = e.verdict === "wrong" && !e.answered_release_date;
+                  const intensity =
+                    e.verdict === "exact"
+                      ? 0
+                      : lag !== null
+                        ? Math.min(lag / maxLag, 1)
+                        : 0.7;
+
+                  const bg =
+                    e.verdict === "exact"
+                      ? "rgba(46,204,113,0.12)"
+                      : `rgba(231,76,60,${0.06 + intensity * 0.18})`;
+
                   return (
                     <td
-                      key={family}
-                      className={`cell ${entry.verdict}`}
-                      title={`Expected: ${entry.expected_model_id}\nAnswered: ${entry.answered_model_id ?? "(parse failure)"}\nExpected date: ${entry.expected_release_date}\nAnswered date: ${entry.answered_release_date ?? "unknown"}`}
+                      key={fam}
+                      className={`c ${e.verdict}`}
+                      style={{ background: bg }}
+                      title={[
+                        `Expected: ${e.expected_model_id ? shortName(e.expected_model_id) : "?"}`,
+                        `Answered: ${e.answered_model_id ?? "(parse failure)"}`,
+                        e.expected_release_date && `Expected: ${e.expected_release_date}`,
+                        e.answered_release_date && `Answered: ${e.answered_release_date}`,
+                        lag !== null && `Behind: ${lagText(lag)}`,
+                      ]
+                        .filter(Boolean)
+                        .join("\n")}
                     >
-                      <div className="answered-model">
-                        {entry.answered_model_id
-                          ? shortModelName(entry.answered_model_id)
+                      <span className="c-model">
+                        {e.answered_model_id
+                          ? shortName(e.answered_model_id)
                           : "parse failure"}
-                      </div>
-                      {entry.verdict === "wrong" && entry.answered_release_date && (
-                        <div className="answered-date">
-                          {entry.answered_release_date}
-                        </div>
-                      )}
-                      {entry.verdict === "exact" && (
-                        <div className="check-mark">correct</div>
-                      )}
-                      {entry.verdict === "wrong" &&
-                        !entry.answered_release_date && (
-                          <div className="unknown-model">unknown model</div>
-                        )}
+                      </span>
+                      <span className="c-lag">
+                        {e.verdict === "exact"
+                          ? "\u2713"
+                          : lagText(lag)}
+                      </span>
                     </td>
                   );
                 })}
               </tr>
-            ))}
-          </tbody>
-          <tfoot>
-            <tr>
-              <td className="answerer-cell">
-                <strong>Expected (latest)</strong>
-              </td>
-              {families.map((family) => {
-                const entry = evaluated.find(
-                  (e) => e.subject_family === family
-                );
-                return (
-                  <td key={family} className="cell expected-footer">
-                    <div className="answered-model">
-                      {entry?.expected_model_id
-                        ? shortModelName(entry.expected_model_id)
-                        : "?"}
-                    </div>
-                    <div className="answered-date">
-                      {entry?.expected_release_date ?? ""}
-                    </div>
-                  </td>
-                );
-              })}
-            </tr>
-          </tfoot>
-        </table>
-      </div>
+            );
+          })}
+        </tbody>
+        <tfoot>
+          <tr>
+            <td className="rh ft-label">Latest</td>
+            {families.map((fam) => {
+              const e = evaluated.find((e) => e.subject_family === fam);
+              return (
+                <td key={fam} className="c ft">
+                  <span className="c-model">
+                    {e?.expected_model_id ? shortName(e.expected_model_id) : "?"}
+                  </span>
+                  <span className="c-lag">{e?.expected_release_date ?? ""}</span>
+                </td>
+              );
+            })}
+          </tr>
+        </tfoot>
+      </table>
+
+      <footer className="pf">
+        <a href="https://github.com/QuesmaOrg/quesma">Quesma</a>
+      </footer>
     </div>
   );
 }
