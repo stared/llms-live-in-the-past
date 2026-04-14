@@ -3,9 +3,12 @@
     "anthropic/claude-sonnet-4.6",
     "anthropic/claude-opus-4.6",
     "openai/gpt-5.4",
-    "openai/gpt-5.3-codex",
-    "google/gemini-3.1-flash-lite-preview",
-    "google/gemini-3.1-pro-preview"
+    "google/gemini-3.1-pro-preview",
+    "z-ai/glm-5.1",
+    "qwen/qwen3.6-plus:free",
+    "x-ai/grok-4.20",
+    "moonshotai/kimi-k2.5",
+    "xiaomi/mimo-v2-pro"
   ],
   "subject_families": [
     "Claude Opus",
@@ -13,7 +16,12 @@
     "Claude Haiku",
     "GPT",
     "Gemini Pro",
-    "Gemini Flash"
+    "Gemini Flash",
+    "GLM",
+    "Qwen",
+    "Grok",
+    "Kimi",
+    "MiMo"
   ],
   "prompt_id": "v2"
 }
