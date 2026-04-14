@@ -127,6 +127,7 @@ h1 {
   height: 1px;
   background: var(--axis);
   pointer-events: none;
+  z-index: 0;
 }
 
 /* ── Dots ── */
@@ -140,7 +141,7 @@ h1 {
   border-radius: 50%;
   background: var(--bg);
   border: 2px solid var(--dim);
-  z-index: 1;
+  z-index: 2;
   cursor: default;
   transition: background 0.12s, border-color 0.12s, box-shadow 0.12s;
 }
@@ -155,34 +156,14 @@ h1 {
   cursor: pointer;
 }
 
-/* Latest in family: filled teal */
-.dot.latest {
+.dot.teal {
   background: var(--teal);
   border-color: var(--teal);
 }
 
-/* Hovered dot: teal highlight */
-.dot.hovered {
-  background: var(--teal);
-  border-color: var(--teal);
-  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.25);
-  z-index: 3;
-}
-
-/* Claimed correct: teal with glow */
-.dot.claimed-ok {
-  background: var(--teal);
-  border-color: var(--teal);
-  box-shadow: 0 0 0 4px rgba(46, 204, 113, 0.3);
-  z-index: 2;
-}
-
-/* Claimed wrong: red */
-.dot.claimed-wrong {
+.dot.red {
   background: var(--red);
   border-color: var(--red);
-  box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.25);
-  z-index: 2;
 }
 
 /* ── Version label under dot ── */
@@ -199,10 +180,8 @@ h1 {
   font-variant-numeric: tabular-nums;
 }
 
-.dot.latest .dot-num { color: var(--teal); font-weight: 600; }
-.dot.hovered .dot-num { color: var(--teal); font-weight: 600; }
-.dot.claimed-wrong .dot-num { color: var(--red); font-weight: 600; }
-.dot.claimed-ok .dot-num { color: var(--teal); font-weight: 600; }
+.dot.teal .dot-num { color: var(--teal); font-weight: 600; }
+.dot.red .dot-num { color: var(--red); font-weight: 600; }
 
 /* ── Unmatched answer ── */
 

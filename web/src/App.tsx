@@ -182,18 +182,28 @@ function App() {
     }
   }
 
-  // What does the active model claim is newest?
-  const claimedModels = new Map<string, string>();
-  if (activeModel && answererSet.has(activeModel)) {
-    const answers = answerLookup.get(activeModel);
-    if (answers) {
-      for (const [fam, q] of answers) {
-        if (q.answered_model_id) claimedModels.set(fam, q.answered_model_id);
+  // Default state: each family's latest model's self-assessment (one red dot max)
+  const selfClaims = new Map<string, string>();
+  for (const [fam, latestId] of latestPerFamily) {
+    if (answererSet.has(latestId)) {
+      const q = answerLookup.get(latestId)?.get(fam);
+      if (q?.answered_model_id && q.answered_model_id !== latestId) {
+        selfClaims.set(fam, q.answered_model_id);
       }
     }
   }
 
+  // Hover state: what does the active model claim is newest?
+  const hoveredClaims = new Map<string, string>();
   const isAnswererActive = activeModel && answererSet.has(activeModel);
+  if (isAnswererActive) {
+    const answers = answerLookup.get(activeModel!);
+    if (answers) {
+      for (const [fam, q] of answers) {
+        if (q.answered_model_id) hoveredClaims.set(fam, q.answered_model_id);
+      }
+    }
+  }
   const headerSub = isAnswererActive
     ? `According to ${shortName(activeModel!)}, these are the newest models`
     : "Hover a model to see what it thinks is newest in each family";
@@ -201,7 +211,7 @@ function App() {
   return (
     <div className="container">
       <header>
-        <h1>We Live in the Past</h1>
+        <h1>AI models live in the past</h1>
         <p className="sub">{headerSub}</p>
       </header>
 
@@ -236,7 +246,7 @@ function App() {
         {families.map((fam) => {
           const fModels = modelsByFamily.get(fam) || [];
           const latestId = latestPerFamily.get(fam);
-          const claimedId = claimedModels.get(fam);
+          const hoveredClaimId = hoveredClaims.get(fam);
 
           return (
             <div key={fam} className="tl-row">
@@ -247,20 +257,23 @@ function App() {
                 {/* Model dots */}
                 {fModels.map((m) => {
                   const pct = dateToPercent(m.release_date);
-                  const isLatest = m.model_id === latestId;
                   const isAnswerer = answererSet.has(m.model_id);
-                  const isHovered = activeModel === m.model_id;
-                  const isClaimed = claimedId === m.model_id;
-                  const isClaimedWrong = isClaimed && !isLatest;
-                  const isClaimedOk = isClaimed && isLatest;
+
+                  let dotState: "teal" | "red" | "hollow";
+                  if (activeModel) {
+                    if (m.model_id === activeModel) dotState = "teal";
+                    else if (hoveredClaimId === m.model_id && m.model_id !== latestId) dotState = "red";
+                    else dotState = "hollow";
+                  } else {
+                    if (m.model_id === latestId) dotState = "teal";
+                    else if (selfClaims.get(fam) === m.model_id) dotState = "red";
+                    else dotState = "hollow";
+                  }
 
                   const classes = [
                     "dot",
-                    isLatest && "latest",
+                    dotState,
                     isAnswerer && "answerer",
-                    isHovered && "hovered",
-                    isClaimedWrong && "claimed-wrong",
-                    isClaimedOk && "claimed-ok",
                   ]
                     .filter(Boolean)
                     .join(" ");
@@ -286,10 +299,10 @@ function App() {
                 })}
 
                 {/* Unmatched claim: answered model not in models.json */}
-                {claimedId &&
-                  !fModels.some((m) => m.model_id === claimedId) && (
+                {hoveredClaimId &&
+                  !fModels.some((m) => m.model_id === hoveredClaimId) && (
                     <span className="unmatched">
-                      ? {shortName(claimedId)}
+                      ? {shortName(hoveredClaimId)}
                     </span>
                   )}
               </div>
