@@ -8,6 +8,7 @@ const FAMILY_ORDER = [
   "Claude Sonnet",
   "Claude Haiku",
   "GPT",
+  "GPT Codex",
   "Gemini Pro",
   "Gemini Flash",
   "GLM",
@@ -42,8 +43,8 @@ function dotLabel(modelId: string): string {
     s.match(/^claude-([\d.]+)/);
   if (m) return m[1];
 
-  // GPT: "gpt-5.4" → "5.4", "gpt-4o" → "4o"
-  m = s.match(/^gpt-([\d.]+[a-z]?)(?:-chat)?$/);
+  // GPT: "gpt-5.4" → "5.4", "gpt-4o" → "4o", "gpt-5.3-codex" → "5.3"
+  m = s.match(/^gpt-([\d.]+[a-z]?)(?:-chat|-codex)?$/);
   if (m) return m[1];
 
   // Gemini: "gemini-2.5-pro" → "2.5"
@@ -88,6 +89,8 @@ function App() {
           fetch("/data/models.json"),
           fetch(`/data/${LATEST_QUERY_FILE}`),
         ]);
+        if (!modelsRes.ok) throw new Error(`Failed to load models.json: ${modelsRes.status}`);
+        if (!queriesRes.ok) throw new Error(`Failed to load ${LATEST_QUERY_FILE}: ${queriesRes.status}`);
         const modelsData: Model[] = await modelsRes.json();
         const rawQueries: Query[] = await queriesRes.json();
 
@@ -95,9 +98,14 @@ function App() {
         const latestPerFamily = findLatestPerFamily(modelsData);
 
         const evaluated = rawQueries.map((q) => {
-          const resolvedId = q.answered_model_id
-            ? (MODEL_ALIASES[q.answered_model_id] ?? q.answered_model_id)
-            : null;
+          let resolvedId = q.answered_model_id;
+          if (resolvedId) {
+            if (MODEL_ALIASES[resolvedId]) {
+              resolvedId = MODEL_ALIASES[resolvedId];
+            } else if (!modelIndex.has(resolvedId)) {
+              console.warn(`No alias for "${resolvedId}" (answerer: ${q.answerer_model_id}, family: ${q.subject_family})`);
+            }
+          }
           return evaluateQuery(
             { ...q, answered_model_id: resolvedId },
             modelIndex,
@@ -122,9 +130,9 @@ function App() {
 
   const activeModel = pinnedModel ?? hoveredModel;
 
-  // Families present in query data
-  const familiesInData = [...new Set(queries.map((q) => q.subject_family))];
-  const families = FAMILY_ORDER.filter((f) => familiesInData.includes(f));
+  // All families that have models in models.json
+  const familiesInModels = new Set(models.map((m) => m.family));
+  const families = FAMILY_ORDER.filter((f) => familiesInModels.has(f));
 
   // Which models are answerers (have query data)
   const answererSet = new Set(queries.map((q) => q.answerer_model_id));
@@ -204,9 +212,14 @@ function App() {
       }
     }
   }
-  const headerSub = isAnswererActive
-    ? `According to ${shortName(activeModel!)}, these are the newest models`
-    : "Hover a model to see what it thinks is newest in each family";
+  let headerSub: string;
+  if (!activeModel) {
+    headerSub = "Hover a model to see what it thinks is newest in each family";
+  } else if (isAnswererActive) {
+    headerSub = `According to ${shortName(activeModel!)}, these are the newest models`;
+  } else {
+    headerSub = `${shortName(activeModel!)} — no query data (not an answerer in this experiment)`;
+  }
 
   return (
     <div className="container">
@@ -262,7 +275,8 @@ function App() {
                   let dotState: "teal" | "red" | "hollow";
                   if (activeModel) {
                     if (m.model_id === activeModel) dotState = "teal";
-                    else if (hoveredClaimId === m.model_id && m.model_id !== latestId) dotState = "red";
+                    else if (hoveredClaimId === m.model_id && m.model_id === latestId) dotState = "teal";
+                    else if (hoveredClaimId === m.model_id) dotState = "red";
                     else dotState = "hollow";
                   } else {
                     if (m.model_id === latestId) dotState = "teal";
