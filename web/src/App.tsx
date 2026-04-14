@@ -17,19 +17,6 @@ const FAMILY_ORDER = [
   "MiMo",
 ];
 
-const ANSWERER_COLORS = [
-  "#7cb9e8",
-  "#f4a460",
-  "#90ee90",
-  "#dda0dd",
-  "#ff6b6b",
-  "#87ceeb",
-  "#ffd700",
-  "#98fb98",
-  "#ff69b4",
-  "#c4a7e7",
-];
-
 const LATEST_QUERY_FILE = "queries_20260411_211727.json";
 
 function shortName(id: string): string {
@@ -41,13 +28,58 @@ function shortName(id: string): string {
     .replace(/-preview$/, "");
 }
 
+/** Extract a compact version label for display under dots. */
+function dotLabel(modelId: string): string {
+  const s = shortName(modelId);
+
+  // GPT with date stamp: "gpt-4o-2024-08-06" → "4o·08"
+  let m = s.match(/^gpt-([\d.]+[a-z]?)-\d{4}-(\d{2})-\d{2}$/);
+  if (m) return `${m[1]}·${m[2]}`;
+
+  // Claude: "claude-opus-4.5" → "4.5", "claude-3.5-sonnet" → "3.5"
+  m =
+    s.match(/^claude-(?:opus|sonnet|haiku)-([\d.]+)/) ||
+    s.match(/^claude-([\d.]+)/);
+  if (m) return m[1];
+
+  // GPT: "gpt-5.4" → "5.4", "gpt-4o" → "4o"
+  m = s.match(/^gpt-([\d.]+[a-z]?)(?:-chat)?$/);
+  if (m) return m[1];
+
+  // Gemini: "gemini-2.5-pro" → "2.5"
+  m = s.match(/^gemini-([\d.]+)/);
+  if (m) return m[1];
+
+  // GLM: "glm-5.1" → "5.1"
+  m = s.match(/^glm-([\d.]+)/);
+  if (m) return m[1];
+
+  // Qwen: "qwen3.6-plus:free" → "3.6"
+  m = s.match(/^qwen([\d.]+)/);
+  if (m) return m[1];
+
+  // Grok: "grok-4.20" → "4.20"
+  m = s.match(/^grok-([\d.]+)/);
+  if (m) return m[1];
+
+  // Kimi: "kimi-k2.5" → "k2.5"
+  m = s.match(/^kimi-(k[\d.]+)/);
+  if (m) return m[1];
+
+  // MiMo: "mimo-v2-flash" → "v2·f"
+  m = s.match(/^mimo-(v[\d.]+)-(\w)/);
+  if (m) return `${m[1]}·${m[2]}`;
+
+  return s;
+}
+
 function App() {
   const [models, setModels] = useState<Model[]>([]);
   const [queries, setQueries] = useState<EvaluatedQuery[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [hoveredAnswerer, setHoveredAnswerer] = useState<string | null>(null);
-  const [pinnedAnswerer, setPinnedAnswerer] = useState<string | null>(null);
+  const [hoveredModel, setHoveredModel] = useState<string | null>(null);
+  const [pinnedModel, setPinnedModel] = useState<string | null>(null);
 
   useEffect(() => {
     async function load() {
@@ -88,13 +120,16 @@ function App() {
   if (error) return <div className="center error">{error}</div>;
   if (!queries.length) return <div className="center">No data found.</div>;
 
-  const activeAnswerer = pinnedAnswerer ?? hoveredAnswerer;
+  const activeModel = pinnedModel ?? hoveredModel;
 
+  // Families present in query data
   const familiesInData = [...new Set(queries.map((q) => q.subject_family))];
   const families = FAMILY_ORDER.filter((f) => familiesInData.includes(f));
-  const answerers = [...new Set(queries.map((q) => q.answerer_model_id))];
 
-  // Models grouped by family
+  // Which models are answerers (have query data)
+  const answererSet = new Set(queries.map((q) => q.answerer_model_id));
+
+  // Models grouped by family, sorted by date
   const modelsByFamily = new Map<string, Model[]>();
   for (const fam of families) {
     modelsByFamily.set(
@@ -113,7 +148,7 @@ function App() {
     }
   }
 
-  // Global date range
+  // Global date range across all displayed families
   const allDates = models
     .filter((m) => families.includes(m.family))
     .map((m) => new Date(m.release_date).getTime());
@@ -121,7 +156,7 @@ function App() {
   const maxDate = Math.max(...allDates);
   const dateRange = maxDate - minDate || 1;
 
-  // Lookup: answerer → family → query
+  // Answer lookup: answerer → family → query
   const answerLookup = new Map<string, Map<string, EvaluatedQuery>>();
   for (const q of queries) {
     if (!answerLookup.has(q.answerer_model_id)) {
@@ -130,14 +165,38 @@ function App() {
     answerLookup.get(q.answerer_model_id)!.set(q.subject_family, q);
   }
 
+  const PAD = 3;
   function dateToPercent(dateStr: string): number {
     const t = new Date(dateStr).getTime();
-    return 2 + ((t - minDate) / dateRange) * 96;
+    return PAD + ((t - minDate) / dateRange) * (100 - 2 * PAD);
   }
 
-  const headerSub = activeAnswerer
-    ? `According to ${shortName(activeAnswerer)}, these are the newest models`
-    : "Each AI was asked: what is the most recent model in each family?";
+  // Year ticks for time axis
+  const minYear = new Date(minDate).getFullYear();
+  const maxYear = new Date(maxDate).getFullYear();
+  const yearTicks: { year: number; pct: number }[] = [];
+  for (let y = minYear; y <= maxYear + 1; y++) {
+    const t = new Date(`${y}-01-01`).getTime();
+    if (t >= minDate && t <= maxDate) {
+      yearTicks.push({ year: y, pct: dateToPercent(`${y}-01-01`) });
+    }
+  }
+
+  // What does the active model claim is newest?
+  const claimedModels = new Map<string, string>();
+  if (activeModel && answererSet.has(activeModel)) {
+    const answers = answerLookup.get(activeModel);
+    if (answers) {
+      for (const [fam, q] of answers) {
+        if (q.answered_model_id) claimedModels.set(fam, q.answered_model_id);
+      }
+    }
+  }
+
+  const isAnswererActive = activeModel && answererSet.has(activeModel);
+  const headerSub = isAnswererActive
+    ? `According to ${shortName(activeModel!)}, these are the newest models`
+    : "Hover a model to see what it thinks is newest in each family";
 
   return (
     <div className="container">
@@ -146,124 +205,93 @@ function App() {
         <p className="sub">{headerSub}</p>
       </header>
 
-      <div className="answerers">
-        {answerers.map((ans, i) => {
-          const color = ANSWERER_COLORS[i % ANSWERER_COLORS.length];
-          return (
-            <button
-              key={ans}
-              className={`chip ${activeAnswerer === ans ? "active" : ""}`}
-              onMouseEnter={() => setHoveredAnswerer(ans)}
-              onMouseLeave={() => setHoveredAnswerer(null)}
-              onClick={() =>
-                setPinnedAnswerer(pinnedAnswerer === ans ? null : ans)
-              }
-              style={{ "--c": color } as React.CSSProperties}
-            >
-              <span className="chip-dot" />
-              {shortName(ans)}
-            </button>
-          );
-        })}
-      </div>
-
       <div className="timelines">
+        {/* Continuous vertical year guides spanning all rows */}
+        <div className="guides-overlay">
+          {yearTicks.map(({ year, pct }) => (
+            <div
+              key={year}
+              className="guide-line"
+              style={{ left: `${pct}%` }}
+            />
+          ))}
+        </div>
+
+        {/* Time axis header */}
+        <div className="tl-header">
+          <div className="tl-label" />
+          <div className="tl-track">
+            {yearTicks.map(({ year, pct }) => (
+              <span
+                key={year}
+                className="year-label"
+                style={{ left: `${pct}%` }}
+              >
+                {year}
+              </span>
+            ))}
+          </div>
+        </div>
+
         {families.map((fam) => {
           const fModels = modelsByFamily.get(fam) || [];
           const latestId = latestPerFamily.get(fam);
+          const claimedId = claimedModels.get(fam);
 
           return (
             <div key={fam} className="tl-row">
               <div className="tl-label">{fam}</div>
               <div className="tl-track">
-                <div className="tl-line" />
+                <div className="tl-axis" />
 
+                {/* Model dots */}
                 {fModels.map((m) => {
                   const pct = dateToPercent(m.release_date);
                   const isLatest = m.model_id === latestId;
+                  const isAnswerer = answererSet.has(m.model_id);
+                  const isHovered = activeModel === m.model_id;
+                  const isClaimed = claimedId === m.model_id;
+                  const isClaimedWrong = isClaimed && !isLatest;
+                  const isClaimedOk = isClaimed && isLatest;
 
-                  const pickedByIndices: number[] = [];
-                  answerers.forEach((ans, i) => {
-                    const q = answerLookup.get(ans)?.get(fam);
-                    if (q?.answered_model_id === m.model_id) {
-                      pickedByIndices.push(i);
-                    }
-                  });
-
-                  const isActivePick =
-                    activeAnswerer !== null &&
-                    pickedByIndices.includes(answerers.indexOf(activeAnswerer));
-
-                  const activeColor = activeAnswerer
-                    ? ANSWERER_COLORS[
-                        answerers.indexOf(activeAnswerer) %
-                          ANSWERER_COLORS.length
-                      ]
-                    : undefined;
+                  const classes = [
+                    "dot",
+                    isLatest && "latest",
+                    isAnswerer && "answerer",
+                    isHovered && "hovered",
+                    isClaimedWrong && "claimed-wrong",
+                    isClaimedOk && "claimed-ok",
+                  ]
+                    .filter(Boolean)
+                    .join(" ");
 
                   return (
                     <div
                       key={m.model_id}
-                      className={[
-                        "dot",
-                        isLatest && "latest",
-                        isActivePick && "picked",
-                      ]
-                        .filter(Boolean)
-                        .join(" ")}
-                      style={{
-                        left: `${pct}%`,
-                        ...(isActivePick
-                          ? ({
-                              "--pick-color": activeColor,
-                            } as React.CSSProperties)
-                          : {}),
-                      }}
+                      className={classes}
+                      style={{ left: `${pct}%` }}
                       title={`${shortName(m.model_id)}\n${m.release_date}`}
+                      onMouseEnter={() => setHoveredModel(m.model_id)}
+                      onMouseLeave={() => setHoveredModel(null)}
+                      onClick={() =>
+                        isAnswerer &&
+                        setPinnedModel(
+                          pinnedModel === m.model_id ? null : m.model_id
+                        )
+                      }
                     >
-                      {isActivePick && (
-                        <span
-                          className="dot-label"
-                          style={{ color: activeColor }}
-                        >
-                          {shortName(m.model_id)}
-                        </span>
-                      )}
-
-                      {!activeAnswerer &&
-                        pickedByIndices.map((idx) => (
-                          <span
-                            key={idx}
-                            className="tick"
-                            style={{
-                              background:
-                                ANSWERER_COLORS[idx % ANSWERER_COLORS.length],
-                            }}
-                          />
-                        ))}
+                      <span className="dot-num">{dotLabel(m.model_id)}</span>
                     </div>
                   );
                 })}
 
-                {activeAnswerer &&
-                  (() => {
-                    const q = answerLookup.get(activeAnswerer)?.get(fam);
-                    if (!q || !q.answered_model_id) return null;
-                    const matched = fModels.some(
-                      (m) => m.model_id === q.answered_model_id
-                    );
-                    if (matched) return null;
-                    const color =
-                      ANSWERER_COLORS[
-                        answerers.indexOf(activeAnswerer) %
-                          ANSWERER_COLORS.length
-                      ];
-                    return (
-                      <span className="unmatched" style={{ color }}>
-                        ? {shortName(q.answered_model_id!)}
-                      </span>
-                    );
-                  })()}
+                {/* Unmatched claim: answered model not in models.json */}
+                {claimedId &&
+                  !fModels.some((m) => m.model_id === claimedId) && (
+                    <span className="unmatched">
+                      ? {shortName(claimedId)}
+                    </span>
+                  )}
               </div>
             </div>
           );

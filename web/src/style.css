@@ -1,10 +1,12 @@
 :root {
-  --bg: #111;
-  --text: #ccc;
-  --muted: #666;
+  --bg: #0e0e0e;
+  --text: #ddd;
+  --muted: #888;
   --dim: #444;
-  --border: #222;
-  --ok: #2ecc71;
+  --border: #262626;
+  --axis: #383838;
+  --teal: #2ecc71;
+  --red: #e74c3c;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -38,63 +40,65 @@ h1 {
   color: var(--muted);
   font-size: 0.82rem;
   min-height: 1.2em;
-  transition: color 0.15s;
 }
 
-/* ── Answerer chips ── */
-
-.answerers {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 1.5rem;
-}
-
-.chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  background: none;
-  border: 1px solid var(--border);
-  color: var(--muted);
-  font-size: 0.7rem;
-  padding: 0.25rem 0.6rem;
-  border-radius: 12px;
-  cursor: pointer;
-  font-family: inherit;
-  transition: border-color 0.15s, color 0.15s, background 0.15s;
-}
-
-.chip:hover, .chip.active {
-  border-color: var(--c);
-  color: var(--text);
-  background: rgba(255,255,255,0.04);
-}
-
-.chip-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--c);
-  flex-shrink: 0;
-}
-
-/* ── Timeline rows ── */
+/* ── Timelines ── */
 
 .timelines {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  position: relative;
 }
+
+.guides-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 110px;
+  right: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Time axis header ── */
+
+.tl-header {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 0.4rem;
+}
+
+.tl-header .tl-track {
+  height: 16px;
+}
+
+.year-label {
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-50%);
+  font-size: 0.62rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Vertical year guides ── */
+
+.guide-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--dim);
+  opacity: 0.35;
+}
+
+/* ── Row ── */
 
 .tl-row {
   display: flex;
   align-items: center;
   padding: 0.6rem 0;
-  border-bottom: 1px solid var(--border);
 }
-
-.tl-row:last-child { border-bottom: none; }
 
 .tl-label {
   width: 110px;
@@ -109,96 +113,106 @@ h1 {
 .tl-track {
   flex: 1;
   position: relative;
-  height: 36px;
+  height: 44px;
   min-width: 0;
 }
 
-.tl-line {
+/* ── Horizontal axis line per row — dots sit on this ── */
+
+.tl-axis {
   position: absolute;
-  left: 2%;
-  right: 2%;
-  top: 50%;
+  left: 0;
+  right: 0;
+  top: 18px;
   height: 1px;
-  background: var(--dim);
-  transform: translateY(-50%);
+  background: var(--axis);
+  pointer-events: none;
 }
 
 /* ── Dots ── */
 
 .dot {
   position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #555;
-  z-index: 1;
-  cursor: default;
-}
-
-.dot.latest {
+  top: 12px;
+  transform: translateX(-50%);
   width: 10px;
   height: 10px;
-  background: var(--ok);
-  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--dim);
+  z-index: 1;
+  cursor: default;
+  transition: background 0.12s, border-color 0.12s, box-shadow 0.12s;
 }
 
-.dot.picked {
+/* Answerer dots: interactive, slightly larger */
+.dot.answerer {
   width: 12px;
   height: 12px;
-  background: var(--pick-color);
+  top: 11px;
+  border-width: 2px;
+  border-color: var(--muted);
+  cursor: pointer;
+}
+
+/* Latest in family: filled teal */
+.dot.latest {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+/* Hovered dot: teal highlight */
+.dot.hovered {
+  background: var(--teal);
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.25);
+  z-index: 3;
+}
+
+/* Claimed correct: teal with glow */
+.dot.claimed-ok {
+  background: var(--teal);
+  border-color: var(--teal);
+  box-shadow: 0 0 0 4px rgba(46, 204, 113, 0.3);
   z-index: 2;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
 }
 
-.dot.picked.latest {
-  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.3);
+/* Claimed wrong: red */
+.dot.claimed-wrong {
+  background: var(--red);
+  border-color: var(--red);
+  box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.25);
+  z-index: 2;
 }
 
-/* Label above picked dot */
+/* ── Version label under dot ── */
 
-.dot-label {
+.dot-num {
   position: absolute;
-  bottom: calc(100% + 4px);
+  top: calc(100% + 4px);
   left: 50%;
   transform: translateX(-50%);
-  font-size: 0.6rem;
-  font-weight: 600;
+  font-size: 0.56rem;
+  color: var(--dim);
   white-space: nowrap;
   pointer-events: none;
+  font-variant-numeric: tabular-nums;
 }
 
-/* Default state: small colored ticks below dot */
+.dot.latest .dot-num { color: var(--teal); font-weight: 600; }
+.dot.hovered .dot-num { color: var(--teal); font-weight: 600; }
+.dot.claimed-wrong .dot-num { color: var(--red); font-weight: 600; }
+.dot.claimed-ok .dot-num { color: var(--teal); font-weight: 600; }
 
-.tick {
-  position: absolute;
-  top: calc(100% + 3px);
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-}
-
-.tick + .tick { margin-top: 5px; }
-
-/* Stack ticks vertically */
-.tick:nth-child(2) { top: calc(100% + 3px); }
-.tick:nth-child(3) { top: calc(100% + 9px); }
-.tick:nth-child(4) { top: calc(100% + 15px); }
-.tick:nth-child(5) { top: calc(100% + 21px); }
-.tick:nth-child(6) { top: calc(100% + 27px); }
-
-/* Unmatched answer */
+/* ── Unmatched answer ── */
 
 .unmatched {
   position: absolute;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 0.62rem;
+  top: 12px;
+  font-size: 0.6rem;
   font-weight: 600;
+  color: var(--red);
   white-space: nowrap;
 }
 
@@ -207,7 +221,6 @@ h1 {
 .pf {
   margin-top: 2rem;
   padding-top: 0.8rem;
-  border-top: 1px solid var(--border);
   font-size: 0.65rem;
   color: #444;
 }
@@ -223,4 +236,4 @@ h1 {
   color: var(--muted);
 }
 
-.error { color: #e74c3c; }
+.error { color: var(--red); }
