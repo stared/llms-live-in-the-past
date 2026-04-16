@@ -96,9 +96,10 @@ function App() {
   useEffect(() => {
     async function load() {
       try {
+        const base = import.meta.env.BASE_URL;
         const [modelsRes, queriesRes] = await Promise.all([
-          fetch("/data/models.json"),
-          fetch(`/data/${LATEST_QUERY_FILE}`),
+          fetch(`${base}data/models.json`),
+          fetch(`${base}data/${LATEST_QUERY_FILE}`),
         ]);
         if (!modelsRes.ok) throw new Error(`Failed to load models.json: ${modelsRes.status}`);
         if (!queriesRes.ok) throw new Error(`Failed to load ${LATEST_QUERY_FILE}: ${queriesRes.status}`);
