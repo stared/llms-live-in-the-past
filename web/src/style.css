@@ -37,7 +37,8 @@ h1 {
 }
 
 .header-block {
-  min-height: 3.2em;
+  height: 3.9em;
+  overflow: hidden;
   margin-bottom: 0.3rem;
 }
 
@@ -167,6 +168,11 @@ h1 {
   border-color: var(--teal);
 }
 
+.dot.teal-fill {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
 .dot.red {
   background: var(--red);
   border-color: var(--red);
@@ -186,7 +192,8 @@ h1 {
   font-variant-numeric: tabular-nums;
 }
 
-.dot.teal .dot-num { color: var(--teal); font-weight: 600; }
+.dot.teal .dot-num,
+.dot.teal-fill .dot-num { color: var(--teal); font-weight: 600; }
 .dot.red .dot-num { color: var(--red); font-weight: 600; }
 
 /* ── Unmatched answer ── */

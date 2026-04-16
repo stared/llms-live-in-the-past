@@ -231,6 +231,23 @@ function App() {
       }
     }
   }
+
+  // Per family, the latest model released on or before the active model's release date
+  // (i.e., the best answer the active model could have given given its knowledge window)
+  const correctPerFamily = new Map<string, string>();
+  const activeInfoForCorrect = activeModel ? modelIndex.get(activeModel) : undefined;
+  const cutoff = activeInfoForCorrect?.release_date;
+  if (cutoff) {
+    for (const [fam, fModels] of modelsByFamily) {
+      let best: Model | undefined;
+      for (const m of fModels) {
+        if (m.release_date <= cutoff && (!best || m.release_date > best.release_date)) {
+          best = m;
+        }
+      }
+      if (best) correctPerFamily.set(fam, best.model_id);
+    }
+  }
   let headerMain: ReactNode;
   if (!activeModel) {
     headerMain = (
@@ -248,18 +265,26 @@ function App() {
 
     if (ownClaim && claimInfo && activeInfo) {
       const age = monthsBetween(claimInfo.release_date, activeInfo.release_date);
-      headerMain = (
+      const correctId = activeFam ? correctPerFamily.get(activeFam) : undefined;
+      const isCorrect = ownClaim === correctId;
+      const claimColor = isCorrect ? "c-teal" : "c-red";
+      headerMain = isCorrect ? (
         <>
           According to <span className="c-teal">{shortName(activeModel!)}</span>, the newest{" "}
-          {activeFam} is <span className="c-red">{shortName(ownClaim)}</span>, which was already{" "}
+          {activeFam} is <span className={claimColor}>{shortName(ownClaim)}</span> — correct.
+        </>
+      ) : (
+        <>
+          According to <span className="c-teal">{shortName(activeModel!)}</span>, the newest{" "}
+          {activeFam} is <span className={claimColor}>{shortName(ownClaim)}</span>, which was already{" "}
           <span className="c-red">{age} months</span> old when it was released.
         </>
       );
     } else if (ownClaim) {
       headerMain = (
         <>
-          According to <span className="c-teal">{shortName(activeModel!)}</span>, the newest{" "}
-          {activeFam} is <span className="c-red">{shortName(ownClaim)}</span> (unknown model).
+          <span className="c-teal">{shortName(activeModel!)}</span> can't correctly identify the newest{" "}
+          {activeFam}, saying <span className="c-red">{shortName(ownClaim)}</span>.
         </>
       );
     } else {
@@ -332,10 +357,12 @@ function App() {
                   const hasData = answererSet.has(m.model_id);
 
                   const latestId = latestPerFamily.get(fam);
-                  let dotState: "teal" | "red" | "hollow";
+                  const correctId = correctPerFamily.get(fam);
+                  let dotState: "teal" | "teal-fill" | "red" | "hollow";
                   if (activeModel) {
                     if (m.model_id === activeModel) dotState = "teal";
-                    else if (claimId === m.model_id) dotState = "red";
+                    else if (claimId === m.model_id)
+                      dotState = m.model_id === correctId ? "teal-fill" : "red";
                     else dotState = "hollow";
                   } else {
                     if (m.model_id === latestId) dotState = "teal";
