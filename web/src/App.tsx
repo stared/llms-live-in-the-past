@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { type ReactNode, useEffect, useState } from "react";
 import type { Model, Query, EvaluatedQuery } from "./types";
 import { buildModelIndex, findLatestPerFamily, evaluateQuery } from "./evaluate";
 import { MODEL_ALIASES } from "./model-aliases";
@@ -190,6 +190,9 @@ function App() {
     }
   }
 
+  // Model index for date lookups
+  const modelIndex = new Map(models.map((m) => [m.model_id, m]));
+
   // Default state: each family's newest model's self-assessment
   const selfClaims = new Map<string, string>();
   for (const [fam, latestId] of latestPerFamily) {
@@ -198,6 +201,24 @@ function App() {
       if (q?.answered_model_id) selfClaims.set(fam, q.answered_model_id);
     }
   }
+
+  // Average age of claimed models relative to the answerer's release date
+  function monthsBetween(from: string, to: string): number {
+    return Math.round((new Date(to).getTime() - new Date(from).getTime()) / (1000 * 60 * 60 * 24 * 30.44));
+  }
+
+  const claimAges: number[] = [];
+  for (const [fam, claimedId] of selfClaims) {
+    const claimInfo = modelIndex.get(claimedId);
+    const latestId = latestPerFamily.get(fam);
+    const latestInfo = latestId ? modelIndex.get(latestId) : undefined;
+    if (claimInfo && latestInfo) {
+      claimAges.push(monthsBetween(claimInfo.release_date, latestInfo.release_date));
+    }
+  }
+  const avgMonths = claimAges.length
+    ? Math.round(claimAges.reduce((a, b) => a + b, 0) / claimAges.length)
+    : 0;
 
   // Hover state: what does the active model claim is newest?
   const activeClaims = new Map<string, string>();
@@ -210,20 +231,61 @@ function App() {
       }
     }
   }
-  let headerSub: string;
+  let headerMain: ReactNode;
   if (!activeModel) {
-    headerSub = "Hover a model to see what it thinks is newest in each family";
+    headerMain = (
+      <>
+        According to the <span className="c-teal">newest model</span> in each family, the{" "}
+        <span className="c-red">most recent model</span> was already{" "}
+        <span className="c-red">{avgMonths} months</span> old when it was released.
+      </>
+    );
   } else if (isAnswererActive) {
-    headerSub = `According to ${shortName(activeModel!)}, these are the newest models`;
+    const activeInfo = modelIndex.get(activeModel!);
+    const activeFam = activeInfo?.family;
+    const ownClaim = activeFam ? activeClaims.get(activeFam) : undefined;
+    const claimInfo = ownClaim ? modelIndex.get(ownClaim) : undefined;
+
+    if (ownClaim && claimInfo && activeInfo) {
+      const age = monthsBetween(claimInfo.release_date, activeInfo.release_date);
+      headerMain = (
+        <>
+          According to <span className="c-teal">{shortName(activeModel!)}</span>, the newest{" "}
+          {activeFam} is <span className="c-red">{shortName(ownClaim)}</span>, which was already{" "}
+          <span className="c-red">{age} months</span> old when it was released.
+        </>
+      );
+    } else if (ownClaim) {
+      headerMain = (
+        <>
+          According to <span className="c-teal">{shortName(activeModel!)}</span>, the newest{" "}
+          {activeFam} is <span className="c-red">{shortName(ownClaim)}</span> (unknown model).
+        </>
+      );
+    } else {
+      headerMain = (
+        <>
+          <span className="c-teal">{shortName(activeModel!)}</span> — no query data.
+        </>
+      );
+    }
   } else {
-    headerSub = `${shortName(activeModel!)} — no query data`;
+    headerMain = (
+      <>
+        <span className="c-teal">{shortName(activeModel!)}</span> — no query data.
+      </>
+    );
   }
+  const headerSub = "Hover a model to see what it thinks is newest in each family";
 
   return (
     <div className="container">
       <header>
         <h1>AI models live in the past</h1>
-        <p className="sub">{headerSub}</p>
+        <div className="header-block">
+          <p className="summary">{headerMain}</p>
+          <p className="sub">{headerSub}</p>
+        </div>
       </header>
 
       <div className="timelines">
@@ -269,13 +331,15 @@ function App() {
                   const pct = dateToPercent(m.release_date);
                   const hasData = answererSet.has(m.model_id);
 
+                  const latestId = latestPerFamily.get(fam);
                   let dotState: "teal" | "red" | "hollow";
                   if (activeModel) {
                     if (m.model_id === activeModel) dotState = "teal";
                     else if (claimId === m.model_id) dotState = "red";
                     else dotState = "hollow";
                   } else {
-                    if (claimId === m.model_id) dotState = "red";
+                    if (m.model_id === latestId) dotState = "teal";
+                    else if (claimId === m.model_id) dotState = "red";
                     else dotState = "hollow";
                   }
 

@@ -36,6 +36,20 @@ h1 {
   margin-bottom: 0.25rem;
 }
 
+.header-block {
+  min-height: 3.2em;
+  margin-bottom: 0.3rem;
+}
+
+.summary {
+  font-size: 0.88rem;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.c-teal { color: var(--teal); font-weight: 600; }
+.c-red  { color: var(--red);  font-weight: 600; }
+
 .sub {
   color: var(--muted);
   font-size: 0.82rem;
