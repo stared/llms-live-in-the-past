@@ -51,11 +51,17 @@ function dotLabel(modelId: string): string {
   m = s.match(/^gemini-([\d.]+)/);
   if (m) return m[1];
 
-  // GLM: "glm-5.1" → "5.1"
+  // GLM: "glm-3-turbo" → "3t", "glm-4-plus" → "4+", "glm-5.1" → "5.1"
+  m = s.match(/^glm-([\d.]+)-turbo$/);
+  if (m) return `${m[1]}t`;
+  m = s.match(/^glm-([\d.]+)-plus$/);
+  if (m) return `${m[1]}+`;
   m = s.match(/^glm-([\d.]+)/);
   if (m) return m[1];
 
-  // Qwen: "qwen3.6-plus:free" → "3.6"
+  // Qwen: "qwen-max" → "max", "qwen3.6-plus" → "3.6"
+  m = s.match(/^qwen-(max|long)$/);
+  if (m) return m[1];
   m = s.match(/^qwen([\d.]+)/);
   if (m) return m[1];
 
