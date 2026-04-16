@@ -209,6 +209,40 @@ h1 {
   white-space: nowrap;
 }
 
+/* ── Prompt box ── */
+
+.prompt-box {
+  margin-top: 2rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: #131313;
+}
+
+.prompt-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.prompt-text {
+  font-size: 0.8rem;
+  color: var(--text);
+  line-height: 1.5;
+  margin: 0 0 0.7rem 0;
+}
+
+.prompt-text:last-child { margin-bottom: 0; }
+
+.prompt-role {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.prompt-var {
+  color: var(--teal);
+}
+
 /* ── Page footer ── */
 
 .pf {

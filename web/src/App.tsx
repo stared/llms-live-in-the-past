@@ -411,6 +411,24 @@ function App() {
         })}
       </div>
 
+      <section className="prompt-box">
+        <div className="prompt-label">Exact prompt used (temperature 0)</div>
+        <p className="prompt-text">
+          <span className="prompt-role">system:</span>
+          <br />
+          You are a helpful assistant. Respond with valid JSON only.
+        </p>
+        <p className="prompt-text">
+          <span className="prompt-role">user:</span>
+          <br />
+          What is the most recent <span className="prompt-var">{"{family}"}</span> model? Give me the exact model number as used in the official API.
+          <br />
+          Respond with only:
+          <br />
+          {"{\"model\": \"[model name]\"}"}
+        </p>
+      </section>
+
       <footer className="pf">
         <a href="https://github.com/QuesmaOrg/quesma">Quesma</a>
       </footer>
