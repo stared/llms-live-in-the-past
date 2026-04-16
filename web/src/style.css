@@ -248,12 +248,12 @@ h1 {
 .pf {
   margin-top: 2rem;
   padding-top: 0.8rem;
-  font-size: 0.65rem;
-  color: #444;
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
-.pf a { color: #555; text-decoration: none; }
-.pf a:hover { color: var(--text); }
+.pf a { color: var(--text); text-decoration: underline; text-underline-offset: 2px; }
+.pf a:hover { color: var(--teal); }
 
 .center {
   display: flex;

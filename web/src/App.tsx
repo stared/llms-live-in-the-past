@@ -430,7 +430,8 @@ function App() {
       </section>
 
       <footer className="pf">
-        <a href="https://github.com/QuesmaOrg/quesma">Quesma</a>
+        by <a href="https://p.migdal.pl">Piotr Migdał</a> from{" "}
+        <a href="https://quesma.com">Quesma</a>, updated 2026-04-16
       </footer>
     </div>
   );
