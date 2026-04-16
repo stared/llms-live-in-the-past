@@ -190,25 +190,23 @@ function App() {
     }
   }
 
-  // Default state: each family's latest model's self-assessment (one red dot max)
+  // Default state: each family's newest model's self-assessment
   const selfClaims = new Map<string, string>();
   for (const [fam, latestId] of latestPerFamily) {
     if (answererSet.has(latestId)) {
       const q = answerLookup.get(latestId)?.get(fam);
-      if (q?.answered_model_id && q.answered_model_id !== latestId) {
-        selfClaims.set(fam, q.answered_model_id);
-      }
+      if (q?.answered_model_id) selfClaims.set(fam, q.answered_model_id);
     }
   }
 
   // Hover state: what does the active model claim is newest?
-  const hoveredClaims = new Map<string, string>();
+  const activeClaims = new Map<string, string>();
   const isAnswererActive = activeModel && answererSet.has(activeModel);
   if (isAnswererActive) {
     const answers = answerLookup.get(activeModel!);
     if (answers) {
       for (const [fam, q] of answers) {
-        if (q.answered_model_id) hoveredClaims.set(fam, q.answered_model_id);
+        if (q.answered_model_id) activeClaims.set(fam, q.answered_model_id);
       }
     }
   }
@@ -218,7 +216,7 @@ function App() {
   } else if (isAnswererActive) {
     headerSub = `According to ${shortName(activeModel!)}, these are the newest models`;
   } else {
-    headerSub = `${shortName(activeModel!)} — no query data (not an answerer in this experiment)`;
+    headerSub = `${shortName(activeModel!)} — no query data`;
   }
 
   return (
@@ -258,8 +256,7 @@ function App() {
 
         {families.map((fam) => {
           const fModels = modelsByFamily.get(fam) || [];
-          const latestId = latestPerFamily.get(fam);
-          const hoveredClaimId = hoveredClaims.get(fam);
+          const claimId = activeModel ? activeClaims.get(fam) : selfClaims.get(fam);
 
           return (
             <div key={fam} className="tl-row">
@@ -270,24 +267,22 @@ function App() {
                 {/* Model dots */}
                 {fModels.map((m) => {
                   const pct = dateToPercent(m.release_date);
-                  const isAnswerer = answererSet.has(m.model_id);
+                  const hasData = answererSet.has(m.model_id);
 
                   let dotState: "teal" | "red" | "hollow";
                   if (activeModel) {
                     if (m.model_id === activeModel) dotState = "teal";
-                    else if (hoveredClaimId === m.model_id && m.model_id === latestId) dotState = "teal";
-                    else if (hoveredClaimId === m.model_id) dotState = "red";
+                    else if (claimId === m.model_id) dotState = "red";
                     else dotState = "hollow";
                   } else {
-                    if (m.model_id === latestId) dotState = "teal";
-                    else if (selfClaims.get(fam) === m.model_id) dotState = "red";
+                    if (claimId === m.model_id) dotState = "red";
                     else dotState = "hollow";
                   }
 
                   const classes = [
                     "dot",
                     dotState,
-                    isAnswerer && "answerer",
+                    hasData && "has-data",
                   ]
                     .filter(Boolean)
                     .join(" ");
@@ -298,10 +293,10 @@ function App() {
                       className={classes}
                       style={{ left: `${pct}%` }}
                       title={`${shortName(m.model_id)}\n${m.release_date}`}
-                      onMouseEnter={() => setHoveredModel(m.model_id)}
-                      onMouseLeave={() => setHoveredModel(null)}
+                      onMouseEnter={() => hasData && setHoveredModel(m.model_id)}
+                      onMouseLeave={() => hasData && setHoveredModel(null)}
                       onClick={() =>
-                        isAnswerer &&
+                        hasData &&
                         setPinnedModel(
                           pinnedModel === m.model_id ? null : m.model_id
                         )
@@ -313,10 +308,10 @@ function App() {
                 })}
 
                 {/* Unmatched claim: answered model not in models.json */}
-                {hoveredClaimId &&
-                  !fModels.some((m) => m.model_id === hoveredClaimId) && (
+                {claimId &&
+                  !fModels.some((m) => m.model_id === claimId) && (
                     <span className="unmatched">
-                      ? {shortName(hoveredClaimId)}
+                      ? {shortName(claimId)}
                     </span>
                   )}
               </div>

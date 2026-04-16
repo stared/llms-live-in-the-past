@@ -9,12 +9,10 @@ export const MODEL_ALIASES: Record<string, string> = {
   // ── Claude ────────────────────────────────────────────────────────────
   "claude-3-opus-20240229": "anthropic/claude-3-opus",
   "claude-3-opus": "anthropic/claude-3-opus",
-  "claude-3-sonnet-20240229": "anthropic/claude-3.5-sonnet", // no Claude 3 Sonnet tracked
   "claude-3-5-sonnet-20240620": "anthropic/claude-3.5-sonnet",
   "claude-3-5-sonnet-20241022": "anthropic/claude-3.5-sonnet",
   "claude-3-7-sonnet-20250219": "anthropic/claude-3.7-sonnet",
   "claude-3.7-sonnet-20250219": "anthropic/claude-3.7-sonnet",
-  "claude-3.7-sonnet-20240620": "anthropic/claude-3.7-sonnet",
   "claude-sonnet-4-20250514": "anthropic/claude-sonnet-4",
   "claude-sonnet-4-5": "anthropic/claude-sonnet-4.5",
   "claude-opus-4-20250514": "anthropic/claude-opus-4",
@@ -27,7 +25,6 @@ export const MODEL_ALIASES: Record<string, string> = {
   "claude-haiku-4-5": "anthropic/claude-haiku-4.5",
 
   // ── GPT ───────────────────────────────────────────────────────────────
-  "gpt-4": "openai/gpt-4-turbo",
   "gpt-4-turbo": "openai/gpt-4-turbo",
   "gpt-4-turbo-2024-04-09": "openai/gpt-4-turbo",
   "gpt-4-turbo-preview": "openai/gpt-4-turbo",
@@ -40,10 +37,8 @@ export const MODEL_ALIASES: Record<string, string> = {
   "gpt-5": "openai/gpt-5",
   "gpt-5.3": "openai/gpt-5.3-chat",
   "gpt-5-codex": "openai/gpt-5-codex",
-  "code-davinci-002": "openai/gpt-5-codex", // old Codex, closest tracked
 
   // ── Gemini ────────────────────────────────────────────────────────────
-  "gemini-pro": "google/gemini-1.5-pro",
   "gemini-1.5-pro": "google/gemini-1.5-pro",
   "gemini-1.5-pro-002": "google/gemini-1.5-pro",
   "gemini-1.5-pro-latest": "google/gemini-1.5-pro",
