@@ -258,9 +258,8 @@ function App() {
   if (!activeModel) {
     headerMain = (
       <>
-        According to the <span className="c-teal">newest model</span> in each family, the{" "}
-        <span className="c-red">most recent model</span> was already{" "}
-        <span className="c-red">{avgMonths} months</span> old when it was released.
+        On average, the newest models are unaware of their own existence, pointing to versions released{" "}
+        <span className="c-red">{avgMonths} months</span> before them.
       </>
     );
   } else if (isAnswererActive) {
@@ -275,15 +274,21 @@ function App() {
       const isCorrect = ownClaim === correctId;
       const claimColor = isCorrect ? "c-teal" : "c-red";
       headerMain = isCorrect ? (
-        <>
-          According to <span className="c-teal">{shortName(activeModel!)}</span>, the newest{" "}
-          {activeFam} is <span className={claimColor}>{shortName(ownClaim)}</span> — correct.
-        </>
+        ownClaim === activeModel ? (
+          <>
+            <span className="c-teal">{shortName(activeModel!)}</span> correctly identifies itself as the newest {activeFam}.
+          </>
+        ) : (
+          <>
+            <span className="c-teal">{shortName(activeModel!)}</span> correctly identifies{" "}
+            <span className={claimColor}>{shortName(ownClaim)}</span> as the newest {activeFam}.
+          </>
+        )
       ) : (
         <>
-          According to <span className="c-teal">{shortName(activeModel!)}</span>, the newest{" "}
-          {activeFam} is <span className={claimColor}>{shortName(ownClaim)}</span>, which was already{" "}
-          <span className="c-red">{age} months</span> old when it was released.
+          <span className="c-teal">{shortName(activeModel!)}</span> thinks the newest {activeFam} is{" "}
+          <span className={claimColor}>{shortName(ownClaim)}</span>, a version released{" "}
+          <span className="c-red">{age} months</span> before it.
         </>
       );
     } else if (ownClaim) {
@@ -296,14 +301,14 @@ function App() {
     } else {
       headerMain = (
         <>
-          <span className="c-teal">{shortName(activeModel!)}</span> — no query data.
+          No query data available for <span className="c-teal">{shortName(activeModel!)}</span>.
         </>
       );
     }
   } else {
     headerMain = (
       <>
-        <span className="c-teal">{shortName(activeModel!)}</span> — no query data.
+        No query data available for <span className="c-teal">{shortName(activeModel!)}</span>.
       </>
     );
   }
