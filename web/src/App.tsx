@@ -323,7 +323,14 @@ function App() {
   return (
     <div className="container">
       <header>
-        <h1>AI models live in the past</h1>
+        <div className="top-bar">
+          <h1>AI models live in the past</h1>
+          <div className="credits">
+            by <a href="https://p.migdal.pl">Piotr Migdał</a> from{" "}
+            <a href="https://quesma.com">Quesma</a> ·{" "}
+            <a href="https://github.com/stared/llms-live-in-the-past">source</a> · 2026-04-16
+          </div>
+        </div>
         <div className="header-block">
           <p className="summary">{headerMain}</p>
           <p className="sub">{headerSub}</p>
@@ -446,10 +453,6 @@ function App() {
         </p>
       </section>
 
-      <footer className="pf">
-        by <a href="https://p.migdal.pl">Piotr Migdał</a> from{" "}
-        <a href="https://quesma.com">Quesma</a>, updated 2026-04-16
-      </footer>
     </div>
   );
 }

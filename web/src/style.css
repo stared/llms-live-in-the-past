@@ -25,6 +25,23 @@ body {
   padding: 2.5rem 2rem 2rem;
 }
 
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.credits {
+  color: var(--muted);
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.credits a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+.credits a:hover { color: var(--teal); }
+
 /* ── Header ── */
 
 header { margin-bottom: 1.5rem; }
