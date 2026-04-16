@@ -9,6 +9,7 @@ export const MODEL_ALIASES: Record<string, string> = {
   // ── Claude ────────────────────────────────────────────────────────────
   "claude-3-opus-20240229": "anthropic/claude-3-opus",
   "claude-3-opus": "anthropic/claude-3-opus",
+  "claude-3-sonnet-20240229": "anthropic/claude-3-sonnet",
   "claude-3-5-sonnet-20240620": "anthropic/claude-3.5-sonnet",
   "claude-3-5-sonnet-20241022": "anthropic/claude-3.5-sonnet",
   "claude-3-7-sonnet-20250219": "anthropic/claude-3.7-sonnet",

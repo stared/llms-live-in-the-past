@@ -438,9 +438,6 @@ function App() {
           <br />
           {"{\"model\": \"[model name]\"}"}
         </p>
-        <p className="prompt-note">
-          Note: we also tested a variant saying "exact model ID" instead of "exact model number" — results were essentially the same, with slightly more unresolvable hallucinations. Displayed data uses the "model number" wording.
-        </p>
       </section>
 
       <footer className="pf">
