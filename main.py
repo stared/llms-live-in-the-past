@@ -1,4 +1,4 @@
-"""We Live in the Past — Do AI models know what's current?
+"""AI models live in the past — Do AI models know what's current?
 
 Tests whether AI models correctly identify the most recent version of model
 families when asked for OpenRouter model IDs.
@@ -12,13 +12,14 @@ Evaluation (verdict, expected model, answered release date) is derived by
 joining queries against the models table — never stored redundantly.
 """
 
+import asyncio
 import json
 import os
 import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-from openai import OpenAI
+from openai import AsyncOpenAI
 from pydantic import BaseModel, TypeAdapter
 
 CONFIG_DIR = Path(__file__).parent / "config"
@@ -150,9 +151,9 @@ def evaluate_query(
     )
 
 
-def query_model(client: OpenAI, answerer_model: str, prompt: Prompt, family: str) -> str:
+async def query_model(client: AsyncOpenAI, answerer_model: str, prompt: Prompt, family: str) -> str:
     user_content = prompt.user_template.format(family=family)
-    response = client.chat.completions.create(
+    response = await client.chat.completions.create(
         model=answerer_model,
         messages=[
             {"role": "system", "content": prompt.system},
@@ -163,48 +164,99 @@ def query_model(client: OpenAI, answerer_model: str, prompt: Prompt, family: str
     return response.choices[0].message.content or ""
 
 
-def print_table(evaluated: list[EvaluatedQuery]) -> None:
-    header = (
-        f"{'Answerer':<36} | {'Asked about':<14} | "
-        f"{'Answered':<40} | {'Expected':<40} | {'Result':<8}"
-    )
-    print()
-    print(header)
-    print("-" * len(header))
-
+def write_log(evaluated: list[EvaluatedQuery], path: str) -> None:
+    """Write a human-readable log of all results."""
+    lines: list[str] = []
     for r in evaluated:
-        answerer = r.answerer_model_id
-        a_date = r.answerer_release_date or "?"
-        subject = r.subject_family
-        answered = r.answered_model_id or "(parse failure)"
-        ans_date = r.answered_release_date or "?"
-        expected = r.expected_model_id or "?"
-        exp_date = r.expected_release_date or "?"
-        verdict = r.verdict.upper()
-
-        line1 = (
-            f"{answerer:<36} | {subject:<14} | "
-            f"{answered:<40} | {expected:<40} | {verdict:<8}"
-        )
-        line2 = (
-            f"  ({a_date}){' ' * max(0, 34 - len(str(a_date)) - 4)} | "
-            f"{'':14} | "
-            f"  ({ans_date}){' ' * max(0, 38 - len(str(ans_date)) - 4)} | "
-            f"  ({exp_date}){' ' * max(0, 38 - len(str(exp_date)) - 4)} |"
-        )
-        print(line1)
-        print(line2)
-
-    print()
+        short = r.answerer_model_id.split("/", 1)[1]
+        ans = r.answered_model_id or "PARSE_FAILURE"
+        ans_short = ans.split("/", 1)[1] if "/" in ans else ans
+        expected = (r.expected_model_id or "?").split("/", 1)[-1]
+        mark = "✓" if r.verdict == "exact" else ("✗" if r.verdict == "wrong" else "?")
+        lines.append(f"{mark} {short} said the latest {r.subject_family} is {ans_short} (expected {expected})")
+    Path(path).write_text("\n".join(lines) + "\n")
+    print(f"Log saved to {path}")
 
 
-def main() -> None:
+MAX_CONCURRENT = 10
+MAX_RETRIES = 3
+RETRY_DELAY = 2.0
+
+
+async def run_query(
+    client: AsyncOpenAI,
+    semaphore: asyncio.Semaphore,
+    answerer_id: str,
+    family: str,
+    prompt: Prompt,
+    prompt_id: str,
+    model_index: dict[str, Model],
+    latest_per_family: dict[str, str],
+    idx: int,
+    total: int,
+) -> Query:
+    short = answerer_id.split("/", 1)[1]
+    async with semaphore:
+        raw = None
+        last_err = None
+        for attempt in range(MAX_RETRIES):
+            try:
+                raw = await query_model(client, answerer_id, prompt, family)
+                break
+            except Exception as e:
+                last_err = e
+                err_str = str(e)
+                # Don't retry permanent errors (404 = model gone, 400 = invalid ID)
+                if "404" in err_str or "400" in err_str:
+                    break
+                if attempt < MAX_RETRIES - 1:
+                    delay = RETRY_DELAY * (attempt + 1)
+                    await asyncio.sleep(delay)
+
+        if raw is None:
+            print(f"  [{idx}/{total}] {short} — ERROR querying about {family}", flush=True)
+            return Query(
+                answerer_model_id=answerer_id,
+                subject_family=family,
+                prompt_id=prompt_id,
+                answered_model_id=None,
+                raw_response=f"ERROR: {last_err}",
+                queried_at=datetime.now(timezone.utc).isoformat(),
+            )
+
+    answered_id = extract_model_id(raw)
+    answered_short = answered_id.split("/", 1)[1] if answered_id and "/" in answered_id else answered_id
+
+    expected_id = latest_per_family.get(family)
+    if answered_id is None:
+        mark = "?"
+        result_str = "PARSE FAILURE"
+    elif answered_id == expected_id:
+        mark = "✓"
+        result_str = answered_short
+    else:
+        mark = "✗"
+        result_str = answered_short
+
+    print(f"  {mark} [{idx}/{total}] {short} said the latest {family} is {result_str}", flush=True)
+
+    return Query(
+        answerer_model_id=answerer_id,
+        subject_family=family,
+        prompt_id=prompt_id,
+        answered_model_id=answered_id,
+        raw_response=raw,
+        queried_at=datetime.now(timezone.utc).isoformat(),
+    )
+
+
+async def main() -> None:
     api_key = os.environ.get("OPENROUTER_API_KEY")
     if not api_key:
         print("Error: OPENROUTER_API_KEY environment variable not set.")
         raise SystemExit(1)
 
-    client = OpenAI(
+    client = AsyncOpenAI(
         base_url="https://openrouter.ai/api/v1",
         api_key=api_key,
     )
@@ -214,70 +266,58 @@ def main() -> None:
     model_index = build_model_index(MODELS)
     latest_per_family = find_latest_per_family(MODELS)
 
-    # Collect raw queries
-    queries: list[Query] = []
+    # Build all tasks with concurrency limit
+    semaphore = asyncio.Semaphore(MAX_CONCURRENT)
+    tasks: list[asyncio.Task[Query]] = []
     total = len(ANSWERER_MODEL_IDS) * len(SUBJECT_FAMILIES)
-    count = 0
+    idx = 0
 
     for answerer_id in ANSWERER_MODEL_IDS:
         for family in SUBJECT_FAMILIES:
-            count += 1
-            print(f"[{count}/{total}] Asking {answerer_id} about {family}...")
-
-            raw = query_model(client, answerer_id, prompt, family)
-            answered_id = extract_model_id(raw)
-
-            query = Query(
-                answerer_model_id=answerer_id,
-                subject_family=family,
-                prompt_id=prompt_id,
-                answered_model_id=answered_id,
-                raw_response=raw,
-                queried_at=datetime.now(timezone.utc).isoformat(),
+            idx += 1
+            task = asyncio.create_task(
+                run_query(
+                    client, semaphore, answerer_id, family, prompt, prompt_id,
+                    model_index, latest_per_family, idx, total,
+                )
             )
-            queries.append(query)
+            tasks.append(task)
 
-            # Quick feedback
-            expected_id = latest_per_family.get(family)
-            if answered_id is None:
-                print("       → PARSE FAILURE")
-            elif answered_id == expected_id:
-                print("       → EXACT")
-            else:
-                info = model_index.get(answered_id)
-                date_hint = f", from {info.release_date}" if info else ""
-                print(f"       → WRONG (answered: {answered_id}{date_hint})")
+    # Run all concurrently
+    queries = await asyncio.gather(*tasks)
+    queries = list(queries)
 
-    # Evaluate for display (derived, not saved)
+    # Evaluate
     evaluated = [evaluate_query(q, model_index, latest_per_family) for q in queries]
-    print_table(evaluated)
 
     verdicts = [e.verdict for e in evaluated]
+    errors = sum(1 for q in queries if q.raw_response.startswith("ERROR"))
     print(
-        f"Summary: {verdicts.count('exact')} exact, "
+        f"\nSummary: {verdicts.count('exact')} exact, "
         f"{verdicts.count('wrong')} wrong, "
-        f"{verdicts.count('parse_failure')} parse failures "
+        f"{verdicts.count('parse_failure')} parse failures, "
+        f"{errors} errors "
         f"out of {len(verdicts)} total"
     )
 
-    # Save normalized data
+    # Save
     os.makedirs("results", exist_ok=True)
     timestamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
 
-    # Models table (overwrite — it's reference data)
     models_path = "results/models.json"
     Path(models_path).write_text(
         _ModelList.dump_json(MODELS, indent=2).decode()
     )
-    print(f"\nModels table saved to {models_path}")
 
-    # Queries table (append-friendly, timestamped)
     queries_path = f"results/queries_{timestamp}.json"
     Path(queries_path).write_text(
         TypeAdapter(list[Query]).dump_json(queries, indent=2).decode()
     )
     print(f"Queries saved to {queries_path}")
 
+    log_path = f"results/log_{timestamp}.txt"
+    write_log(evaluated, log_path)
+
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())

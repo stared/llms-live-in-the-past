@@ -1,0 +1,5570 @@
+[
+  {
+    "answerer_model_id": "anthropic/claude-3-haiku",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-v1",
+    "raw_response": "{\"model\": \"claude-v1\"}",
+    "queried_at": "2026-04-16T11:47:33.419242+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3-haiku",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-v1-1",
+    "raw_response": "{\"model\": \"claude-v1-1\"}",
+    "queried_at": "2026-04-16T11:47:34.473548+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3-haiku",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "text-davinci-003",
+    "raw_response": "{\"model\": \"text-davinci-003\"}",
+    "queried_at": "2026-04-16T11:47:33.344188+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3-haiku",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-3.5-turbo",
+    "raw_response": "{\"model\": \"gpt-3.5-turbo\"}",
+    "queried_at": "2026-04-16T11:47:33.346673+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3-haiku",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T11:47:33.301045+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3-haiku",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "Gemini Pro 2",
+    "raw_response": "{\"model\": \"Gemini Pro 2\"}",
+    "queried_at": "2026-04-16T11:47:33.296094+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3-haiku",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "Gemini Flash 2",
+    "raw_response": "{\"model\": \"Gemini Flash 2\"}",
+    "queried_at": "2026-04-16T11:47:33.208326+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3-haiku",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-3.5-turbo",
+    "raw_response": "{\"model\": \"gpt-3.5-turbo\"}",
+    "queried_at": "2026-04-16T11:47:33.727347+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3-haiku",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-3.5-turbo",
+    "raw_response": "{\"model\": \"gpt-3.5-turbo\"}",
+    "queried_at": "2026-04-16T11:47:33.591202+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3-haiku",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-3.5-turbo",
+    "raw_response": "{\"model\": \"gpt-3.5-turbo\"}",
+    "queried_at": "2026-04-16T11:47:33.207998+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3-haiku",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "Kimi-v4",
+    "raw_response": "{\"model\": \"Kimi-v4\"}",
+    "queried_at": "2026-04-16T11:47:33.720079+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3-haiku",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4",
+    "raw_response": "{\"model\": \"gpt-4\"}",
+    "queried_at": "2026-04-16T11:47:33.651603+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.5-haiku",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T11:47:34.997527+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.5-haiku",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-sonnet-20240229",
+    "raw_response": "{\"model\": \"claude-3-sonnet-20240229\"}",
+    "queried_at": "2026-04-16T11:47:34.597151+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.5-haiku",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-haiku-20240307",
+    "raw_response": "{\"model\": \"claude-3-haiku-20240307\"}",
+    "queried_at": "2026-04-16T11:47:34.851950+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.5-haiku",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4-turbo-2024-04-09",
+    "raw_response": "{\"model\": \"gpt-4-turbo-2024-04-09\"}",
+    "queried_at": "2026-04-16T11:47:34.994622+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.5-haiku",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T11:47:34.522387+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.5-haiku",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-pro",
+    "raw_response": "{\"model\": \"gemini-pro\"}",
+    "queried_at": "2026-04-16T11:47:34.723969+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.5-haiku",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash",
+    "raw_response": "{\"model\": \"gemini-1.5-flash\"}",
+    "queried_at": "2026-04-16T11:47:35.188765+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.5-haiku",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "{\"model\": \"glm-4\"}",
+    "queried_at": "2026-04-16T11:47:34.570061+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.5-haiku",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "Qwen-72B-Chat",
+    "raw_response": "{\"model\": \"Qwen-72B-Chat\"}",
+    "queried_at": "2026-04-16T11:47:35.455740+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.5-haiku",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-1",
+    "raw_response": "{\"model\": \"grok-1\"}",
+    "queried_at": "2026-04-16T11:47:35.641911+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.5-haiku",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T11:47:36.008031+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.5-haiku",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "MiMo-9B-v1.0",
+    "raw_response": "{\"model\": \"MiMo-9B-v1.0\"}",
+    "queried_at": "2026-04-16T11:47:35.716946+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-haiku-4.5",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "```json\n{\"model\": \"claude-3-5-sonnet-20241022\"}\n```",
+    "queried_at": "2026-04-16T11:47:35.820314+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-haiku-4.5",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "```json\n{\"model\": \"claude-3-5-sonnet-20241022\"}\n```",
+    "queried_at": "2026-04-16T11:47:36.188724+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-haiku-4.5",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "```json\n{\"model\": \"claude-3-5-haiku-20241022\"}\n```",
+    "queried_at": "2026-04-16T11:47:36.537483+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-haiku-4.5",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "```json\n{\"model\": \"gpt-4o\"}\n```",
+    "queried_at": "2026-04-16T11:47:36.021363+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-haiku-4.5",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "```json\n{\"model\": \"code-davinci-002\"}\n```",
+    "queried_at": "2026-04-16T11:47:36.856434+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-haiku-4.5",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro",
+    "raw_response": "```json\n{\"model\": \"gemini-1.5-pro\"}\n```",
+    "queried_at": "2026-04-16T11:47:36.699367+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-haiku-4.5",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-flash",
+    "raw_response": "```json\n{\"model\": \"gemini-2.0-flash\"}\n```",
+    "queried_at": "2026-04-16T11:47:36.588409+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-haiku-4.5",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4-plus",
+    "raw_response": "```json\n{\"model\": \"glm-4-plus\"}\n```",
+    "queried_at": "2026-04-16T11:47:36.443372+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-haiku-4.5",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-max",
+    "raw_response": "```json\n{\"model\": \"qwen-max\"}\n```",
+    "queried_at": "2026-04-16T11:47:37.413417+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-haiku-4.5",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-2",
+    "raw_response": "```json\n{\"model\": \"grok-2\"}\n```",
+    "queried_at": "2026-04-16T11:47:37.216868+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-haiku-4.5",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-1.5",
+    "raw_response": "```json\n{\"model\": \"kimi-1.5\"}\n```",
+    "queried_at": "2026-04-16T11:47:37.314226+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-haiku-4.5",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "mimo-1",
+    "raw_response": "```json\n{\"model\": \"mimo-1\"}\n```",
+    "queried_at": "2026-04-16T11:47:37.051962+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.7-sonnet",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T11:47:37.522996+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.7-sonnet",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-sonnet-20240229",
+    "raw_response": "{\"model\": \"claude-3-sonnet-20240229\"}",
+    "queried_at": "2026-04-16T11:47:37.720758+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.7-sonnet",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-haiku-20240307",
+    "raw_response": "{\"model\": \"claude-3-haiku-20240307\"}",
+    "queried_at": "2026-04-16T11:47:37.907704+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.7-sonnet",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "{\"model\": \"gpt-4o\"}",
+    "queried_at": "2026-04-16T11:47:37.724039+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.7-sonnet",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4-turbo",
+    "raw_response": "{\"model\": \"gpt-4-turbo\"}",
+    "queried_at": "2026-04-16T11:47:37.880085+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.7-sonnet",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro",
+    "raw_response": "{\"model\": \"gemini-1.5-pro\"}",
+    "queried_at": "2026-04-16T11:47:38.248980+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.7-sonnet",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash-latest",
+    "raw_response": "{\"model\": \"gemini-1.5-flash-latest\"}",
+    "queried_at": "2026-04-16T11:47:38.268490+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.7-sonnet",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-latest",
+    "raw_response": "{\"model\": \"gemini-1.5-pro-latest\"}",
+    "queried_at": "2026-04-16T11:47:38.917691+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.7-sonnet",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-max",
+    "raw_response": "{\"model\": \"qwen-max\"}",
+    "queried_at": "2026-04-16T11:47:38.459795+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.7-sonnet",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-1",
+    "raw_response": "{\"model\": \"grok-1\"}",
+    "queried_at": "2026-04-16T11:47:38.519299+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.7-sonnet",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-v1-32k",
+    "raw_response": "{\"model\": \"kimi-v1-32k\"}",
+    "queried_at": "2026-04-16T11:47:38.832483+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-3.7-sonnet",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "mimo-2",
+    "raw_response": "{\"model\": \"mimo-2\"}",
+    "queried_at": "2026-04-16T11:47:38.900428+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T11:47:39.683614+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-sonnet-20241022\"}",
+    "queried_at": "2026-04-16T11:47:39.774165+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-haiku-20240307",
+    "raw_response": "{\"model\": \"claude-3-haiku-20240307\"}",
+    "queried_at": "2026-04-16T11:47:40.023229+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "{\"model\": \"gpt-4o\"}",
+    "queried_at": "2026-04-16T11:47:39.256218+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T11:47:39.261341+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-pro",
+    "raw_response": "{\"model\": \"gemini-pro\"}",
+    "queried_at": "2026-04-16T11:47:40.386979+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash",
+    "raw_response": "{\"model\": \"gemini-1.5-flash\"}",
+    "queried_at": "2026-04-16T11:47:39.658037+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "{\"model\": \"glm-4\"}",
+    "queried_at": "2026-04-16T11:47:40.061150+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-max",
+    "raw_response": "{\"model\": \"qwen-max\"}",
+    "queried_at": "2026-04-16T11:47:40.290097+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-beta",
+    "raw_response": "{\"model\": \"grok-beta\"}",
+    "queried_at": "2026-04-16T11:47:39.846683+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-8k",
+    "raw_response": "{\"model\": \"moonshot-v1-8k\"}",
+    "queried_at": "2026-04-16T11:47:40.380238+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o-mini",
+    "raw_response": "{\"model\": \"gpt-4o-mini\"}",
+    "queried_at": "2026-04-16T11:47:41.666812+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.5",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-opus-4-20250514",
+    "raw_response": "{\"model\": \"claude-opus-4-20250514\"}",
+    "queried_at": "2026-04-16T11:47:41.457910+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.5",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-sonnet-4-20250514",
+    "raw_response": "{\"model\": \"claude-sonnet-4-20250514\"}",
+    "queried_at": "2026-04-16T11:47:42.235432+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.5",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T11:47:41.401676+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.5",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4",
+    "raw_response": "{\"model\": \"gpt-4\"}",
+    "queried_at": "2026-04-16T11:47:41.309207+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.5",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-3.5-turbo-instruct",
+    "raw_response": "{\"model\": \"gpt-3.5-turbo-instruct\"}",
+    "queried_at": "2026-04-16T11:47:41.878322+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.5",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-latest",
+    "raw_response": "{\"model\": \"gemini-1.5-pro-latest\"}",
+    "queried_at": "2026-04-16T11:47:41.878002+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.5",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-flash-exp",
+    "raw_response": "{\"model\": \"gemini-2.0-flash-exp\"}",
+    "queried_at": "2026-04-16T11:47:41.786424+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.5",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "{\"model\": \"glm-4\"}",
+    "queried_at": "2026-04-16T11:47:41.992177+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.5",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-max",
+    "raw_response": "{\"model\": \"qwen-max\"}",
+    "queried_at": "2026-04-16T11:47:43.801986+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.5",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-beta",
+    "raw_response": "{\"model\": \"grok-beta\"}",
+    "queried_at": "2026-04-16T11:47:42.797664+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.5",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-128k",
+    "raw_response": "{\"model\": \"moonshot-v1-128k\"}",
+    "queried_at": "2026-04-16T11:47:43.213338+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.5",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-7-sonnet-20250219",
+    "raw_response": "{\"model\": \"claude-3-7-sonnet-20250219\"}",
+    "queried_at": "2026-04-16T11:47:42.902412+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.6",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-opus-4-5",
+    "raw_response": "{\"model\": \"claude-opus-4-5\"}",
+    "queried_at": "2026-04-16T11:47:43.646761+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.6",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-sonnet-4-5",
+    "raw_response": "{\"model\": \"claude-sonnet-4-5\"}",
+    "queried_at": "2026-04-16T11:47:43.440458+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.6",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-haiku-4-5",
+    "raw_response": "{\"model\": \"claude-haiku-4-5\"}",
+    "queried_at": "2026-04-16T11:47:55.840412+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.6",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "{\"model\": \"gpt-4o\"}",
+    "queried_at": "2026-04-16T11:47:43.402293+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.6",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T11:47:43.399402+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.6",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro",
+    "raw_response": "{\"model\": \"gemini-1.5-pro\"}",
+    "queried_at": "2026-04-16T11:47:43.629181+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.6",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-flash",
+    "raw_response": "{\"model\": \"gemini-2.0-flash\"}",
+    "queried_at": "2026-04-16T11:47:45.165229+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.6",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "{\"model\": \"glm-4\"}",
+    "queried_at": "2026-04-16T11:47:43.994710+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.6",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-max",
+    "raw_response": "{\"model\": \"qwen-max\"}",
+    "queried_at": "2026-04-16T11:47:45.397271+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.6",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-3",
+    "raw_response": "{\"model\": \"grok-3\"}",
+    "queried_at": "2026-04-16T11:47:45.017678+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.6",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-8k",
+    "raw_response": "{\"model\": \"moonshot-v1-8k\"}",
+    "queried_at": "2026-04-16T11:47:45.148594+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-sonnet-4.6",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "MiMo-7B-RL",
+    "raw_response": "{\"model\": \"MiMo-7B-RL\"}",
+    "queried_at": "2026-04-16T11:47:45.599982+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T11:47:47.844662+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-sonnet-20241022\"}",
+    "queried_at": "2026-04-16T11:47:48.142844+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-haiku-20240307",
+    "raw_response": "{\"model\": \"claude-3-haiku-20240307\"}",
+    "queried_at": "2026-04-16T11:47:49.931998+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o-2024-08-06",
+    "raw_response": "{\"model\": \"gpt-4o-2024-08-06\"}",
+    "queried_at": "2026-04-16T11:47:48.535171+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T11:47:48.449706+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-latest",
+    "raw_response": "{\"model\": \"gemini-1.5-pro-latest\"}",
+    "queried_at": "2026-04-16T11:47:49.890429+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash",
+    "raw_response": "{\"model\": \"gemini-1.5-flash\"}",
+    "queried_at": "2026-04-16T11:47:49.738592+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4-plus",
+    "raw_response": "{\"model\": \"glm-4-plus\"}",
+    "queried_at": "2026-04-16T11:47:49.417956+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-max",
+    "raw_response": "{\"model\": \"qwen-max\"}",
+    "queried_at": "2026-04-16T11:47:49.347780+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-beta",
+    "raw_response": "{\"model\": \"grok-beta\"}",
+    "queried_at": "2026-04-16T11:47:51.553612+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-8k",
+    "raw_response": "{\"model\": \"moonshot-v1-8k\"}",
+    "queried_at": "2026-04-16T11:47:52.131759+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-sonnet-20241022\"}",
+    "queried_at": "2026-04-16T11:47:53.391140+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.1",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T11:47:52.689911+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.1",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-sonnet-20241022\"}",
+    "queried_at": "2026-04-16T11:47:53.667711+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.1",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-haiku-20240307",
+    "raw_response": "{\"model\": \"claude-3-haiku-20240307\"}",
+    "queried_at": "2026-04-16T11:47:53.733657+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.1",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o-2024-08-06",
+    "raw_response": "{\"model\": \"gpt-4o-2024-08-06\"}",
+    "queried_at": "2026-04-16T11:47:56.075285+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.1",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T11:47:53.689686+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.1",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-latest",
+    "raw_response": "{\"model\": \"gemini-1.5-pro-latest\"}",
+    "queried_at": "2026-04-16T11:47:54.023238+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.1",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash",
+    "raw_response": "{\"model\": \"gemini-1.5-flash\"}",
+    "queried_at": "2026-04-16T11:47:55.772711+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.1",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4-plus",
+    "raw_response": "{\"model\": \"glm-4-plus\"}",
+    "queried_at": "2026-04-16T11:47:57.290336+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.1",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "Qwen2.5-72B-Instruct",
+    "raw_response": "{\"model\": \"Qwen2.5-72B-Instruct\"}",
+    "queried_at": "2026-04-16T11:48:04.075063+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.1",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-beta",
+    "raw_response": "{\"model\": \"grok-beta\"}",
+    "queried_at": "2026-04-16T11:47:57.522161+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.1",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-8k",
+    "raw_response": "{\"model\": \"moonshot-v1-8k\"}",
+    "queried_at": "2026-04-16T11:47:57.545628+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.1",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-sonnet-20241022\"}",
+    "queried_at": "2026-04-16T11:47:58.448067+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.5",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T11:47:55.506736+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.5",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-sonnet-4-20250514",
+    "raw_response": "{\"model\": \"claude-sonnet-4-20250514\"}",
+    "queried_at": "2026-04-16T11:47:55.790023+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.5",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T11:47:57.273566+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.5",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "{\"model\": \"gpt-4o\"}",
+    "queried_at": "2026-04-16T11:47:57.524346+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.5",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T11:47:57.402093+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.5",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-latest",
+    "raw_response": "{\"model\": \"gemini-1.5-pro-latest\"}",
+    "queried_at": "2026-04-16T11:47:58.182852+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.5",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-flash",
+    "raw_response": "{\"model\": \"gemini-2.0-flash\"}",
+    "queried_at": "2026-04-16T11:47:57.649504+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.5",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "{\"model\": \"glm-4\"}",
+    "queried_at": "2026-04-16T11:47:59.658817+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.5",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-max-2025-01-25",
+    "raw_response": "{\"model\": \"qwen-max-2025-01-25\"}",
+    "queried_at": "2026-04-16T11:47:59.437004+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.5",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-3",
+    "raw_response": "{\"model\": \"grok-3\"}",
+    "queried_at": "2026-04-16T11:47:59.065650+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.5",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-k2-0711-preview",
+    "raw_response": "{\"model\": \"kimi-k2-0711-preview\"}",
+    "queried_at": "2026-04-16T11:47:59.562227+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.5",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "Qwen/Qwen3-MiMo-8B-Instruct",
+    "raw_response": "{\"model\": \"Qwen/Qwen3-MiMo-8B-Instruct\"}",
+    "queried_at": "2026-04-16T11:47:59.510044+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.6",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-sonnet-20241022\"}\n\nWait, let me correct that. You asked about Opus specifically.\n\n{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T11:48:01.052845+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.6",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-sonnet-4-20250514",
+    "raw_response": "{\"model\": \"claude-sonnet-4-20250514\"}",
+    "queried_at": "2026-04-16T11:47:59.510594+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.6",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T11:48:00.490102+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.6",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "{\"model\": \"gpt-4o\"}",
+    "queried_at": "2026-04-16T11:48:01.213313+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.6",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "codex-mini-latest",
+    "raw_response": "{\"model\": \"codex-mini-latest\"}",
+    "queried_at": "2026-04-16T11:48:02.564963+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.6",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.5-pro-preview-06-05",
+    "raw_response": "{\"model\": \"gemini-2.5-pro-preview-06-05\"}",
+    "queried_at": "2026-04-16T11:48:01.824824+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.6",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.5-flash-preview-04-17",
+    "raw_response": "{\"model\": \"gemini-2.5-flash-preview-04-17\"}",
+    "queried_at": "2026-04-16T11:48:01.739955+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.6",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "{\"model\": \"glm-4\"}",
+    "queried_at": "2026-04-16T11:48:02.824299+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.6",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-max-latest",
+    "raw_response": "{\"model\": \"qwen-max-latest\"}",
+    "queried_at": "2026-04-16T11:48:02.266272+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.6",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-3",
+    "raw_response": "{\"model\": \"grok-3\"}",
+    "queried_at": "2026-04-16T11:48:02.889074+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.6",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-k2-0711-preview",
+    "raw_response": "{\"model\": \"kimi-k2-0711-preview\"}",
+    "queried_at": "2026-04-16T11:48:02.673752+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.6",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "mimo-7b-rl",
+    "raw_response": "{\"model\": \"mimo-7b-rl\"}",
+    "queried_at": "2026-04-16T11:48:02.847664+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4-turbo",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "Claude Opus 2023",
+    "raw_response": "{\n  \"model\": \"Claude Opus 2023\"\n}",
+    "queried_at": "2026-04-16T11:48:02.616274+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4-turbo",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "CS-2023",
+    "raw_response": "{\n  \"model\": \"CS-2023\"\n}",
+    "queried_at": "2026-04-16T11:48:03.116903+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4-turbo",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "text-davinci-003",
+    "raw_response": "{\n  \"model\": \"text-davinci-003\"\n}",
+    "queried_at": "2026-04-16T11:48:03.201039+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4-turbo",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4",
+    "raw_response": "{\n  \"model\": \"gpt-4\"\n}",
+    "queried_at": "2026-04-16T11:48:03.707671+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4-turbo",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\n  \"model\": \"code-davinci-002\"\n}",
+    "queried_at": "2026-04-16T11:48:04.094289+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4-turbo",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "Gemini Pro GMP2023",
+    "raw_response": "{\n  \"model\": \"Gemini Pro GMP2023\"\n}",
+    "queried_at": "2026-04-16T11:48:04.084502+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4-turbo",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "Gemini Flash 3X",
+    "raw_response": "{\n  \"model\": \"Gemini Flash 3X\"\n}",
+    "queried_at": "2026-04-16T11:48:04.083104+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4-turbo",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4-1106-preview",
+    "raw_response": "{\n  \"model\": \"gpt-4-1106-preview\"\n}",
+    "queried_at": "2026-04-16T11:48:03.940241+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4-turbo",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "Qwen-2023",
+    "raw_response": "{\n  \"model\": \"Qwen-2023\"\n}",
+    "queried_at": "2026-04-16T11:48:04.463700+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4-turbo",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-002",
+    "raw_response": "{\n  \"model\": \"grok-002\"\n}",
+    "queried_at": "2026-04-16T11:48:04.342628+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4-turbo",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "text-davinci-003",
+    "raw_response": "{\n  \"model\": \"text-davinci-003\"\n}",
+    "queried_at": "2026-04-16T11:48:04.749656+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4-turbo",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "MiMo-v1",
+    "raw_response": "{\n  \"model\": \"MiMo-v1\"\n}",
+    "queried_at": "2026-04-16T11:48:04.778685+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-2.0",
+    "raw_response": "{\"model\": \"claude-2.0\"}",
+    "queried_at": "2026-04-16T11:48:04.398269+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-2.0",
+    "raw_response": "{\"model\": \"claude-2.0\"}",
+    "queried_at": "2026-04-16T11:48:04.642573+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-haiku-2.0",
+    "raw_response": "```json\n{\"model\": \"claude-haiku-2.0\"}\n```",
+    "queried_at": "2026-04-16T11:48:05.417245+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4-turbo",
+    "raw_response": "```json\n{\"model\": \"gpt-4-turbo\"}\n```",
+    "queried_at": "2026-04-16T11:48:04.942379+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "```json\n{\"model\": \"code-davinci-002\"}\n```",
+    "queried_at": "2026-04-16T11:48:04.766345+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-pro-1.5",
+    "raw_response": "```json\n{\"model\": \"gemini-pro-1.5\" }\n```",
+    "queried_at": "2026-04-16T11:48:04.906215+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-flash-v1.5",
+    "raw_response": "```json\n{\"model\": \"gemini-flash-v1.5\"}\n```",
+    "queried_at": "2026-04-16T11:48:05.033372+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-130b",
+    "raw_response": "```json\n{\"model\": \"glm-130b\"}\n```",
+    "queried_at": "2026-04-16T11:48:05.241101+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-v1.1",
+    "raw_response": "{\"model\": \"qwen-v1.1\"}",
+    "queried_at": "2026-04-16T11:48:05.540691+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-2",
+    "raw_response": "{\"model\": \"grok-2\"}",
+    "queried_at": "2026-04-16T11:48:05.612925+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-1.5-turbo",
+    "raw_response": "```json\n{\"model\": \"kimi-1.5-turbo\"}\n```",
+    "queried_at": "2026-04-16T11:48:05.455892+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4-turbo",
+    "raw_response": "{\"model\": \"gpt-4-turbo\"}",
+    "queried_at": "2026-04-16T11:48:05.768629+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o-mini",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3",
+    "raw_response": "{\"model\": \"claude-3\"}",
+    "queried_at": "2026-04-16T11:48:05.614337+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o-mini",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3",
+    "raw_response": "{\"model\": \"claude-3\"}",
+    "queried_at": "2026-04-16T11:48:05.858013+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o-mini",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3",
+    "raw_response": "{\"model\": \"claude-3\"}",
+    "queried_at": "2026-04-16T11:48:05.663350+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o-mini",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4-turbo",
+    "raw_response": "{\"model\": \"gpt-4-turbo\"}",
+    "queried_at": "2026-04-16T11:48:05.698821+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o-mini",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T11:48:05.812912+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o-mini",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-pro-1",
+    "raw_response": "{\"model\": \"gemini-pro-1\"}",
+    "queried_at": "2026-04-16T11:48:06.249594+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o-mini",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-flash-1",
+    "raw_response": "{\"model\": \"gemini-flash-1\"}",
+    "queried_at": "2026-04-16T11:48:06.057161+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o-mini",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-3.5-turbo",
+    "raw_response": "{\"model\": \"gpt-3.5-turbo\"}",
+    "queried_at": "2026-04-16T11:48:06.586110+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o-mini",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "Qwen-7B",
+    "raw_response": "{\"model\": \"Qwen-7B\"}",
+    "queried_at": "2026-04-16T11:48:06.640448+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o-mini",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-1.0",
+    "raw_response": "{\"model\": \"grok-1.0\"}",
+    "queried_at": "2026-04-16T11:48:06.315277+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o-mini",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4-turbo",
+    "raw_response": "{\"model\": \"gpt-4-turbo\"}",
+    "queried_at": "2026-04-16T11:48:06.412868+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4o-mini",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "MiMo-2023",
+    "raw_response": "{\"model\": \"MiMo-2023\"}",
+    "queried_at": "2026-04-16T11:48:06.263722+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T11:48:06.529129+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-sonnet-20240229",
+    "raw_response": "{\"model\": \"claude-3-sonnet-20240229\"}",
+    "queried_at": "2026-04-16T11:48:06.447577+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-haiku-20240307",
+    "raw_response": "{\"model\": \"claude-3-haiku-20240307\"}",
+    "queried_at": "2026-04-16T11:48:06.688500+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "{\"model\": \"gpt-4o\"}",
+    "queried_at": "2026-04-16T11:48:06.814803+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-3.5-turbo-instruct",
+    "raw_response": "{\"model\": \"gpt-3.5-turbo-instruct\"}",
+    "queried_at": "2026-04-16T11:48:07.244094+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-latest",
+    "raw_response": "{\"model\": \"gemini-1.5-pro-latest\"}",
+    "queried_at": "2026-04-16T11:48:07.087181+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash-latest",
+    "raw_response": "{\"model\": \"gemini-1.5-flash-latest\"}",
+    "queried_at": "2026-04-16T11:49:01.451203+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "{\"model\": \"glm-4\"}",
+    "queried_at": "2026-04-16T11:48:07.332747+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen2-72b-chat",
+    "raw_response": "{\"model\": \"qwen2-72b-chat\"}",
+    "queried_at": "2026-04-16T11:48:07.542864+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-1.5",
+    "raw_response": "{\"model\": \"grok-1.5\" }",
+    "queried_at": "2026-04-16T11:48:07.382193+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-1.5-32k",
+    "raw_response": "{\"model\": \"kimi-1.5-32k\"}",
+    "queried_at": "2026-04-16T11:48:07.330098+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "mimo-v1-128k",
+    "raw_response": "{\"model\": \"mimo-v1-128k\"}",
+    "queried_at": "2026-04-16T11:48:07.578843+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-mini",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-2",
+    "raw_response": "{\"model\": \"claude-2\"}",
+    "queried_at": "2026-04-16T11:48:07.687823+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-mini",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-sonnet-1",
+    "raw_response": "{\"model\": \"claude-sonnet-1\"}",
+    "queried_at": "2026-04-16T11:48:07.883574+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-mini",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-haiku-1",
+    "raw_response": "{\"model\": \"claude-haiku-1\"}",
+    "queried_at": "2026-04-16T11:48:09.290150+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-mini",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4",
+    "raw_response": "{\"model\": \"gpt-4\"}",
+    "queried_at": "2026-04-16T11:48:08.270555+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-mini",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T11:48:08.389765+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-mini",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-pro-1",
+    "raw_response": "{\"model\": \"gemini-pro-1\"}",
+    "queried_at": "2026-04-16T11:48:09.124415+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-mini",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-flash-1",
+    "raw_response": "{\"model\": \"gemini-flash-1\"}",
+    "queried_at": "2026-04-16T11:48:08.398004+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-mini",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o-mini",
+    "raw_response": "{\"model\": \"gpt-4o-mini\"}",
+    "queried_at": "2026-04-16T11:48:08.567189+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-mini",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-7b",
+    "raw_response": "{\"model\": \"qwen-7b\"}",
+    "queried_at": "2026-04-16T11:48:08.586824+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-mini",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-1",
+    "raw_response": "{\"model\": \"grok-1\"}",
+    "queried_at": "2026-04-16T11:48:08.866856+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-mini",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-1",
+    "raw_response": "{\"model\": \"kimi-1\"}",
+    "queried_at": "2026-04-16T11:48:09.151623+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-mini",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o-mini",
+    "raw_response": "{\"model\": \"gpt-4o-mini\"}",
+    "queried_at": "2026-04-16T11:48:09.299752+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-nano",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-2",
+    "raw_response": "{\"model\": \"claude-2\"}",
+    "queried_at": "2026-04-16T11:48:09.040604+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-nano",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-2",
+    "raw_response": "{\"model\": \"claude-2\"}",
+    "queried_at": "2026-04-16T11:48:09.133877+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-nano",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-2",
+    "raw_response": "{\"model\": \"claude-2\"}",
+    "queried_at": "2026-04-16T11:48:09.213701+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-nano",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4",
+    "raw_response": "{\"model\": \"gpt-4\"}",
+    "queried_at": "2026-04-16T11:48:09.155543+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-nano",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T11:48:09.425540+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-nano",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "Gemini Pro 2023",
+    "raw_response": "{\"model\": \"Gemini Pro 2023\"}",
+    "queried_at": "2026-04-16T11:48:09.700339+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-nano",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "Gemini Flash 2",
+    "raw_response": "{\"model\": \"Gemini Flash 2\"}",
+    "queried_at": "2026-04-16T11:48:09.755355+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-nano",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-130b",
+    "raw_response": "{\"model\": \"glm-130b\"}",
+    "queried_at": "2026-04-16T11:48:09.727274+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-nano",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "Qwen-7B-Chat",
+    "raw_response": "{\"model\": \"Qwen-7B-Chat\"}",
+    "queried_at": "2026-04-16T11:48:09.757106+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-nano",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-1.0",
+    "raw_response": "{\"model\": \"grok-1.0\"}",
+    "queried_at": "2026-04-16T11:48:09.895377+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-nano",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-2023.1",
+    "raw_response": "{\"model\": \"kimi-2023.1\"}",
+    "queried_at": "2026-04-16T11:48:09.776397+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-4.1-nano",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "MiMo-2023-Alpha",
+    "raw_response": "{\"model\": \"MiMo-2023-Alpha\"}",
+    "queried_at": "2026-04-16T11:48:09.875171+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T11:48:17.099559+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "{\"model\":\"claude-3-5-sonnet-20241022\"}",
+    "queried_at": "2026-04-16T11:48:19.636587+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\":\"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T11:48:19.488679+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o-2024-08-06",
+    "raw_response": "{\"model\": \"gpt-4o-2024-08-06\"}",
+    "queried_at": "2026-04-16T11:48:28.865517+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T11:48:17.689858+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro",
+    "raw_response": "{\"model\": \"gemini-1.5-pro\"}",
+    "queried_at": "2026-04-16T11:48:31.122575+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-flash",
+    "raw_response": "{\"model\":\"gemini-2.0-flash\"}",
+    "queried_at": "2026-04-16T11:48:51.570247+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "{\"model\": \"glm-4\"}",
+    "queried_at": "2026-04-16T11:48:47.409891+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen2.5-72b-instruct",
+    "raw_response": "{\"model\":\"qwen2.5-72b-instruct\"}",
+    "queried_at": "2026-04-16T11:48:41.112568+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-2",
+    "raw_response": "{\"model\": \"grok-2\"}",
+    "queried_at": "2026-04-16T11:48:42.926050+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\":\"unknown\"}",
+    "queried_at": "2026-04-16T11:48:39.427290+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "Which service’s MiMo model are you referring to (e.g., OpenAI, Google, Anthropic)? Please specify so I can provide the exact API model name.",
+    "raw_response": "{\"model\": \"Which service’s MiMo model are you referring to (e.g., OpenAI, Google, Anthropic)? Please specify so I can provide the exact API model name.\"}",
+    "queried_at": "2026-04-16T11:49:22.909484+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-mini",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus",
+    "raw_response": "{\"model\":\"claude-3-opus\"}",
+    "queried_at": "2026-04-16T11:48:31.474404+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-mini",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\":\"unknown\"}",
+    "queried_at": "2026-04-16T11:48:37.271103+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-mini",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\":\"unknown\"}",
+    "queried_at": "2026-04-16T11:48:41.156666+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-mini",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\":\"unknown\"}",
+    "queried_at": "2026-04-16T11:48:40.842345+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-mini",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\":\"code-davinci-002\"}",
+    "queried_at": "2026-04-16T11:48:43.527363+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-mini",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown (knowledge cutoff 2024-06)",
+    "raw_response": "{\"model\":\"unknown (knowledge cutoff 2024-06)\"}",
+    "queried_at": "2026-04-16T11:48:49.133703+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-mini",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash",
+    "raw_response": "{\"model\":\"gemini-1.5-flash\"}",
+    "queried_at": "2026-04-16T11:48:51.709543+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-mini",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": null,
+    "raw_response": "{\"error\":\"Which official API do you mean (OpenAI, Hugging Face, THUDM, etc.)? Please specify the provider so I can return the exact model name.\"}",
+    "queried_at": "2026-04-16T11:48:55.932838+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-mini",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\":\"unknown\"}",
+    "queried_at": "2026-04-16T11:48:48.520859+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-mini",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\":\"unknown\"}",
+    "queried_at": "2026-04-16T11:48:50.917599+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-mini",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\":\"unknown\"}",
+    "queried_at": "2026-04-16T11:48:54.883615+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-mini",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\":\"unknown\"}",
+    "queried_at": "2026-04-16T11:48:56.675085+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-nano",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-opus-2",
+    "raw_response": "{\"model\": \"claude-opus-2\"}",
+    "queried_at": "2026-04-16T11:49:05.062577+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-nano",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3",
+    "raw_response": "{\"model\": \"claude-3\"}",
+    "queried_at": "2026-04-16T11:49:10.143682+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-nano",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\": \"unknown\"}",
+    "queried_at": "2026-04-16T11:49:08.142831+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-nano",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "{\"model\": \"gpt-4o\"}",
+    "queried_at": "2026-04-16T11:49:01.232365+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-nano",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-003",
+    "raw_response": "{\"model\": \"code-davinci-003\"}",
+    "queried_at": "2026-04-16T11:49:07.589545+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-nano",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\": \"unknown\"}",
+    "queried_at": "2026-04-16T11:49:09.177533+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-nano",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\": \"unknown\"}",
+    "queried_at": "2026-04-16T11:49:13.108434+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-nano",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "GLM-130B",
+    "raw_response": "{\"model\": \"GLM-130B\"}",
+    "queried_at": "2026-04-16T11:49:15.110699+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-nano",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-14b-chat",
+    "raw_response": "{\"model\": \"qwen-14b-chat\"}",
+    "queried_at": "2026-04-16T11:49:20.655705+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-nano",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-13b",
+    "raw_response": "{\"model\": \"grok-13b\"}",
+    "queried_at": "2026-04-16T11:49:20.046863+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-nano",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\": \"unknown\"}",
+    "queried_at": "2026-04-16T11:49:17.038383+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-nano",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "mimo-unknown",
+    "raw_response": "{\"model\": \"mimo-unknown\"}",
+    "queried_at": "2026-04-16T11:49:25.832618+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-pro",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\":\"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T11:50:12.634074+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-pro",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-sonnet-20241022\"}",
+    "queried_at": "2026-04-16T11:50:35.345866+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-pro",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T11:50:44.755281+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-pro",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "{\"model\": \"gpt-4o\"}",
+    "queried_at": "2026-04-16T11:50:55.111685+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-pro",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\":\"code-davinci-002\"}",
+    "queried_at": "2026-04-16T11:49:57.470714+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-pro",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-latest",
+    "raw_response": "{\"model\": \"gemini-1.5-pro-latest\"}",
+    "queried_at": "2026-04-16T11:50:54.346228+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-pro",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-flash",
+    "raw_response": "{\"model\": \"gemini-2.0-flash\"}",
+    "queried_at": "2026-04-16T11:51:00.494320+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-pro",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "{\"model\": \"glm-4\"}",
+    "queried_at": "2026-04-16T11:50:55.474653+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-pro",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-max-latest",
+    "raw_response": "{\"model\":\"qwen-max-latest\"}",
+    "queried_at": "2026-04-16T11:52:12.026054+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-pro",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-2",
+    "raw_response": "{\"model\":\"grok-2\"}",
+    "queried_at": "2026-04-16T11:52:10.288609+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-pro",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-128k",
+    "raw_response": "{\"model\": \"moonshot-v1-128k\"}",
+    "queried_at": "2026-04-16T11:51:27.516472+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-pro",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "o4-mini",
+    "raw_response": "{\"model\":\"o4-mini\"}",
+    "queried_at": "2026-04-16T11:52:38.377238+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T11:50:36.276424+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3.7-sonnet-20250219",
+    "raw_response": "{\"model\": \"claude-3.7-sonnet-20250219\"}",
+    "queried_at": "2026-04-16T11:50:37.379776+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T11:50:38.402588+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4.1",
+    "raw_response": "{\"model\": \"gpt-4.1\"}",
+    "queried_at": "2026-04-16T11:50:39.964088+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4.1-mini",
+    "raw_response": "{\"model\": \"gpt-4.1-mini\"}",
+    "queried_at": "2026-04-16T11:50:41.652777+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-pro-exp-02-05",
+    "raw_response": "{\"model\": \"gemini-2.0-pro-exp-02-05\"}",
+    "queried_at": "2026-04-16T11:50:42.716600+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-flash",
+    "raw_response": "{\"model\": \"gemini-2.0-flash\"}",
+    "queried_at": "2026-04-16T11:50:43.564889+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4.1-mini",
+    "raw_response": "{\"model\": \"gpt-4.1-mini\"}",
+    "queried_at": "2026-04-16T11:50:44.540975+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen2.5-72b-instruct",
+    "raw_response": "{\"model\": \"qwen2.5-72b-instruct\"}",
+    "queried_at": "2026-04-16T11:50:45.750909+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-2-latest",
+    "raw_response": "{\"model\": \"grok-2-latest\"}",
+    "queried_at": "2026-04-16T11:50:45.784947+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-32k",
+    "raw_response": "{\"model\": \"moonshot-v1-32k\"}",
+    "queried_at": "2026-04-16T11:50:46.746744+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4.1-mini",
+    "raw_response": "{\"model\": \"gpt-4.1-mini\"}",
+    "queried_at": "2026-04-16T11:50:46.704441+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\":\"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T11:50:50.915272+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20240620",
+    "raw_response": "{\"model\":\"claude-3-5-sonnet-20240620\"}",
+    "queried_at": "2026-04-16T11:50:51.714088+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\":\"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T11:50:55.113245+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\":\"unknown\"}",
+    "queried_at": "2026-04-16T11:50:55.189000+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\":\"code-davinci-002\"}",
+    "queried_at": "2026-04-16T11:51:03.333248+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.5-pro-latest",
+    "raw_response": "{\"model\":\"gemini-2.5-pro-latest\"}",
+    "queried_at": "2026-04-16T11:51:01.768454+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash-002",
+    "raw_response": "{\"model\":\"gemini-1.5-flash-002\"}",
+    "queried_at": "2026-04-16T11:51:03.157752+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4-plus",
+    "raw_response": "{\"model\":\"glm-4-plus\"}",
+    "queried_at": "2026-04-16T11:51:01.033572+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen2.5-72b-instruct",
+    "raw_response": "{\"model\":\"qwen2.5-72b-instruct\"}",
+    "queried_at": "2026-04-16T11:51:01.947424+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\":\"unknown\"}",
+    "queried_at": "2026-04-16T11:51:04.023966+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-128k",
+    "raw_response": "{\"model\":\"moonshot-v1-128k\"}",
+    "queried_at": "2026-04-16T11:51:04.104522+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\":\"unknown\"}",
+    "queried_at": "2026-04-16T11:51:05.947322+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-pro",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\":\"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T11:51:16.921655+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-pro",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20240620",
+    "raw_response": "{\"model\":\"claude-3-5-sonnet-20240620\"}",
+    "queried_at": "2026-04-16T11:51:33.568824+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-pro",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\":\"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T11:51:22.155088+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-pro",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4.1",
+    "raw_response": "{\"model\":\"gpt-4.1\"}",
+    "queried_at": "2026-04-16T11:51:28.932378+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-pro",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\":\"code-davinci-002\"}",
+    "queried_at": "2026-04-16T11:51:39.037399+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-pro",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-latest",
+    "raw_response": "{\"model\":\"gemini-1.5-pro-latest\"}",
+    "queried_at": "2026-04-16T11:51:42.811448+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-pro",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-flash",
+    "raw_response": "{\"model\":\"gemini-2.0-flash\"}",
+    "queried_at": "2026-04-16T11:51:55.237097+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-pro",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "I don't know",
+    "raw_response": "{\"model\":\"I don't know\"}",
+    "queried_at": "2026-04-16T11:51:48.865726+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-pro",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-max-latest",
+    "raw_response": "{\"model\":\"qwen-max-latest\"}",
+    "queried_at": "2026-04-16T11:51:54.347276+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-pro",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\":\"unknown\"}",
+    "queried_at": "2026-04-16T11:51:51.720174+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-pro",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-128k",
+    "raw_response": "{\"model\":\"moonshot-v1-128k\"}",
+    "queried_at": "2026-04-16T11:51:48.490382+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-pro",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\":\"unknown\"}",
+    "queried_at": "2026-04-16T11:51:56.409832+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-codex",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T11:51:45.228869+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-codex",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20240620",
+    "raw_response": "{\"model\": \"claude-3-5-sonnet-20240620\"}",
+    "queried_at": "2026-04-16T11:51:48.492019+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-codex",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-haiku-20240307",
+    "raw_response": "{\"model\": \"claude-3-haiku-20240307\"}",
+    "queried_at": "2026-04-16T11:51:54.629847+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-codex",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "{\"model\": \"gpt-4o\"}",
+    "queried_at": "2026-04-16T11:51:54.986159+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-codex",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T11:51:51.151603+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-codex",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-latest",
+    "raw_response": "{\"model\":\"gemini-1.5-pro-latest\"}",
+    "queried_at": "2026-04-16T11:51:57.748461+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-codex",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash-latest",
+    "raw_response": "{\"model\": \"gemini-1.5-flash-latest\"}",
+    "queried_at": "2026-04-16T11:52:00.559910+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-codex",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "{\"model\": \"glm-4\"}",
+    "queried_at": "2026-04-16T11:51:59.970683+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-codex",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen2.5-72b-instruct",
+    "raw_response": "{\"model\":\"qwen2.5-72b-instruct\"}",
+    "queried_at": "2026-04-16T11:52:09.533150+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-codex",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-1",
+    "raw_response": "{\"model\": \"grok-1\"}",
+    "queried_at": "2026-04-16T11:52:01.779047+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-codex",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-128k",
+    "raw_response": "{\"model\":\"moonshot-v1-128k\"}",
+    "queried_at": "2026-04-16T11:52:02.390078+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5-codex",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\": \"unknown\"}",
+    "queried_at": "2026-04-16T11:52:18.936647+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1-codex",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T11:51:59.840323+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1-codex",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20240620",
+    "raw_response": "{\"model\": \"claude-3-5-sonnet-20240620\"}",
+    "queried_at": "2026-04-16T11:52:03.067016+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1-codex",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3.5-haiku-20241022",
+    "raw_response": "{\"model\": \"claude-3.5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T11:52:13.562875+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1-codex",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4.1",
+    "raw_response": "{\"model\":\"gpt-4.1\"}",
+    "queried_at": "2026-04-16T11:52:03.802030+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1-codex",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\":\"code-davinci-002\"}",
+    "queried_at": "2026-04-16T11:52:04.057486+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1-codex",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-latest",
+    "raw_response": "{\"model\": \"gemini-1.5-pro-latest\"}",
+    "queried_at": "2026-04-16T11:52:04.963108+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1-codex",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash-latest",
+    "raw_response": "{\"model\":\"gemini-1.5-flash-latest\"}",
+    "queried_at": "2026-04-16T11:52:10.766552+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1-codex",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "{\"model\": \"glm-4\"}",
+    "queried_at": "2026-04-16T11:52:14.986801+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1-codex",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen2.5-72b-instruct",
+    "raw_response": "{\"model\":\"qwen2.5-72b-instruct\"}",
+    "queried_at": "2026-04-16T11:52:06.307094+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1-codex",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-1.5",
+    "raw_response": "{\"model\": \"grok-1.5\"}",
+    "queried_at": "2026-04-16T11:52:17.350474+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1-codex",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-128k",
+    "raw_response": "{\"model\":\"moonshot-v1-128k\"}",
+    "queried_at": "2026-04-16T11:52:23.758158+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.1-codex",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\":\"unknown\"}",
+    "queried_at": "2026-04-16T11:52:16.253710+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-codex",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\":\"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T11:52:11.876072+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-codex",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20240620",
+    "raw_response": "{\"model\":\"claude-3-5-sonnet-20240620\"}",
+    "queried_at": "2026-04-16T11:52:12.625333+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-codex",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\":\"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T11:52:14.547124+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-codex",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\":\"unknown\"}",
+    "queried_at": "2026-04-16T11:52:14.106042+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-codex",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T11:52:19.768468+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-codex",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-latest",
+    "raw_response": "{\"model\":\"gemini-1.5-pro-latest\"}",
+    "queried_at": "2026-04-16T11:52:16.342704+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-codex",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash-002",
+    "raw_response": "{\"model\":\"gemini-1.5-flash-002\"}",
+    "queried_at": "2026-04-16T11:52:16.421232+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-codex",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\":\"unknown\"}",
+    "queried_at": "2026-04-16T11:52:16.951401+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-codex",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-max",
+    "raw_response": "{\"model\":\"qwen-max\"}",
+    "queried_at": "2026-04-16T11:52:16.701730+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-codex",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\":\"unknown\"}",
+    "queried_at": "2026-04-16T11:52:18.296672+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-codex",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\":\"unknown\"}",
+    "queried_at": "2026-04-16T11:52:18.039078+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.2-codex",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4.1",
+    "raw_response": "{\"model\":\"gpt-4.1\"}",
+    "queried_at": "2026-04-16T11:52:18.325548+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-codex",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\":\"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T11:52:24.227508+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-codex",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-7-sonnet-20250219",
+    "raw_response": "{\"model\":\"claude-3-7-sonnet-20250219\"}",
+    "queried_at": "2026-04-16T11:52:32.060167+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-codex",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\":\"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T11:52:28.019916+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-codex",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4.1",
+    "raw_response": "{\"model\":\"gpt-4.1\"}",
+    "queried_at": "2026-04-16T11:52:25.303424+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-codex",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-5-codex",
+    "raw_response": "{\"model\":\"gpt-5-codex\"}",
+    "queried_at": "2026-04-16T11:52:28.647979+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-codex",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-latest",
+    "raw_response": "{\"model\":\"gemini-1.5-pro-latest\"}",
+    "queried_at": "2026-04-16T11:52:34.542154+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-codex",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-flash",
+    "raw_response": "{\"model\":\"gemini-2.0-flash\"}",
+    "queried_at": "2026-04-16T11:52:39.308403+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-codex",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4.5",
+    "raw_response": "{\"model\":\"glm-4.5\"}",
+    "queried_at": "2026-04-16T11:52:31.353190+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-codex",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen2-72b-instruct",
+    "raw_response": "{\"model\":\"qwen2-72b-instruct\"}",
+    "queried_at": "2026-04-16T11:52:35.370501+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-codex",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-2-latest",
+    "raw_response": "{\"model\":\"grok-2-latest\"}",
+    "queried_at": "2026-04-16T11:52:31.254702+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-codex",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-128k",
+    "raw_response": "{\"model\":\"moonshot-v1-128k\"}",
+    "queried_at": "2026-04-16T11:52:32.151750+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-codex",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\":\"unknown\"}",
+    "queried_at": "2026-04-16T11:52:40.061021+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-chat",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\":\"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T11:52:31.695269+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-chat",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-7-sonnet-20250219",
+    "raw_response": "{\"model\":\"claude-3-7-sonnet-20250219\"}",
+    "queried_at": "2026-04-16T11:52:34.007693+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-chat",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\":\"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T11:52:33.300121+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-chat",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-5.3",
+    "raw_response": "{\"model\":\"gpt-5.3\"}",
+    "queried_at": "2026-04-16T11:52:33.759400+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-chat",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T11:52:35.924339+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-chat",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-latest",
+    "raw_response": "{\"model\": \"gemini-1.5-pro-latest\"}",
+    "queried_at": "2026-04-16T11:52:34.225685+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-chat",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-flash",
+    "raw_response": "{\"model\": \"gemini-2.0-flash\"}",
+    "queried_at": "2026-04-16T11:52:35.322887+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-chat",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "{\"model\": \"glm-4\"}",
+    "queried_at": "2026-04-16T11:52:36.458700+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-chat",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen2.5-72b-instruct",
+    "raw_response": "{\"model\":\"qwen2.5-72b-instruct\"}",
+    "queried_at": "2026-04-16T11:52:36.778111+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-chat",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-2-latest",
+    "raw_response": "{\"model\":\"grok-2-latest\"}",
+    "queried_at": "2026-04-16T11:52:36.813790+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-chat",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-k2-0711-preview",
+    "raw_response": "{\"model\":\"kimi-k2-0711-preview\"}",
+    "queried_at": "2026-04-16T11:52:37.338245+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.3-chat",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "{\"model\":\"unknown\"}",
+    "queried_at": "2026-04-16T11:52:36.751695+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-opus-4-1-20250805",
+    "raw_response": "{\"model\":\"claude-opus-4-1-20250805\"}",
+    "queried_at": "2026-04-16T11:52:36.192823+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-sonnet-4-20250514",
+    "raw_response": "{\"model\":\"claude-sonnet-4-20250514\"}",
+    "queried_at": "2026-04-16T11:52:36.692850+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-latest",
+    "raw_response": "{\"model\":\"claude-3-5-haiku-latest\"}",
+    "queried_at": "2026-04-16T11:52:36.908755+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4.1",
+    "raw_response": "{\"model\":\"gpt-4.1\"}",
+    "queried_at": "2026-04-16T11:52:37.187461+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-5-codex",
+    "raw_response": "{\"model\":\"gpt-5-codex\"}",
+    "queried_at": "2026-04-16T11:52:37.359301+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.5-pro",
+    "raw_response": "{\"model\":\"gemini-2.5-pro\"}",
+    "queried_at": "2026-04-16T11:52:37.524617+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.5-flash",
+    "raw_response": "{\"model\":\"gemini-2.5-flash\"}",
+    "queried_at": "2026-04-16T11:52:37.521710+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4.5",
+    "raw_response": "{\"model\":\"glm-4.5\"}",
+    "queried_at": "2026-04-16T11:52:37.491591+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-max",
+    "raw_response": "{\"model\":\"qwen-max\"}",
+    "queried_at": "2026-04-16T11:52:37.894161+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-3",
+    "raw_response": "{\"model\":\"grok-3\"}",
+    "queried_at": "2026-04-16T11:52:37.920036+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-k2-0711-preview",
+    "raw_response": "{\"model\":\"kimi-k2-0711-preview\"}",
+    "queried_at": "2026-04-16T11:52:38.113105+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "I don’t know",
+    "raw_response": "{\"model\":\"I don’t know\"}",
+    "queried_at": "2026-04-16T11:52:40.058878+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-mini",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-opus-4-1-20250805",
+    "raw_response": "{\"model\":\"claude-opus-4-1-20250805\"}",
+    "queried_at": "2026-04-16T11:52:38.158296+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-mini",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-7-sonnet-20250219",
+    "raw_response": "{\"model\":\"claude-3-7-sonnet-20250219\"}",
+    "queried_at": "2026-04-16T11:52:38.266913+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-mini",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\":\"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T11:52:38.102260+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-mini",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4.1",
+    "raw_response": "{\"model\":\"gpt-4.1\"}",
+    "queried_at": "2026-04-16T11:52:38.538688+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-mini",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "codex-1",
+    "raw_response": "{\"model\":\"codex-1\"}",
+    "queried_at": "2026-04-16T11:52:38.561592+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-mini",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.5-pro",
+    "raw_response": "{\"model\":\"gemini-2.5-pro\"}",
+    "queried_at": "2026-04-16T11:52:38.717903+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-mini",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-flash",
+    "raw_response": "{\"model\":\"gemini-2.0-flash\"}",
+    "queried_at": "2026-04-16T11:52:38.798030+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-mini",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4.5",
+    "raw_response": "{\"model\":\"glm-4.5\"}",
+    "queried_at": "2026-04-16T11:52:38.880186+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-mini",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-max",
+    "raw_response": "{\"model\":\"qwen-max\"}",
+    "queried_at": "2026-04-16T11:52:38.963284+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-mini",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-3-latest",
+    "raw_response": "{\"model\":\"grok-3-latest\"}",
+    "queried_at": "2026-04-16T11:52:38.960118+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-mini",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-128k",
+    "raw_response": "{\"model\":\"moonshot-v1-128k\"}",
+    "queried_at": "2026-04-16T11:52:39.140323+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-mini",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "mimo-3",
+    "raw_response": "{\"model\":\"mimo-3\"}",
+    "queried_at": "2026-04-16T11:52:39.452542+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-nano",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "{\"model\":\"claude-3-5-sonnet-20241022\"}",
+    "queried_at": "2026-04-16T11:52:39.431297+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-nano",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "{\"model\":\"claude-3-5-sonnet-20241022\"}",
+    "queried_at": "2026-04-16T11:52:39.455466+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-nano",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-haiku-20240307",
+    "raw_response": "{\"model\":\"claude-3-haiku-20240307\"}",
+    "queried_at": "2026-04-16T11:52:39.591428+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-nano",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4.1",
+    "raw_response": "{\"model\":\"gpt-4.1\"}",
+    "queried_at": "2026-04-16T11:52:39.691760+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-nano",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o-mini",
+    "raw_response": "{\"model\":\"gpt-4o-mini\"}",
+    "queried_at": "2026-04-16T11:52:39.590810+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-nano",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-002",
+    "raw_response": "{\"model\":\"gemini-1.5-pro-002\"}",
+    "queried_at": "2026-04-16T11:52:39.893647+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-nano",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-flash-exp",
+    "raw_response": "{\"model\":\"gemini-2.0-flash-exp\"}",
+    "queried_at": "2026-04-16T11:52:40.139243+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-nano",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4.1-mini",
+    "raw_response": "{\"model\":\"gpt-4.1-mini\"}",
+    "queried_at": "2026-04-16T11:52:40.105274+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-nano",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen2.5-72b-instruct",
+    "raw_response": "{\"model\":\"qwen2.5-72b-instruct\"}",
+    "queried_at": "2026-04-16T11:52:40.131644+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-nano",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-2-1212",
+    "raw_response": "{\"model\":\"grok-2-1212\"}",
+    "queried_at": "2026-04-16T11:52:40.089892+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-nano",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4.1-mini",
+    "raw_response": "{\"model\":\"gpt-4.1-mini\"}",
+    "queried_at": "2026-04-16T11:52:40.249783+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-nano",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o-mini",
+    "raw_response": "{\"model\":\"gpt-4o-mini\"}",
+    "queried_at": "2026-04-16T11:52:40.306005+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-pro",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-opus-4-1-20250805",
+    "raw_response": "{\"model\":\"claude-opus-4-1-20250805\"}",
+    "queried_at": "2026-04-16T11:53:51.151337+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-pro",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-sonnet-4-20250514",
+    "raw_response": "{\"model\":\"claude-sonnet-4-20250514\"}",
+    "queried_at": "2026-04-16T11:54:28.980971+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-pro",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\":\"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T11:53:06.455928+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-pro",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-5",
+    "raw_response": "{\"model\":\"gpt-5\"}",
+    "queried_at": "2026-04-16T11:53:45.321806+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-pro",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-5-codex",
+    "raw_response": "{\"model\":\"gpt-5-codex\"}",
+    "queried_at": "2026-04-16T11:55:14.657971+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-pro",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.5-pro",
+    "raw_response": "{\"model\":\"gemini-2.5-pro\"}",
+    "queried_at": "2026-04-16T11:56:27.081716+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-pro",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.5-flash",
+    "raw_response": "{\"model\":\"gemini-2.5-flash\"}",
+    "queried_at": "2026-04-16T11:54:41.249077+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-pro",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4.5",
+    "raw_response": "{\"model\":\"glm-4.5\"}",
+    "queried_at": "2026-04-16T11:54:31.909591+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-pro",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen3-235b-a22b",
+    "raw_response": "{\"model\":\"qwen3-235b-a22b\"}",
+    "queried_at": "2026-04-16T11:57:04.015714+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-pro",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-4-0709",
+    "raw_response": "{\"model\":\"grok-4-0709\"}",
+    "queried_at": "2026-04-16T11:55:25.599563+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-pro",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-k2-0711-preview",
+    "raw_response": "{\"model\":\"kimi-k2-0711-preview\"}",
+    "queried_at": "2026-04-16T11:55:08.080601+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.4-pro",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "MiMo-7B-RL",
+    "raw_response": "{\"model\":\"MiMo-7B-RL\"}",
+    "queried_at": "2026-04-16T11:56:51.666947+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.0-flash-001",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "```json\n{\"model\": \"claude-3-opus-20240229\"}\n```",
+    "queried_at": "2026-04-16T11:53:51.896109+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.0-flash-001",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-sonnet-20240229",
+    "raw_response": "```json\n{\"model\": \"claude-3-sonnet-20240229\"}\n```",
+    "queried_at": "2026-04-16T11:53:52.399632+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.0-flash-001",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-haiku-20240307",
+    "raw_response": "```json\n{\"model\": \"claude-3-haiku-20240307\"}\n```",
+    "queried_at": "2026-04-16T11:53:52.912631+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.0-flash-001",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4-turbo-preview",
+    "raw_response": "```json\n{\"model\": \"gpt-4-turbo-preview\"}\n```",
+    "queried_at": "2026-04-16T11:53:53.499678+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.0-flash-001",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "```json\n{\"model\": \"code-davinci-002\"}\n```",
+    "queried_at": "2026-04-16T11:53:54.072939+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.0-flash-001",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-pro",
+    "raw_response": "```json\n{\"model\": \"gemini-pro\"}\n```",
+    "queried_at": "2026-04-16T11:53:54.605233+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.0-flash-001",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "models/gemini-1.5-flash-001",
+    "raw_response": "```json\n{\"model\": \"models/gemini-1.5-flash-001\"}\n```",
+    "queried_at": "2026-04-16T11:53:55.135418+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.0-flash-001",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "```json\n{\"model\": \"glm-4\"}\n```",
+    "queried_at": "2026-04-16T11:53:55.683340+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.0-flash-001",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "Qwen-72B-Chat",
+    "raw_response": "```json\n{\"model\": \"Qwen-72B-Chat\"}\n```",
+    "queried_at": "2026-04-16T11:53:56.206730+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.0-flash-001",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-1",
+    "raw_response": "```json\n{\"model\": \"grok-1\"}\n```",
+    "queried_at": "2026-04-16T11:53:56.900342+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.0-flash-001",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-moonshot-v1",
+    "raw_response": "```json\n{\"model\": \"kimi-moonshot-v1\"}\n```",
+    "queried_at": "2026-04-16T11:53:57.510651+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.0-flash-001",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "```json\n{\"model\": \"gpt-4o\"}\n```",
+    "queried_at": "2026-04-16T11:53:57.924069+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-pro",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "```json\n{\n  \"model\": \"claude-3-opus-20240229\"\n}\n```",
+    "queried_at": "2026-04-16T12:04:07.531806+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-pro",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-sonnet-20240229",
+    "raw_response": "```json\n{\n  \"model\": \"claude-3-sonnet-20240229\"\n}\n```",
+    "queried_at": "2026-04-16T12:04:35.760919+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-pro",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-haiku-20240307",
+    "raw_response": "```json\n{\n  \"model\": \"claude-3-haiku-20240307\"\n}\n```",
+    "queried_at": "2026-04-16T12:04:39.659483+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-pro",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "```json\n{\"model\": \"gpt-4o\"}\n```",
+    "queried_at": "2026-04-16T12:04:49.192130+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-pro",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "```json\n{\"model\": \"code-davinci-002\"}\n```",
+    "queried_at": "2026-04-16T12:05:31.822686+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-pro",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro",
+    "raw_response": "```json\n{\n  \"model\": \"gemini-1.5-pro\"\n}\n```",
+    "queried_at": "2026-04-16T12:05:22.865208+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-pro",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash-latest",
+    "raw_response": "```json\n{\n  \"model\": \"gemini-1.5-flash-latest\"\n}\n```",
+    "queried_at": "2026-04-16T12:05:32.981535+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-pro",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "```json\n{\n  \"model\": \"glm-4\"\n}\n```",
+    "queried_at": "2026-04-16T12:06:33.733851+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-pro",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen2-72b-instruct",
+    "raw_response": "```json\n{\n  \"model\": \"qwen2-72b-instruct\"\n}\n```",
+    "queried_at": "2026-04-16T12:07:00.891048+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-pro",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-1.5",
+    "raw_response": "```json\n{\n  \"model\": \"grok-1.5\"\n}\n```",
+    "queried_at": "2026-04-16T12:07:26.413630+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-pro",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-128k",
+    "raw_response": "```json\n{\"model\": \"moonshot-v1-128k\"}\n```",
+    "queried_at": "2026-04-16T12:04:15.507562+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-pro",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-latest",
+    "raw_response": "```json\n{\n  \"model\": \"gemini-1.5-pro-latest\"\n}\n```",
+    "queried_at": "2026-04-16T12:04:48.780260+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "```json\n{\n  \"model\": \"claude-3-opus-20240229\"\n}\n```",
+    "queried_at": "2026-04-16T12:04:36.445676+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20240620",
+    "raw_response": "```json\n{\n  \"model\": \"claude-3-5-sonnet-20240620\"\n}\n```",
+    "queried_at": "2026-04-16T12:04:37.905465+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-haiku-20240307",
+    "raw_response": "```json\n{\n  \"model\": \"claude-3-haiku-20240307\"\n}\n```",
+    "queried_at": "2026-04-16T12:04:38.946534+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "```json\n{\n  \"model\": \"gpt-4o\"\n}\n```",
+    "queried_at": "2026-04-16T12:04:39.625114+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "```json\n{\n  \"model\": \"code-davinci-002\"\n}\n```",
+    "queried_at": "2026-04-16T12:04:40.270546+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-pro",
+    "raw_response": "```json\n{\n\"model\": \"gemini-pro\"\n}\n```",
+    "queried_at": "2026-04-16T12:04:40.360187+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash-latest",
+    "raw_response": "```json\n{\n\"model\": \"gemini-1.5-flash-latest\"\n}\n```",
+    "queried_at": "2026-04-16T12:04:40.962903+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-latest",
+    "raw_response": "```json\n{\n\"model\": \"gemini-1.5-pro-latest\"\n}\n```",
+    "queried_at": "2026-04-16T12:04:41.026062+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-max",
+    "raw_response": "```json\n{\n\"model\": \"qwen-max\"\n}\n```",
+    "queried_at": "2026-04-16T12:04:41.808755+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-1",
+    "raw_response": "```json\n{\n\"model\": \"grok-1\"\n}\n```",
+    "queried_at": "2026-04-16T12:04:42.062360+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi",
+    "raw_response": "```json\n{\n\"model\": \"kimi\"\n}\n```",
+    "queried_at": "2026-04-16T12:04:42.842864+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-latest",
+    "raw_response": "```json\n{\n  \"model\": \"gemini-1.5-pro-latest\"\n}\n```",
+    "queried_at": "2026-04-16T12:04:43.135497+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash-lite",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "```json\n{\"model\": \"claude-3-opus-20240229\"}\n```",
+    "queried_at": "2026-04-16T12:04:43.442183+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash-lite",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20240620",
+    "raw_response": "```json\n{\"model\": \"claude-3-5-sonnet-20240620\"}\n```",
+    "queried_at": "2026-04-16T12:04:44.397253+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash-lite",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-haiku-20240307",
+    "raw_response": "```json\n{\"model\": \"claude-3-haiku-20240307\"}\n```",
+    "queried_at": "2026-04-16T12:04:43.947152+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash-lite",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4-turbo-preview",
+    "raw_response": "```json\n{\"model\": \"gpt-4-turbo-preview\"}\n```",
+    "queried_at": "2026-04-16T12:04:44.415466+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash-lite",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "```json\n{\"model\": \"code-davinci-002\"}\n```",
+    "queried_at": "2026-04-16T12:04:44.927068+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash-lite",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-latest",
+    "raw_response": "```json\n{\"model\": \"gemini-1.5-pro-latest\"}\n```",
+    "queried_at": "2026-04-16T12:04:44.949441+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash-lite",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash-latest",
+    "raw_response": "```json\n{\"model\": \"gemini-1.5-flash-latest\"}\n```",
+    "queried_at": "2026-04-16T12:04:45.393987+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash-lite",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "```json\n{\"model\": \"claude-3-opus-20240229\"}\n```",
+    "queried_at": "2026-04-16T12:04:45.397803+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash-lite",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-long",
+    "raw_response": "```json\n{\"model\": \"qwen-long\"}\n```",
+    "queried_at": "2026-04-16T12:04:45.931643+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash-lite",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "groq/llama3-70b-8192",
+    "raw_response": "```json\n{\"model\": \"groq/llama3-70b-8192\"}\n```",
+    "queried_at": "2026-04-16T12:04:45.919227+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash-lite",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-2.5",
+    "raw_response": "```json\n{\"model\": \"kimi-2.5\"}\n```",
+    "queried_at": "2026-04-16T12:04:46.391791+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-2.5-flash-lite",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "MiMo-7B",
+    "raw_response": "```json\n{\"model\": \"MiMo-7B\"}\n```",
+    "queried_at": "2026-04-16T12:04:46.484269+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3-flash-preview",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T12:04:47.414390+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3-flash-preview",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-sonnet-20241022\"}",
+    "queried_at": "2026-04-16T12:04:47.515982+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3-flash-preview",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T12:04:48.439912+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3-flash-preview",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o-2024-08-06",
+    "raw_response": "{\"model\": \"gpt-4o-2024-08-06\"}",
+    "queried_at": "2026-04-16T12:04:48.480163+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3-flash-preview",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T12:04:49.378187+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3-flash-preview",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro",
+    "raw_response": "{\"model\": \"gemini-1.5-pro\"}",
+    "queried_at": "2026-04-16T12:04:49.289170+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3-flash-preview",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-flash",
+    "raw_response": "{\"model\": \"gemini-2.0-flash\"}",
+    "queried_at": "2026-04-16T12:04:49.802473+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3-flash-preview",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4-plus",
+    "raw_response": "{\"model\": \"glm-4-plus\"}",
+    "queried_at": "2026-04-16T12:04:50.039805+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3-flash-preview",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-max-2025-01-25",
+    "raw_response": "{\"model\": \"qwen-max-2025-01-25\"}",
+    "queried_at": "2026-04-16T12:04:50.231552+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3-flash-preview",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-2-1212",
+    "raw_response": "{\"model\": \"grok-2-1212\"}",
+    "queried_at": "2026-04-16T12:04:50.243712+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3-flash-preview",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-128k",
+    "raw_response": "{\"model\": \"moonshot-v1-128k\"}",
+    "queried_at": "2026-04-16T12:04:50.808067+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3-flash-preview",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "mistral-large-2407",
+    "raw_response": "{\"model\": \"mistral-large-2407\"}",
+    "queried_at": "2026-04-16T12:04:50.931253+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-pro-preview",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\n  \"model\": \"claude-3-opus-20240229\"\n}",
+    "queried_at": "2026-04-16T12:04:57.519662+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-pro-preview",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-7-sonnet-20250219",
+    "raw_response": "{\n  \"model\": \"claude-3-7-sonnet-20250219\"\n}",
+    "queried_at": "2026-04-16T12:05:02.532684+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-pro-preview",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\n  \"model\": \"claude-3-5-haiku-20241022\"\n}",
+    "queried_at": "2026-04-16T12:05:06.036721+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-pro-preview",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "{\n  \"model\": \"gpt-4o\"\n}",
+    "queried_at": "2026-04-16T12:05:21.447411+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-pro-preview",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\n  \"model\": \"code-davinci-002\"\n}",
+    "queried_at": "2026-04-16T12:05:12.403141+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-pro-preview",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro",
+    "raw_response": "{\n  \"model\": \"gemini-1.5-pro\"\n}",
+    "queried_at": "2026-04-16T12:05:08.485574+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-pro-preview",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-flash",
+    "raw_response": "{\n  \"model\": \"gemini-2.0-flash\"\n}",
+    "queried_at": "2026-04-16T12:05:18.656512+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-pro-preview",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4-plus",
+    "raw_response": "{\n  \"model\": \"glm-4-plus\"\n}",
+    "queried_at": "2026-04-16T12:05:25.268161+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-pro-preview",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-max",
+    "raw_response": "{\n  \"model\": \"qwen-max\"\n}",
+    "queried_at": "2026-04-16T12:05:30.738052+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-pro-preview",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-2-latest",
+    "raw_response": "{\n  \"model\": \"grok-2-latest\"\n}",
+    "queried_at": "2026-04-16T12:05:36.411788+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-pro-preview",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-128k",
+    "raw_response": "{\n  \"model\": \"moonshot-v1-128k\"\n}",
+    "queried_at": "2026-04-16T12:05:36.873332+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-pro-preview",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "open-mixtral-8x22b",
+    "raw_response": "```json\n{\"model\": \"open-mixtral-8x22b\"}\n```",
+    "queried_at": "2026-04-16T12:12:01.695382+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-flash-lite-preview",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T12:05:26.298127+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-flash-lite-preview",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-sonnet-20241022\"}",
+    "queried_at": "2026-04-16T12:05:27.083067+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-flash-lite-preview",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T12:05:28.161932+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-flash-lite-preview",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "{\"model\": \"gpt-4o\"}",
+    "queried_at": "2026-04-16T12:05:29.113680+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-flash-lite-preview",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T12:05:29.929645+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-flash-lite-preview",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-002",
+    "raw_response": "{\"model\": \"gemini-1.5-pro-002\"}",
+    "queried_at": "2026-04-16T12:05:31.454206+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-flash-lite-preview",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash-002",
+    "raw_response": "{\"model\": \"gemini-1.5-flash-002\"}",
+    "queried_at": "2026-04-16T12:05:32.053083+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-flash-lite-preview",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4-plus",
+    "raw_response": "{\"model\": \"glm-4-plus\"}",
+    "queried_at": "2026-04-16T12:05:33.617811+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-flash-lite-preview",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-max",
+    "raw_response": "{\"model\": \"qwen-max\"}",
+    "queried_at": "2026-04-16T12:05:32.978668+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-flash-lite-preview",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-beta",
+    "raw_response": "{\"model\": \"grok-beta\"}",
+    "queried_at": "2026-04-16T12:05:33.065070+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-flash-lite-preview",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-k1.5",
+    "raw_response": "{\"model\": \"kimi-k1.5\"}",
+    "queried_at": "2026-04-16T12:05:33.644637+00:00"
+  },
+  {
+    "answerer_model_id": "google/gemini-3.1-flash-lite-preview",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "mixtral-8x22b-instruct-v0.1",
+    "raw_response": "{\"model\": \"mixtral-8x22b-instruct-v0.1\"}",
+    "queried_at": "2026-04-16T12:05:34.556358+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.5",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T12:05:38.874910+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.5",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-sonnet-20240229",
+    "raw_response": "{\"model\": \"claude-3-sonnet-20240229\"}",
+    "queried_at": "2026-04-16T12:05:48.002537+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.5",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-haiku-20240307",
+    "raw_response": "{\"model\": \"claude-3-haiku-20240307\"}",
+    "queried_at": "2026-04-16T12:05:38.609251+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.5",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4",
+    "raw_response": "{\"model\": \"gpt-4\"}",
+    "queried_at": "2026-04-16T12:05:53.721161+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.5",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T12:05:40.520580+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.5",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro",
+    "raw_response": "{\"model\": \"gemini-1.5-pro\"}",
+    "queried_at": "2026-04-16T12:05:40.336720+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.5",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash",
+    "raw_response": "{\"model\": \"gemini-1.5-flash\"}",
+    "queried_at": "2026-04-16T12:05:41.974527+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.5",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "{\"model\": \"glm-4\"}",
+    "queried_at": "2026-04-16T12:05:45.855307+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.5",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-72b",
+    "raw_response": "{\"model\": \"qwen-72b\"}",
+    "queried_at": "2026-04-16T12:05:47.035409+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.5",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-1.5",
+    "raw_response": "{\"model\": \"grok-1.5\"}",
+    "queried_at": "2026-04-16T12:05:46.956718+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.5",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-32k",
+    "raw_response": "{\"model\": \"moonshot-v1-32k\"}",
+    "queried_at": "2026-04-16T12:05:48.854615+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.5",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4-vision-preview",
+    "raw_response": "{\"model\": \"gpt-4-vision-preview\"}",
+    "queried_at": "2026-04-16T12:05:55.115639+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.6",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T12:05:53.985157+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.6",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-sonnet-20240229",
+    "raw_response": "\n{\"model\": \"claude-3-sonnet-20240229\"}",
+    "queried_at": "2026-04-16T12:05:54.090556+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.6",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-haiku-20240307",
+    "raw_response": "\n{\"model\": \"claude-3-haiku-20240307\"}",
+    "queried_at": "2026-04-16T12:05:55.352539+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.6",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "{\"model\": \"gpt-4o\"}",
+    "queried_at": "2026-04-16T12:06:06.920729+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.6",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T12:06:02.132616+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.6",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-latest",
+    "raw_response": "{\"model\": \"gemini-1.5-pro-latest\"}",
+    "queried_at": "2026-04-16T12:06:09.736200+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.6",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash-latest",
+    "raw_response": "{\"model\": \"gemini-1.5-flash-latest\"}",
+    "queried_at": "2026-04-16T12:06:35.931774+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.6",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4.5",
+    "raw_response": "{\"model\": \"glm-4.5\"}",
+    "queried_at": "2026-04-16T12:06:18.706477+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.6",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-2.0-72b",
+    "raw_response": "\n{\"model\": \"qwen-2.0-72b\"}",
+    "queried_at": "2026-04-16T12:06:10.686014+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.6",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-2",
+    "raw_response": "{\"model\": \"grok-2\"}",
+    "queried_at": "2026-04-16T12:06:35.375830+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.6",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-latest",
+    "raw_response": "{\"model\": \"kimi-latest\"}",
+    "queried_at": "2026-04-16T12:06:50.396692+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.6",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": null,
+    "raw_response": "",
+    "queried_at": "2026-04-16T12:24:37.510880+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.7",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T12:06:13.107270+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.7",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "```json\n{\"model\": \"claude-3-5-sonnet-20241022\"}\n```",
+    "queried_at": "2026-04-16T12:06:30.554086+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.7",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "```json\n{\n  \"model\": \"claude-3-5-haiku-20241022\"\n}\n```",
+    "queried_at": "2026-04-16T12:06:28.748579+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.7",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "```json\n{\n  \"model\": \"gpt-4o\"\n}\n```",
+    "queried_at": "2026-04-16T12:06:56.793065+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.7",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "```json\n{\n  \"model\": \"code-davinci-002\"\n}\n```",
+    "queried_at": "2026-04-16T12:06:54.481040+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.7",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro",
+    "raw_response": "```json\n{\"model\": \"gemini-1.5-pro\"}\n```",
+    "queried_at": "2026-04-16T12:06:40.349266+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.7",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash-002",
+    "raw_response": "```json\n{\n  \"model\": \"gemini-1.5-flash-002\"\n}\n```",
+    "queried_at": "2026-04-16T12:07:09.063901+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.7",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4-plus",
+    "raw_response": "```json\n{\n  \"model\": \"glm-4-plus\"\n}\n```",
+    "queried_at": "2026-04-16T12:07:43.196152+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.7",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "Qwen2.5-72B-Instruct",
+    "raw_response": "```json\n{\n  \"model\": \"Qwen2.5-72B-Instruct\"\n}\n```",
+    "queried_at": "2026-04-16T12:07:03.713396+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.7",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-1.5",
+    "raw_response": "{\"model\": \"grok-1.5\"}",
+    "queried_at": "2026-04-16T12:07:02.345867+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.7",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-128k",
+    "raw_response": "```json\n{\n  \"model\": \"moonshot-v1-128k\"\n}\n```",
+    "queried_at": "2026-04-16T12:07:40.158014+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-4.7",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": null,
+    "raw_response": "",
+    "queried_at": "2026-04-16T12:41:34.690945+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T12:07:08.998814+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-sonnet-20241022\"}",
+    "queried_at": "2026-04-16T12:07:09.257033+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T12:07:07.932777+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": null,
+    "raw_response": "I don't have reliable current information about the most recent GPT model, as my knowledge has a cutoff date and I don't have access to real-time information about OpenAI's latest releases.\n\nI recommend checking OpenAI's official documentation at platform.openai.com for the most up-to-date information on available models.",
+    "queried_at": "2026-04-16T12:07:17.600189+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T12:07:14.873232+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro",
+    "raw_response": "{\"model\": \"gemini-1.5-pro\"}",
+    "queried_at": "2026-04-16T12:07:16.512239+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-flash",
+    "raw_response": "{\"model\": \"gemini-2.0-flash\"}",
+    "queried_at": "2026-04-16T12:07:13.077320+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4-plus",
+    "raw_response": "{\"model\": \"glm-4-plus\"}",
+    "queried_at": "2026-04-16T12:07:24.035647+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen2.5-72b-instruct",
+    "raw_response": "{\"model\": \"qwen2.5-72b-instruct\"}",
+    "queried_at": "2026-04-16T12:07:35.110077+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "I don't have the most up-to-date information about the latest Grok model version in the official API.",
+    "raw_response": "{\"model\": \"I don't have the most up-to-date information about the latest Grok model version in the official API.\"}",
+    "queried_at": "2026-04-16T12:07:21.180161+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-128k",
+    "raw_response": "{\"model\": \"moonshot-v1-128k\"}",
+    "queried_at": "2026-04-16T12:07:22.861705+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "I don't have reliable, up-to-date information about the most recent MiMo model or its official API model identifier. I'm not confident in providing a specific model name without the risk of providing incorrect information.\n\n{\"model\": \"unknown\"}",
+    "queried_at": "2026-04-16T12:07:35.317284+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5.1",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T12:07:53.994447+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5.1",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-sonnet-20241022\"}",
+    "queried_at": "2026-04-16T12:07:37.815072+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5.1",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T12:07:32.042370+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5.1",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "{\"model\": \"gpt-4o\"}",
+    "queried_at": "2026-04-16T12:07:39.134540+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5.1",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T12:08:14.888902+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5.1",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-latest",
+    "raw_response": "{\"model\": \"gemini-1.5-pro-latest\"}",
+    "queried_at": "2026-04-16T12:07:58.464180+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5.1",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-flash",
+    "raw_response": "{\"model\": \"gemini-2.0-flash\"}",
+    "queried_at": "2026-04-16T12:07:53.017874+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5.1",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "{\"model\": \"glm-4\"}",
+    "queried_at": "2026-04-16T12:07:52.164586+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5.1",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen2.5-72b-instruct",
+    "raw_response": "```json\n{\"model\": \"qwen2.5-72b-instruct\"}\n```",
+    "queried_at": "2026-04-16T12:07:52.765166+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5.1",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-2",
+    "raw_response": "{\"model\": \"grok-2\"}",
+    "queried_at": "2026-04-16T12:07:56.726073+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5.1",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-128k",
+    "raw_response": "{\"model\": \"moonshot-v1-128k\"}",
+    "queried_at": "2026-04-16T12:08:02.247764+00:00"
+  },
+  {
+    "answerer_model_id": "z-ai/glm-5.1",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "unknown",
+    "raw_response": "I don't have reliable information about a \"MiMo\" model series or its most recent version in my training data. I'm not confident enough to provide an accurate model name.\n\n{\"model\": \"unknown\"}",
+    "queried_at": "2026-04-16T12:08:13.215988+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen-max",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-2.0",
+    "raw_response": "{\"model\": \"claude-2.0\"}",
+    "queried_at": "2026-04-16T12:07:53.696812+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen-max",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-2.0",
+    "raw_response": "{\"model\": \"claude-2.0\"}",
+    "queried_at": "2026-04-16T12:07:54.303317+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen-max",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-2.0",
+    "raw_response": "{\"model\": \"claude-2.0\"}",
+    "queried_at": "2026-04-16T12:07:54.869829+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen-max",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4",
+    "raw_response": "{\"model\": \"gpt-4\"}",
+    "queried_at": "2026-04-16T12:07:54.911522+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen-max",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T12:07:55.575501+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen-max",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "GeminiPro2023",
+    "raw_response": "{\"model\": \"GeminiPro2023\"}",
+    "queried_at": "2026-04-16T12:07:55.928400+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen-max",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "GeminiFlash_V2.0",
+    "raw_response": "{\"model\": \"GeminiFlash_V2.0\"}",
+    "queried_at": "2026-04-16T12:07:56.347819+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen-max",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4",
+    "raw_response": "{\"model\": \"gpt-4\"}",
+    "queried_at": "2026-04-16T12:07:57.242837+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen-max",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "Qwen-1.5",
+    "raw_response": "{\"model\": \"Qwen-1.5\"}",
+    "queried_at": "2026-04-16T12:07:57.021964+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen-max",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-2",
+    "raw_response": "{\"model\": \"grok-2\"}",
+    "queried_at": "2026-04-16T12:07:57.324999+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen-max",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "Kimi-1.2",
+    "raw_response": "{\"model\": \"Kimi-1.2\"}",
+    "queried_at": "2026-04-16T12:07:57.878973+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen-max",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "mim-6b",
+    "raw_response": "{\"model\": \"mim-6b\"}",
+    "queried_at": "2026-04-16T12:07:58.050441+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3-235b-a22b",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus",
+    "raw_response": "{\"model\": \"claude-3-opus\"}",
+    "queried_at": "2026-04-16T12:08:11.559436+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3-235b-a22b",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20240620",
+    "raw_response": "{\"model\": \"claude-3-5-sonnet-20240620\"}",
+    "queried_at": "2026-04-16T12:08:02.108312+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3-235b-a22b",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-haiku-20240307",
+    "raw_response": "{\"model\": \"claude-3-haiku-20240307\"}",
+    "queried_at": "2026-04-16T12:08:05.698805+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3-235b-a22b",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "{\"model\": \"gpt-4o\"}",
+    "queried_at": "2026-04-16T12:08:07.386615+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3-235b-a22b",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-003",
+    "raw_response": "{\"model\": \"code-davinci-003\"}",
+    "queried_at": "2026-04-16T12:08:14.396610+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3-235b-a22b",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro",
+    "raw_response": "{\"model\": \"gemini-1.5-pro\"}",
+    "queried_at": "2026-04-16T12:08:09.293229+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3-235b-a22b",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash",
+    "raw_response": "{\"model\": \"gemini-1.5-flash\"}",
+    "queried_at": "2026-04-16T12:08:15.015786+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3-235b-a22b",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "{\"model\": \"glm-4\"}",
+    "queried_at": "2026-04-16T12:08:14.600295+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3-235b-a22b",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen3",
+    "raw_response": "{\"model\": \"qwen3\"}",
+    "queried_at": "2026-04-16T12:08:14.188395+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3-235b-a22b",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "Grok-4",
+    "raw_response": "{\"model\": \"Grok-4\"}",
+    "queried_at": "2026-04-16T12:08:18.496543+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3-235b-a22b",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-1-5",
+    "raw_response": "{\"model\": \"kimi-1-5\"}",
+    "queried_at": "2026-04-16T12:08:31.627500+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3-235b-a22b",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "MiMo-B3D",
+    "raw_response": "{\"model\": \"MiMo-B3D\"}",
+    "queried_at": "2026-04-16T12:08:25.363759+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.5-plus-02-15",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T12:08:51.048375+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.5-plus-02-15",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "\n</think>\n\n{\"model\": \"claude-3-5-sonnet-20241022\"}",
+    "queried_at": "2026-04-16T12:12:12.514893+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.5-plus-02-15",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T12:11:06.098561+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.5-plus-02-15",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "\n</think>\n\n{\"model\": \"gpt-4o\"}",
+    "queried_at": "2026-04-16T12:10:09.884165+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.5-plus-02-15",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T12:33:03.944833+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.5-plus-02-15",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro",
+    "raw_response": "\n</think>\n\n{\"model\": \"gemini-1.5-pro\"}",
+    "queried_at": "2026-04-16T12:09:48.178926+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.5-plus-02-15",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash",
+    "raw_response": "{\"model\": \"gemini-1.5-flash\"}",
+    "queried_at": "2026-04-16T12:10:38.040769+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.5-plus-02-15",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "\n</think>\n\n{\"model\": \"glm-4\"}",
+    "queried_at": "2026-04-16T12:12:07.329257+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.5-plus-02-15",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-max",
+    "raw_response": "\n</think>\n\n{\"model\": \"qwen-max\"}",
+    "queried_at": "2026-04-16T12:11:47.493427+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.5-plus-02-15",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-2",
+    "raw_response": "{\"model\": \"grok-2\"}",
+    "queried_at": "2026-04-16T12:11:01.713871+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.5-plus-02-15",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-128k",
+    "raw_response": "\n</think>\n\n{\"model\": \"moonshot-v1-128k\"}",
+    "queried_at": "2026-04-16T12:12:09.249130+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.5-plus-02-15",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "mimo-v1",
+    "raw_response": "{\n  \"model\": \"mimo-v1\"\n}",
+    "queried_at": "2026-04-16T12:35:47.517926+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.6-plus",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T12:11:28.532380+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.6-plus",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-sonnet-20241022\"}",
+    "queried_at": "2026-04-16T12:11:43.367954+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.6-plus",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T12:12:14.164055+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.6-plus",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "{\"model\": \"gpt-4o\"}",
+    "queried_at": "2026-04-16T12:12:29.221473+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.6-plus",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T12:22:25.838566+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.6-plus",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro",
+    "raw_response": "{\"model\": \"gemini-1.5-pro\"}",
+    "queried_at": "2026-04-16T12:12:36.390973+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.6-plus",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-flash",
+    "raw_response": "{\"model\": \"gemini-2.0-flash\"}",
+    "queried_at": "2026-04-16T12:22:28.051325+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.6-plus",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "{\"model\": \"glm-4\"}",
+    "queried_at": "2026-04-16T12:12:40.485140+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.6-plus",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen2.5-72b-instruct",
+    "raw_response": "{\"model\": \"qwen2.5-72b-instruct\"}",
+    "queried_at": "2026-04-16T12:12:55.758599+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.6-plus",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-3",
+    "raw_response": "{\"model\": \"grok-3\"}",
+    "queried_at": "2026-04-16T12:12:59.235576+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.6-plus",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-128k",
+    "raw_response": "{\"model\": \"moonshot-v1-128k\"}",
+    "queried_at": "2026-04-16T12:13:11.877404+00:00"
+  },
+  {
+    "answerer_model_id": "qwen/qwen3.6-plus",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "MiMo-72B-Chat",
+    "raw_response": "{\"model\": \"MiMo-72B-Chat\"}",
+    "queried_at": "2026-04-16T12:13:20.150788+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-3",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T12:12:56.312016+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-3",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3.7-sonnet-20240620",
+    "raw_response": "{\"model\": \"claude-3.7-sonnet-20240620\"}",
+    "queried_at": "2026-04-16T12:12:57.144605+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-3",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-haiku-20240307",
+    "raw_response": "{\"model\": \"claude-3-haiku-20240307\"}",
+    "queried_at": "2026-04-16T12:12:57.676831+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-3",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4-turbo",
+    "raw_response": "{\"model\": \"gpt-4-turbo\"}",
+    "queried_at": "2026-04-16T12:12:58.270841+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-3",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4-turbo-2024-04-09",
+    "raw_response": "{\"model\": \"gpt-4-turbo-2024-04-09\"}",
+    "queried_at": "2026-04-16T12:12:58.865418+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-3",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro",
+    "raw_response": "{\"model\": \"gemini-1.5-pro\"}",
+    "queried_at": "2026-04-16T12:12:59.555338+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-3",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash",
+    "raw_response": "{\"model\": \"gemini-1.5-flash\"}",
+    "queried_at": "2026-04-16T12:12:59.852553+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-3",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "{\"model\": \"glm-4\"}",
+    "queried_at": "2026-04-16T12:13:00.160089+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-3",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-72b",
+    "raw_response": "{\"model\": \"qwen-72b\"}",
+    "queried_at": "2026-04-16T12:13:00.365515+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-3",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-2-latest",
+    "raw_response": "{\"model\": \"grok-2-latest\"}",
+    "queried_at": "2026-04-16T12:13:00.944830+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-3",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-2-100k",
+    "raw_response": "{\"model\": \"kimi-2-100k\"}",
+    "queried_at": "2026-04-16T12:13:00.892688+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-3",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-2-latest",
+    "raw_response": "{\"model\": \"grok-2-latest\"}",
+    "queried_at": "2026-04-16T12:13:01.408965+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T12:13:04.999547+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20240620",
+    "raw_response": "{\"model\": \"claude-3-5-sonnet-20240620\"}",
+    "queried_at": "2026-04-16T12:13:05.143927+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-haiku-20240307",
+    "raw_response": "{\"model\": \"claude-3-haiku-20240307\"}",
+    "queried_at": "2026-04-16T12:13:10.281883+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o-mini",
+    "raw_response": "{\"model\": \"gpt-4o-mini\"}",
+    "queried_at": "2026-04-16T12:13:14.769448+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T12:13:22.090094+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro",
+    "raw_response": "{\"model\": \"gemini-1.5-pro\"}",
+    "queried_at": "2026-04-16T12:13:19.420932+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash",
+    "raw_response": "{\"model\": \"gemini-1.5-flash\"}",
+    "queried_at": "2026-04-16T12:13:26.518965+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "{\"model\": \"glm-4\"}",
+    "queried_at": "2026-04-16T12:13:26.851708+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen2.5-72b-instruct",
+    "raw_response": "{\"model\": \"qwen2.5-72b-instruct\"}",
+    "queried_at": "2026-04-16T12:13:35.141278+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-1",
+    "raw_response": "{\"model\": \"grok-1\"}",
+    "queried_at": "2026-04-16T12:13:34.710473+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-128k",
+    "raw_response": "{\"model\": \"moonshot-v1-128k\"}",
+    "queried_at": "2026-04-16T12:13:52.856964+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o-mini",
+    "raw_response": "{\"model\": \"gpt-4o-mini\"}",
+    "queried_at": "2026-04-16T12:15:27.817885+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.1-fast",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T12:13:36.757449+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.1-fast",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20240620",
+    "raw_response": "{\"model\": \"claude-3-5-sonnet-20240620\"}",
+    "queried_at": "2026-04-16T12:13:37.063714+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.1-fast",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T12:13:38.837382+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.1-fast",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "{\"model\": \"gpt-4o\"}",
+    "queried_at": "2026-04-16T12:13:43.243806+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.1-fast",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T12:13:41.557252+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.1-fast",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-002",
+    "raw_response": "{\"model\": \"gemini-1.5-pro-002\"}",
+    "queried_at": "2026-04-16T12:13:45.288057+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.1-fast",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash-002",
+    "raw_response": "{\"model\": \"gemini-1.5-flash-002\"}",
+    "queried_at": "2026-04-16T12:13:50.607341+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.1-fast",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "{\"model\": \"glm-4\"}",
+    "queried_at": "2026-04-16T12:13:56.274691+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.1-fast",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen2.5-72b-instruct",
+    "raw_response": "{\"model\": \"qwen2.5-72b-instruct\"}",
+    "queried_at": "2026-04-16T12:13:53.836391+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.1-fast",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-beta",
+    "raw_response": "{\"model\": \"grok-beta\"}",
+    "queried_at": "2026-04-16T12:14:02.126369+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.1-fast",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-128k",
+    "raw_response": "{\"model\": \"moonshot-v1-128k\"}",
+    "queried_at": "2026-04-16T12:14:08.998984+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.1-fast",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-vision-beta",
+    "raw_response": "{\"model\": \"grok-vision-beta\"}",
+    "queried_at": "2026-04-16T12:14:32.304906+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.20",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T12:14:02.918001+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.20",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-7-sonnet-20250219",
+    "raw_response": "{\"model\": \"claude-3-7-sonnet-20250219\"}",
+    "queried_at": "2026-04-16T12:14:03.443096+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.20",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T12:14:03.882637+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.20",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "{\"model\": \"gpt-4o\"}",
+    "queried_at": "2026-04-16T12:14:04.326478+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.20",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T12:14:04.786177+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.20",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-002",
+    "raw_response": "{\"model\": \"gemini-1.5-pro-002\"}",
+    "queried_at": "2026-04-16T12:14:05.272272+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.20",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash-002",
+    "raw_response": "{\"model\": \"gemini-1.5-flash-002\"}",
+    "queried_at": "2026-04-16T12:14:05.906689+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.20",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4-plus",
+    "raw_response": "{\"model\": \"glm-4-plus\"}",
+    "queried_at": "2026-04-16T12:14:06.341557+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.20",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen3-235b-a22b",
+    "raw_response": "{\"model\": \"qwen3-235b-a22b\"}",
+    "queried_at": "2026-04-16T12:14:06.889352+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.20",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-2-1212",
+    "raw_response": "{\"model\": \"grok-2-1212\"}",
+    "queried_at": "2026-04-16T12:14:07.369534+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.20",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-8k",
+    "raw_response": "{\"model\": \"moonshot-v1-8k\"}",
+    "queried_at": "2026-04-16T12:14:07.855812+00:00"
+  },
+  {
+    "answerer_model_id": "x-ai/grok-4.20",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "MiMo-4.5-Pro-2507",
+    "raw_response": "{\"model\": \"MiMo-4.5-Pro-2507\"}",
+    "queried_at": "2026-04-16T12:14:08.408214+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T12:14:10.173961+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-sonnet-20241022\"}",
+    "queried_at": "2026-04-16T12:14:10.493850+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-haiku-20240307",
+    "raw_response": "{\"model\": \"claude-3-haiku-20240307\"}",
+    "queried_at": "2026-04-16T12:14:11.677806+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4-turbo-2024-04-09",
+    "raw_response": "{\"model\": \"gpt-4-turbo-2024-04-09\"}",
+    "queried_at": "2026-04-16T12:14:11.984464+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T12:14:14.756582+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro",
+    "raw_response": "{\"model\": \"gemini-1.5-pro\"}",
+    "queried_at": "2026-04-16T12:14:13.726818+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash-latest",
+    "raw_response": "{\"model\": \"gemini-1.5-flash-latest\"}",
+    "queried_at": "2026-04-16T12:14:15.105010+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4-0520",
+    "raw_response": "{\"model\": \"glm-4-0520\"}",
+    "queried_at": "2026-04-16T12:14:16.013899+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen2.5-72b-instruct",
+    "raw_response": "{\"model\": \"qwen2.5-72b-instruct\"}",
+    "queried_at": "2026-04-16T12:14:16.456678+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-2-1212",
+    "raw_response": "{\"model\": \"grok-2-1212\"}",
+    "queried_at": "2026-04-16T12:14:17.283414+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-latest",
+    "raw_response": "{\"model\": \"kimi-latest\"}",
+    "queried_at": "2026-04-16T12:14:18.137977+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": null,
+    "raw_response": "{\"model\"}: \"google/mimo-pro-7b\"",
+    "queried_at": "2026-04-16T12:14:19.072952+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2-thinking",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T12:14:24.094670+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2-thinking",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20240620",
+    "raw_response": "{\"model\": \"claude-3-5-sonnet-20240620\"}",
+    "queried_at": "2026-04-16T12:14:35.581377+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2-thinking",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-haiku-20240307",
+    "raw_response": "{\"model\": \"claude-3-haiku-20240307\"}",
+    "queried_at": "2026-04-16T12:14:33.064904+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2-thinking",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "{\"model\": \"gpt-4o\"}",
+    "queried_at": "2026-04-16T12:15:26.307449+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2-thinking",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T12:14:45.250815+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2-thinking",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro-002",
+    "raw_response": "{\"model\": \"gemini-1.5-pro-002\"}",
+    "queried_at": "2026-04-16T12:16:13.840111+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2-thinking",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash-002",
+    "raw_response": "{\"model\": \"gemini-1.5-flash-002\"}",
+    "queried_at": "2026-04-16T12:15:19.041413+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2-thinking",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4-plus",
+    "raw_response": "{\"model\": \"glm-4-plus\"}",
+    "queried_at": "2026-04-16T12:15:27.835327+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2-thinking",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-2.5-72b-instruct",
+    "raw_response": "{\"model\": \"qwen-2.5-72b-instruct\"}",
+    "queried_at": "2026-04-16T12:16:37.742859+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2-thinking",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-2",
+    "raw_response": "{\"model\": \"grok-2\"}",
+    "queried_at": "2026-04-16T12:15:48.253355+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2-thinking",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-k2-general",
+    "raw_response": "{\"model\": \"kimi-k2-general\"}",
+    "queried_at": "2026-04-16T12:16:15.308713+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2-thinking",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "mimo-7b-instruct",
+    "raw_response": "{\"model\": \"mimo-7b-instruct\"}",
+    "queried_at": "2026-04-16T12:16:17.431062+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2.5",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": " {\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T12:16:16.450097+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2.5",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": " {\"model\": \"claude-3-5-sonnet-20241022\"}",
+    "queried_at": "2026-04-16T12:16:29.711374+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2.5",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-haiku-20240307",
+    "raw_response": " {\"model\": \"claude-3-haiku-20240307\"}",
+    "queried_at": "2026-04-16T12:16:24.436652+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2.5",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": " {\"model\": \"gpt-4o\"}",
+    "queried_at": "2026-04-16T12:26:42.798938+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2.5",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "codex-1",
+    "raw_response": " {\"model\": \"codex-1\"}",
+    "queried_at": "2026-04-16T12:16:45.238292+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2.5",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro",
+    "raw_response": " {\"model\": \"gemini-1.5-pro\"}",
+    "queried_at": "2026-04-16T12:16:42.361425+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2.5",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-flash-exp",
+    "raw_response": " {\"model\": \"gemini-2.0-flash-exp\"}",
+    "queried_at": "2026-04-16T12:17:36.890073+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2.5",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4-plus",
+    "raw_response": "{\"model\": \"glm-4-plus\"}",
+    "queried_at": "2026-04-16T12:17:32.872254+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2.5",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen2-72b-instruct",
+    "raw_response": " {\"model\": \"qwen2-72b-instruct\"}",
+    "queried_at": "2026-04-16T12:17:20.514442+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2.5",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-2",
+    "raw_response": " {\"model\": \"grok-2\"}",
+    "queried_at": "2026-04-16T12:17:55.238898+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2.5",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-k1-5",
+    "raw_response": " {\"model\": \"kimi-k1-5\"}",
+    "queried_at": "2026-04-16T12:17:58.175139+00:00"
+  },
+  {
+    "answerer_model_id": "moonshotai/kimi-k2.5",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "mimo-7b",
+    "raw_response": " {\"model\": \"mimo-7b\"}",
+    "queried_at": "2026-04-16T12:17:51.815808+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-flash",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T12:17:52.375904+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-flash",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-sonnet-20241022\"}",
+    "queried_at": "2026-04-16T12:17:54.056430+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-flash",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-16T12:17:54.766624+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-flash",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "{\"model\": \"gpt-4o\"}",
+    "queried_at": "2026-04-16T12:18:05.213139+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-flash",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4.1",
+    "raw_response": "{\"model\": \"gpt-4.1\"}",
+    "queried_at": "2026-04-16T12:17:56.023101+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-flash",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-pro-exp-02-05",
+    "raw_response": "{\"model\": \"gemini-2.0-pro-exp-02-05\"}",
+    "queried_at": "2026-04-16T12:18:06.452570+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-flash",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-flash-001",
+    "raw_response": "```json\n{\n\"model\": \"gemini-2.0-flash-001\"\n}\n```",
+    "queried_at": "2026-04-16T12:18:01.783531+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-flash",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4-plus",
+    "raw_response": "{\"model\": \"glm-4-plus\"}",
+    "queried_at": "2026-04-16T12:18:04.471754+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-flash",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen3-235b-a22b",
+    "raw_response": "{\"model\": \"qwen3-235b-a22b\"}",
+    "queried_at": "2026-04-16T12:18:16.511220+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-flash",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-2-1212",
+    "raw_response": "{\"model\": \"grok-2-1212\"}",
+    "queried_at": "2026-04-16T12:18:06.133392+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-flash",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-auto",
+    "raw_response": "```json\n{\n\"model\": \"moonshot-v1-auto\"\n}\n```",
+    "queried_at": "2026-04-16T12:18:10.964525+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-flash",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "MiMo-1.5-32B",
+    "raw_response": "{\"model\": \"MiMo-1.5-32B\"}",
+    "queried_at": "2026-04-16T12:18:11.861573+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-pro",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-opus-20240229",
+    "raw_response": "{\"model\": \"claude-3-opus-20240229\"}",
+    "queried_at": "2026-04-16T12:18:22.401860+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-pro",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-sonnet-20240229",
+    "raw_response": "{\"model\": \"claude-3-sonnet-20240229\"}",
+    "queried_at": "2026-04-16T12:18:30.164675+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-pro",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-haiku-20240307",
+    "raw_response": "{\"model\": \"claude-3-haiku-20240307\"}",
+    "queried_at": "2026-04-16T12:18:29.420881+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-pro",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4-1106-preview",
+    "raw_response": "{\"model\": \"gpt-4-1106-preview\"}",
+    "queried_at": "2026-04-16T12:18:40.092932+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-pro",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "code-davinci-002",
+    "raw_response": "{\"model\": \"code-davinci-002\"}",
+    "queried_at": "2026-04-16T12:18:44.284779+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-pro",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-pro",
+    "raw_response": "{\"model\": \"gemini-pro\"}",
+    "queried_at": "2026-04-16T12:18:45.285554+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-pro",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-flash",
+    "raw_response": "{\"model\": \"gemini-1.5-flash\"}",
+    "queried_at": "2026-04-16T12:18:49.699106+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-pro",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4",
+    "raw_response": "{\"model\": \"glm-4\"}",
+    "queried_at": "2026-04-16T12:18:56.612055+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-pro",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen1.5-72b",
+    "raw_response": "{\"model\": \"qwen1.5-72b\"}",
+    "queried_at": "2026-04-16T12:19:14.829802+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-pro",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-1",
+    "raw_response": "{\"model\": \"grok-1\"}",
+    "queried_at": "2026-04-16T12:19:00.852890+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-pro",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "moonshot-v1-128k",
+    "raw_response": "{\"model\": \"moonshot-v1-128k\"}",
+    "queried_at": "2026-04-16T12:19:25.469705+00:00"
+  },
+  {
+    "answerer_model_id": "xiaomi/mimo-v2-pro",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "MiMo-2",
+    "raw_response": "{\"model\": \"MiMo-2\"}",
+    "queried_at": "2026-04-16T12:19:14.988210+00:00"
+  }
+]

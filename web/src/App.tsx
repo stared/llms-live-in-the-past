@@ -18,7 +18,7 @@ const FAMILY_ORDER = [
   "MiMo",
 ];
 
-const LATEST_QUERY_FILE = "queries_20260411_211727.json";
+const LATEST_QUERY_FILE = "queries_20260416_124134.json";
 
 function shortName(id: string): string {
   return id

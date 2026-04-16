@@ -2,32 +2,110 @@
  * Deterministic mapping from native API model IDs (as returned by v2 prompt)
  * to OpenRouter-style model IDs used in models.json.
  *
- * If an answered ID is not here, it's used as-is for lookup.
+ * ONLY maps same-model-different-ID pairs. No `-latest` aliases (ambiguous).
+ * If an answered ID is not here and not in models.json, it shows as "?" (unmatched).
  */
 export const MODEL_ALIASES: Record<string, string> = {
-  // Claude
-  "claude-opus-4-5": "anthropic/claude-opus-4.5",
-  "claude-opus-4-1-20250805": "anthropic/claude-opus-4.1",
+  // ── Claude ────────────────────────────────────────────────────────────
   "claude-3-opus-20240229": "anthropic/claude-3-opus",
-  "claude-sonnet-4-5": "anthropic/claude-sonnet-4.5",
-  "claude-sonnet-4-20250514": "anthropic/claude-sonnet-4",
+  "claude-3-opus": "anthropic/claude-3-opus",
+  "claude-3-sonnet-20240229": "anthropic/claude-3.5-sonnet", // no Claude 3 Sonnet tracked
+  "claude-3-5-sonnet-20240620": "anthropic/claude-3.5-sonnet",
   "claude-3-5-sonnet-20241022": "anthropic/claude-3.5-sonnet",
   "claude-3-7-sonnet-20250219": "anthropic/claude-3.7-sonnet",
-  "claude-haiku-4-5": "anthropic/claude-haiku-4.5",
+  "claude-3.7-sonnet-20250219": "anthropic/claude-3.7-sonnet",
+  "claude-3.7-sonnet-20240620": "anthropic/claude-3.7-sonnet",
+  "claude-sonnet-4-20250514": "anthropic/claude-sonnet-4",
+  "claude-sonnet-4-5": "anthropic/claude-sonnet-4.5",
+  "claude-opus-4-20250514": "anthropic/claude-opus-4",
+  "claude-opus-4-1-20250805": "anthropic/claude-opus-4.1",
+  "claude-opus-4-5": "anthropic/claude-opus-4.5",
+  "claude-3-haiku-20240307": "anthropic/claude-3-haiku",
   "claude-3-5-haiku-20241022": "anthropic/claude-3.5-haiku",
+  "claude-3.5-haiku-20241022": "anthropic/claude-3.5-haiku",
   "claude-3-5-haiku-latest": "anthropic/claude-3.5-haiku",
-  // GPT
+  "claude-haiku-4-5": "anthropic/claude-haiku-4.5",
+
+  // ── GPT ───────────────────────────────────────────────────────────────
+  "gpt-4": "openai/gpt-4-turbo",
+  "gpt-4-turbo": "openai/gpt-4-turbo",
+  "gpt-4-turbo-2024-04-09": "openai/gpt-4-turbo",
+  "gpt-4-turbo-preview": "openai/gpt-4-turbo",
+  "gpt-4-1106-preview": "openai/gpt-4-turbo",
   "gpt-4o": "openai/gpt-4o",
+  "gpt-4o-2024-08-06": "openai/gpt-4o",
+  "gpt-4o-mini": "openai/gpt-4o-mini",
   "gpt-4.1": "openai/gpt-4.1",
-  // Gemini
+  "gpt-4.1-mini": "openai/gpt-4.1-mini",
+  "gpt-5": "openai/gpt-5",
+  "gpt-5.3": "openai/gpt-5.3-chat",
+  "gpt-5-codex": "openai/gpt-5-codex",
+  "code-davinci-002": "openai/gpt-5-codex", // old Codex, closest tracked
+
+  // ── Gemini ────────────────────────────────────────────────────────────
+  "gemini-pro": "google/gemini-1.5-pro",
+  "gemini-1.5-pro": "google/gemini-1.5-pro",
+  "gemini-1.5-pro-002": "google/gemini-1.5-pro",
+  "gemini-1.5-pro-latest": "google/gemini-1.5-pro",
+  "models/gemini-1.5-flash-001": "google/gemini-1.5-flash",
+  "gemini-1.5-flash": "google/gemini-1.5-flash",
+  "gemini-1.5-flash-002": "google/gemini-1.5-flash",
+  "gemini-1.5-flash-latest": "google/gemini-1.5-flash",
   "gemini-2.0-flash": "google/gemini-2.0-flash-001",
+  "gemini-2.0-flash-001": "google/gemini-2.0-flash-001",
+  "gemini-2.0-flash-exp": "google/gemini-2.0-flash-001",
   "gemini-2.5-pro": "google/gemini-2.5-pro",
+  "gemini-2.5-pro-latest": "google/gemini-2.5-pro",
   "gemini-2.5-pro-preview-06-05": "google/gemini-2.5-pro",
   "gemini-2.5-flash": "google/gemini-2.5-flash",
   "gemini-2.5-flash-preview-04-17": "google/gemini-2.5-flash",
-  // These map to models NOT in models.json (too old to be tracked)
-  "gemini-1.5-pro": "google/gemini-1.5-pro",
-  "gemini-1.5-pro-002": "google/gemini-1.5-pro",
-  "gemini-1.5-flash": "google/gemini-1.5-flash",
-  "gemini-1.5-flash-002": "google/gemini-1.5-flash",
+
+  // ── GLM ───────────────────────────────────────────────────────────────
+  "glm-3-turbo": "z-ai/glm-3-turbo",
+  "glm-4": "z-ai/glm-4",
+  "glm-4-0520": "z-ai/glm-4",
+  "glm-4-plus": "z-ai/glm-4-plus",
+  "glm-4.5": "z-ai/glm-4.5",
+  "glm-4.6": "z-ai/glm-4.6",
+
+  // ── Qwen ──────────────────────────────────────────────────────────────
+  "qwen2-72b": "qwen/qwen2-72b",
+  "qwen2-72b-instruct": "qwen/qwen2-72b",
+  "qwen2-72b-chat": "qwen/qwen2-72b",
+  "qwen2.5-72b-instruct": "qwen/qwen2.5-72b-instruct",
+  "Qwen2.5-72B-Instruct": "qwen/qwen2.5-72b-instruct",
+  "qwen-2.5-72b-instruct": "qwen/qwen2.5-72b-instruct",
+  "qwen-max": "qwen/qwen-max",
+  "qwen-max-2025-01-25": "qwen/qwen-max",
+  "qwen-max-latest": "qwen/qwen-max",
+  "qwen3-235b-a22b": "qwen/qwen3-235b-a22b",
+
+  // ── Grok ──────────────────────────────────────────────────────────────
+  "grok-1": "x-ai/grok-1",
+  "grok-1.0": "x-ai/grok-1",
+  "grok-2": "x-ai/grok-2",
+  "grok-2-1212": "x-ai/grok-2",
+  "grok-2-latest": "x-ai/grok-2",
+  "grok-beta": "x-ai/grok-2",
+  "grok-3": "x-ai/grok-3",
+  "grok-3-latest": "x-ai/grok-3",
+  "grok-4-0709": "x-ai/grok-4",
+  "Grok-4": "x-ai/grok-4",
+
+  // ── Kimi ──────────────────────────────────────────────────────────────
+  "moonshot-v1-128k": "moonshotai/moonshot-v1-128k",
+  "moonshot-v1-32k": "moonshotai/moonshot-v1-128k",
+  "moonshot-v1-8k": "moonshotai/moonshot-v1-128k",
+  "moonshot-v1-auto": "moonshotai/moonshot-v1-128k",
+  "kimi-k2": "moonshotai/kimi-k2",
+  "kimi-k2-0711-preview": "moonshotai/kimi-k2",
+  "kimi-k2-general": "moonshotai/kimi-k2",
+  "kimi-2.5": "moonshotai/kimi-k2.5",
+
+  // ── MiMo ──────────────────────────────────────────────────────────────
+  "MiMo-7B": "xiaomi/mimo-7b",
+  "MiMo-7B-RL": "xiaomi/mimo-7b",
+  "mimo-7b": "xiaomi/mimo-7b",
+  "mimo-7b-rl": "xiaomi/mimo-7b",
+  "mimo-7b-instruct": "xiaomi/mimo-7b",
 };
