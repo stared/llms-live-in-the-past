@@ -12,6 +12,7 @@
   {"model_id": "anthropic/claude-opus-4.1",       "family": "Claude Opus",    "release_date": "2025-08-05"},
   {"model_id": "anthropic/claude-opus-4.5",       "family": "Claude Opus",    "release_date": "2025-11-24"},
   {"model_id": "anthropic/claude-opus-4.6",       "family": "Claude Opus",    "release_date": "2026-02-05"},
+  {"model_id": "anthropic/claude-opus-4.7",       "family": "Claude Opus",    "release_date": "2026-04-16"},
   {"model_id": "openai/gpt-4-turbo",               "family": "GPT",            "release_date": "2023-11-06"},
   {"model_id": "openai/gpt-4o",                   "family": "GPT",            "release_date": "2024-05-13"},
   {"model_id": "openai/gpt-4o-mini",              "family": "GPT Mini",       "release_date": "2024-07-18"},

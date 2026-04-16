@@ -1723,8 +1723,8 @@
     "answerer_model_id": "openai/gpt-5",
     "subject_family": "MiMo",
     "prompt_id": "v2",
-    "answered_model_id": "Which service’s MiMo model are you referring to (e.g., OpenAI, Google, Anthropic)? Please specify so I can provide the exact API model name.",
-    "raw_response": "{\"model\": \"Which service’s MiMo model are you referring to (e.g., OpenAI, Google, Anthropic)? Please specify so I can provide the exact API model name.\"}",
+    "answered_model_id": "Which service\u2019s MiMo model are you referring to (e.g., OpenAI, Google, Anthropic)? Please specify so I can provide the exact API model name.",
+    "raw_response": "{\"model\": \"Which service\u2019s MiMo model are you referring to (e.g., OpenAI, Google, Anthropic)? Please specify so I can provide the exact API model name.\"}",
     "queried_at": "2026-04-16T11:49:22.909484+00:00"
   },
   {
@@ -2875,8 +2875,8 @@
     "answerer_model_id": "openai/gpt-5.4",
     "subject_family": "MiMo",
     "prompt_id": "v2",
-    "answered_model_id": "I don’t know",
-    "raw_response": "{\"model\":\"I don’t know\"}",
+    "answered_model_id": "I don\u2019t know",
+    "raw_response": "{\"model\":\"I don\u2019t know\"}",
     "queried_at": "2026-04-16T11:52:40.058878+00:00"
   },
   {
@@ -5566,5 +5566,101 @@
     "answered_model_id": "MiMo-2",
     "raw_response": "{\"model\": \"MiMo-2\"}",
     "queried_at": "2026-04-16T12:19:14.988210+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.7",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-opus-4-5",
+    "raw_response": "{\"model\": \"claude-opus-4-5\"}",
+    "queried_at": "2026-04-16T15:20:02.020003+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.7",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-sonnet-20241022",
+    "raw_response": "{\"model\": \"claude-3-5-sonnet-20241022\"}",
+    "queried_at": "2026-04-16T15:20:01.601829+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.7",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-haiku-4-5",
+    "raw_response": "{\"model\": \"claude-haiku-4-5\"}",
+    "queried_at": "2026-04-16T15:20:01.172095+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.7",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "{\"model\": \"gpt-4o\"}",
+    "queried_at": "2026-04-16T15:20:01.070026+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.7",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-5-codex",
+    "raw_response": "{\"model\": \"gpt-5-codex\"}",
+    "queried_at": "2026-04-16T15:20:02.791819+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.7",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-1.5-pro",
+    "raw_response": "{\"model\": \"gemini-1.5-pro\"}",
+    "queried_at": "2026-04-16T15:20:01.055200+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.7",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.0-flash",
+    "raw_response": "{\"model\": \"gemini-2.0-flash\"}",
+    "queried_at": "2026-04-16T15:20:01.031097+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.7",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4-plus",
+    "raw_response": "{\"model\": \"glm-4-plus\"}",
+    "queried_at": "2026-04-16T15:20:01.353315+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.7",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen-max",
+    "raw_response": "{\"model\": \"qwen-max\"}",
+    "queried_at": "2026-04-16T15:20:00.909356+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.7",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-4",
+    "raw_response": "{\"model\": \"grok-4\"}",
+    "queried_at": "2026-04-16T15:20:00.901963+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.7",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-k2-0905-preview",
+    "raw_response": "{\"model\": \"kimi-k2-0905-preview\"}",
+    "queried_at": "2026-04-16T15:20:02.000455+00:00"
+  },
+  {
+    "answerer_model_id": "anthropic/claude-opus-4.7",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "mimo-7b-rl",
+    "raw_response": "{\"model\": \"mimo-7b-rl\"}",
+    "queried_at": "2026-04-16T15:20:02.253116+00:00"
   }
 ]
