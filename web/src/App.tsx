@@ -20,6 +20,11 @@ const FAMILY_ORDER = [
 
 const LATEST_QUERY_FILE = "queries_20260416_124134.json";
 
+// Don't show dots for models older than this on the chart (kept in data for
+// alias resolution only). GPT-4-turbo release date — anything before feels
+// historical noise.
+const MIN_CHART_DATE = "2023-11-06";
+
 function shortName(id: string): string {
   return id
     .replace(
@@ -143,13 +148,13 @@ function App() {
   // Which models are answerers (have query data)
   const answererSet = new Set(queries.map((q) => q.answerer_model_id));
 
-  // Models grouped by family, sorted by date
+  // Models grouped by family, sorted by date (chart hides pre-MIN_CHART_DATE)
   const modelsByFamily = new Map<string, Model[]>();
   for (const fam of families) {
     modelsByFamily.set(
       fam,
       models
-        .filter((m) => m.family === fam)
+        .filter((m) => m.family === fam && m.release_date >= MIN_CHART_DATE)
         .sort((a, b) => a.release_date.localeCompare(b.release_date))
     );
   }
@@ -162,9 +167,9 @@ function App() {
     }
   }
 
-  // Global date range across all displayed families
+  // Global date range across all displayed families (same chart-date filter)
   const allDates = models
-    .filter((m) => families.includes(m.family))
+    .filter((m) => families.includes(m.family) && m.release_date >= MIN_CHART_DATE)
     .map((m) => new Date(m.release_date).getTime());
   const minDate = Math.min(...allDates);
   const maxDate = Math.max(...allDates);
