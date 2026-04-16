@@ -7,6 +7,7 @@
   --axis: #383838;
   --teal: #2ecc71;
   --red: #e74c3c;
+  --t: 250ms ease;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -39,7 +40,7 @@ body {
   white-space: nowrap;
 }
 
-.credits a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+.credits a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; transition: color var(--t); }
 .credits a:hover { color: var(--teal); }
 
 /* ── Header ── */
@@ -175,7 +176,7 @@ h1 {
   border: 2px solid var(--muted);
   z-index: 2;
   cursor: default;
-  transition: border-color 0.12s, background 0.12s;
+  transition: border-color var(--t), background-color var(--t), opacity var(--t);
 }
 
 .dot.has-data { cursor: pointer; }
@@ -207,6 +208,7 @@ h1 {
   white-space: nowrap;
   pointer-events: none;
   font-variant-numeric: tabular-nums;
+  transition: color var(--t);
 }
 
 .dot.teal .dot-num,
@@ -224,6 +226,7 @@ h1 {
   font-weight: 600;
   color: var(--red);
   white-space: nowrap;
+  transition: opacity var(--t);
 }
 
 /* ── Prompt box ── */

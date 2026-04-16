@@ -422,13 +422,19 @@ function App() {
                   );
                 })}
 
-                {/* Unmatched claim: answered model not in models.json */}
-                {claimId &&
-                  !fModels.some((m) => m.model_id === claimId) && (
-                    <span className="unmatched">
-                      ? {shortName(claimId)}
+                {/* Unmatched claim: answered model not on chart. Always rendered
+                    so opacity can fade in/out smoothly. */}
+                {(() => {
+                  const unmatched = claimId && !fModels.some((m) => m.model_id === claimId);
+                  return (
+                    <span
+                      className="unmatched"
+                      style={{ opacity: unmatched ? 1 : 0 }}
+                    >
+                      {unmatched ? `? ${shortName(claimId!)}` : "\u00a0"}
                     </span>
-                  )}
+                  );
+                })()}
               </div>
             </div>
           );
