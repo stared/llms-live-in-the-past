@@ -258,8 +258,8 @@ function App() {
   if (!activeModel) {
     headerMain = (
       <>
-        On average, the newest models are unaware of their own existence, pointing to versions released{" "}
-        <span className="c-red">{avgMonths} months</span> before them.
+        The <span className="c-teal">newest models</span> are unaware of their own existence, pointing to versions released{" "}
+        <span className="c-red">{avgMonths} months</span> before them on average.
       </>
     );
   } else if (isAnswererActive) {
