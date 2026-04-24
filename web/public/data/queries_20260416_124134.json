@@ -5662,5 +5662,101 @@
     "answered_model_id": "mimo-7b-rl",
     "raw_response": "{\"model\": \"mimo-7b-rl\"}",
     "queried_at": "2026-04-16T15:20:02.253116+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.5",
+    "subject_family": "Claude Opus",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-opus-4-1-20250805",
+    "raw_response": "{\"model\":\"claude-opus-4-1-20250805\"}",
+    "queried_at": "2026-04-24T20:47:12.080023+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.5",
+    "subject_family": "Claude Sonnet",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-sonnet-4-5-20250929",
+    "raw_response": "{\"model\":\"claude-sonnet-4-5-20250929\"}",
+    "queried_at": "2026-04-24T20:47:14.088965+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.5",
+    "subject_family": "Claude Haiku",
+    "prompt_id": "v2",
+    "answered_model_id": "claude-3-5-haiku-20241022",
+    "raw_response": "{\"model\":\"claude-3-5-haiku-20241022\"}",
+    "queried_at": "2026-04-24T20:47:11.398628+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.5",
+    "subject_family": "GPT",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-4o",
+    "raw_response": "{\"model\":\"gpt-4o\"}",
+    "queried_at": "2026-04-24T20:47:22.809853+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.5",
+    "subject_family": "GPT Codex",
+    "prompt_id": "v2",
+    "answered_model_id": "gpt-5-codex",
+    "raw_response": "{\"model\":\"gpt-5-codex\"}",
+    "queried_at": "2026-04-24T20:47:17.875334+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.5",
+    "subject_family": "Gemini Pro",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.5-pro",
+    "raw_response": "{\"model\":\"gemini-2.5-pro\"}",
+    "queried_at": "2026-04-24T20:47:14.891002+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.5",
+    "subject_family": "Gemini Flash",
+    "prompt_id": "v2",
+    "answered_model_id": "gemini-2.5-flash",
+    "raw_response": "{\"model\":\"gemini-2.5-flash\"}",
+    "queried_at": "2026-04-24T20:47:15.111620+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.5",
+    "subject_family": "GLM",
+    "prompt_id": "v2",
+    "answered_model_id": "glm-4.6",
+    "raw_response": "{\"model\":\"glm-4.6\"}",
+    "queried_at": "2026-04-24T20:47:17.907817+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.5",
+    "subject_family": "Qwen",
+    "prompt_id": "v2",
+    "answered_model_id": "qwen3-max",
+    "raw_response": "{\"model\":\"qwen3-max\"}",
+    "queried_at": "2026-04-24T20:47:26.143086+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.5",
+    "subject_family": "Grok",
+    "prompt_id": "v2",
+    "answered_model_id": "grok-4-0709",
+    "raw_response": "{\"model\":\"grok-4-0709\"}",
+    "queried_at": "2026-04-24T20:47:43.832195+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.5",
+    "subject_family": "Kimi",
+    "prompt_id": "v2",
+    "answered_model_id": "kimi-k2-0905-preview",
+    "raw_response": "{\"model\":\"kimi-k2-0905-preview\"}",
+    "queried_at": "2026-04-24T20:47:21.116200+00:00"
+  },
+  {
+    "answerer_model_id": "openai/gpt-5.5",
+    "subject_family": "MiMo",
+    "prompt_id": "v2",
+    "answered_model_id": "MiMo-7B-RL",
+    "raw_response": "{\"model\":\"MiMo-7B-RL\"}",
+    "queried_at": "2026-04-24T20:47:25.502476+00:00"
   }
 ]

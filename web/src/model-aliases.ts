@@ -69,6 +69,9 @@ export const MODEL_ALIASES: Record<string, string> = {
   "gemini-2.0-flash": "google/gemini-2.0-flash-001",
   "gemini-2.0-flash-001": "google/gemini-2.0-flash-001",
   "gemini-2.0-flash-exp": "google/gemini-2.0-flash-001",
+  "gemini-2.0-pro-exp": "google/gemini-2.0-pro-exp",
+  "gemini-2.0-pro-exp-02-05": "google/gemini-2.0-pro-exp",
+  "gemini-2.0-pro": "google/gemini-2.0-pro-exp",
   "gemini-2.5-pro": "google/gemini-2.5-pro",
   "gemini-2.5-pro-latest": "google/gemini-2.5-pro",
   "gemini-2.5-pro-preview-06-05": "google/gemini-2.5-pro",
@@ -126,6 +129,7 @@ export const MODEL_ALIASES: Record<string, string> = {
   "kimi-1-5": "moonshotai/kimi-k1.5",
   "kimi-k2": "moonshotai/kimi-k2",
   "kimi-k2-0711-preview": "moonshotai/kimi-k2",
+  "kimi-k2-0905-preview": "moonshotai/kimi-k2",
   "kimi-k2-general": "moonshotai/kimi-k2",
   "kimi-2.5": "moonshotai/kimi-k2.5",
 
