@@ -151,15 +151,21 @@ def evaluate_query(
     )
 
 
+REQUEST_TIMEOUT = 90.0  # seconds; some upstream models (e.g. GLM) can hang indefinitely
+
+
 async def query_model(client: AsyncOpenAI, answerer_model: str, prompt: Prompt, family: str) -> str:
     user_content = prompt.user_template.format(family=family)
-    response = await client.chat.completions.create(
-        model=answerer_model,
-        messages=[
-            {"role": "system", "content": prompt.system},
-            {"role": "user", "content": user_content},
-        ],
-        temperature=0,
+    response = await asyncio.wait_for(
+        client.chat.completions.create(
+            model=answerer_model,
+            messages=[
+                {"role": "system", "content": prompt.system},
+                {"role": "user", "content": user_content},
+            ],
+            temperature=0,
+        ),
+        timeout=REQUEST_TIMEOUT,
     )
     return response.choices[0].message.content or ""
 
