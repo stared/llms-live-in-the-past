@@ -16,6 +16,7 @@ export const MODEL_ALIASES: Record<string, string> = {
   "claude-3.7-sonnet-20250219": "anthropic/claude-3.7-sonnet",
   "claude-sonnet-4-20250514": "anthropic/claude-sonnet-4",
   "claude-sonnet-4-5": "anthropic/claude-sonnet-4.5",
+  "claude-sonnet-4-5-20250929": "anthropic/claude-sonnet-4.5",
   "claude-opus-4-20250514": "anthropic/claude-opus-4",
   "claude-opus-4-1-20250805": "anthropic/claude-opus-4.1",
   "claude-opus-4-5": "anthropic/claude-opus-4.5",
@@ -131,6 +132,7 @@ export const MODEL_ALIASES: Record<string, string> = {
   "kimi-k2-0711-preview": "moonshotai/kimi-k2",
   "kimi-k2-0905-preview": "moonshotai/kimi-k2",
   "kimi-k2-general": "moonshotai/kimi-k2",
+  "kimi-k2-thinking": "moonshotai/kimi-k2-thinking",
   "kimi-2.5": "moonshotai/kimi-k2.5",
 
   // ── MiMo ──────────────────────────────────────────────────────────────
